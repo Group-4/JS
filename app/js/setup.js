@@ -8,7 +8,7 @@
   window.app.Views = {};
   window.app.Routers = {};
 
-  app.rootURL = '';
+  app.rootURL = 'http://tiyqpic.herokuapp.com';
 
 
 
