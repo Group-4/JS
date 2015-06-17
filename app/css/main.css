@@ -10,5 +10,44 @@ html {
 ---------------- */
 /* MIXINS
 ---------- */
-/* GLOBAL STYLES
----------------- */
+/* GLOBAL
+----------- */
+* {
+  box-sizing: border-box; }
+
+body {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif; }
+
+input, button {
+  border: none;
+  border: 1px solid #ccc;
+  border-radius: 3px; }
+  input:focus, button:focus {
+    outline: none; }
+
+a {
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
+ul {
+  list-style: none; }
+
+/* HEADER
+---------- */
+header {
+  width: 100%;
+  background-color: #225378;
+  overflow: hidden; }
+  header .innerHeader {
+    width: 80%;
+    margin: auto; }
+  header .logo {
+    float: left;
+    color: #F3FFE2;
+    margin: 0;
+    overflow: hidden;
+    padding: 1.5em; }
+    header .logo p {
+      margin: 0; }

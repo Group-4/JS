@@ -6,7 +6,7 @@
 
     model: app.Models.UserModel,
 
-    url: app.rootURL //+ endpoint,
+    url: app.rootURL,
 
     comparator: 'score'
 
