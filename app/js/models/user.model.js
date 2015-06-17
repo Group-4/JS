@@ -11,6 +11,7 @@
       username: '',
       password: '',
       score: '',
+      email: '',
       accessToken: ''
     }
 
