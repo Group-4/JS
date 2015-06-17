@@ -1,0 +1,29 @@
+<div class="congratsDiv">
+
+<h2>Congrats {{ username }}! You guessed correctly!</h2>
+
+<img src="{{ url }}">
+
+<h3>{{ guessAnswer }}</h3>
+
+<p>Your score is now: {{ score }}</p>
+
+
+</div>
+
+
+<div class="leaderboardDiv">
+
+<h2>Here's where you stand on the Leaderboard:</h2>
+
+<ul id="leaderboardList" class="leaderboardList">
+{{#each user}}
+<li data-id="{{ userID }}">
+
+  {{username}} {{score}}
+{{/each}}
+</li>
+</ul>
+
+
+</div>
