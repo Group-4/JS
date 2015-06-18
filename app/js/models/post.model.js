@@ -4,7 +4,7 @@
 
   app.Models.PostModel = Backbone.Model.extend({
 
-    idAttribute: 'post_id',
+    idAttribute: 'id',
 
     defaults: {
       image_url: '',

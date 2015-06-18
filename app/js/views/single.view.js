@@ -25,13 +25,8 @@
       this.collection = new app.Collections.Posts();
 
       this.collection.fetch().done( function (data) {
-        console.log(this.collection);
-        console.log(this.collection.toJSON());
+
         var singlePost = this.collection.get(this.singleID);
-        // console.log(this);
-        // window.k = singlePost;
-        // window.c = this.collection;
-        // window.i = this.singleID;
         this.$el.html(this.template(singlePost.toJSON()));
 
       }.bind(this));
