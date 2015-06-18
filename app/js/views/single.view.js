@@ -23,9 +23,9 @@
     },
 
     render: function () {
-      this.$el.html(this.template());
-      // var singlePost = this.collection.get(this.singleID);
-      // this.$el.html(this.template(singlePost.toJSON()));
+
+      this.$el.html(this.template);
+
     },
 
     makeGuess: function (e) {

@@ -14,10 +14,10 @@
 
       '' : 'login',
       'main/:id' : 'mainPage',
-      'single' : 'singlePost',
+      'single/:id' : 'singlePost',
       'leaderboard' : 'leaderboardPage'
 
-      },
+    },
 
     login: function() {
       new app.Views.Login({
@@ -41,18 +41,15 @@
       })
     },
 
-    singlePost: function () {
-
-      var allPosts = new app.Collections.Posts();
-      allPosts.fetch().done(function() {
-      new app.Views.Single({
-        // singleID: id,
-        // collection: this.collection
+    singlePost: function (id) {
+        new app.Views.Single({
+        singleID: id
         })
 
-      });
+
+
     }
 
-  });
+  })
 
 }());
