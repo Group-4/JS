@@ -6,7 +6,7 @@
 
     model: app.Models.UserModel,
 
-    url: app.rootURL,
+    url: app.rootURL + '/users/register',
 
     comparator: 'score'
 

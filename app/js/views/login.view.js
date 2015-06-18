@@ -24,7 +24,7 @@
     },
 
     render: function(){
-      this.$el.html(this.template)
+      this.$el.html(this.template())
     },
 
 
@@ -48,7 +48,7 @@
 
       //add new user model to data/collection and trigger main view
       this.collection.add(u).save().success( function() {
-        app.mainRouter.navigate('', { trigger: true });
+        // app.mainRouter.navigate('/main', { trigger: true });
 
       });
     },
@@ -67,7 +67,7 @@
       //then trigger main view upon success
       var loginPerson = this.collection.get(this.userID);
       loginPerson.get(this.accessToken).success(function() {
-        app.mainRouter.navigate('', { trigger: true });
+        app.mainRouter.navigate('/main', { trigger: true });
       });
 
 

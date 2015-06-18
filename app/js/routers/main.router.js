@@ -12,13 +12,35 @@
 
     routes: {
 
-      '' : 'login'
+      '' : 'login',
+      '/main/:id' : 'mainPage',
+      '/single/:id' : 'singlePost',
+      '/leaderboard/:id' : 'leaderboardPage'
+
     },
 
     login: function() {
       new app.Views.Login({
+        // collection: this.collection
+      });
+    },
+
+    mainPage: function(id) {
+      new app.Views.Main({
         collection: this.collection
       });
+    },
+
+    singlePost: function(id) {
+      new app.Views.Single({
+        collection: this.collection
+      });
+    },
+
+    leaderboardPage: function(id) {
+      new app.Views.Leaderboard({
+        collection: this.collection
+      })
     }
 
   });
