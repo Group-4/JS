@@ -7,7 +7,6 @@
     initialize: function (options) {
       var args = options || {};
       this.collection = args.collection;
-
     },
 
     routes: {
@@ -38,14 +37,13 @@
     },
 
     singlePost: function () {
+      console.log('singlePost function');
       new app.Views.Single({
         singleID: id,
         collection: this.collection
       })
-
     }
 
   });
-
 
 }());
