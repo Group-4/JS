@@ -15,8 +15,7 @@
       '' : 'login',
       'main/:id' : 'mainPage',
       'single' : 'singlePost',
-      'leaderboard/:id' : 'leaderboardPage'
-
+      'leaderboard' : 'leaderboardPage'
 
       },
 
@@ -28,15 +27,15 @@
 
     mainPage: function(id) {
       console.log('mainPage');
-      new app.Views.Main({
-        collection: this.collection
-      });
+      // new app.Views.Main({
+      //   //collection: this.collection
+      // });
     },
 
-    leaderboardPage: function(id) {
+    leaderboardPage: function() {
       console.log('leaderboardPage');
       new app.Views.Leaderboard({
-        collection: this.collection
+        //collection: this.collection
       })
     },
 
