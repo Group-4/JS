@@ -4,7 +4,7 @@
 
   var allUsers = new app.Collections.Users();
 
-  //allUsers.fetch().done( function() {
+  allUsers.fetch().done( function() {
 
     console.log(allUsers);
 
@@ -14,7 +14,7 @@
 
     Backbone.history.start();
 
-  //});
+  });
 
 
 

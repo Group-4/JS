@@ -5,6 +5,7 @@
   app.Routers.MainRouter = Backbone.Router.extend({
 
     initialize: function (options) {
+
       var args = options || {};
       this.collection = args.collection;
 
@@ -38,8 +39,9 @@
     },
 
     singlePost: function () {
+      console.log('im in single post');
       new app.Views.Single({
-        singleID: id,
+
         collection: this.collection
       })
 
