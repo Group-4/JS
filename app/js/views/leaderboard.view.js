@@ -17,7 +17,7 @@
     },
 
     render: function() {
-      this.$el.html(this.template({ user: this.collection.toJSON()}));
+      this.$el.html(this.template());
     }
 
   });

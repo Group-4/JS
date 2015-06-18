@@ -18,13 +18,7 @@
     }
   });
 
-  app.isLoggedIn = (Cookies.get('access_token') !== undefined) ? true : false;
-  if (app.isLoggedIn) {
-    console.log('yep logged in ');
-    //ping to server to check if valid access token here
-  } else {
-    console.log('nope not logged in');
-  }
+
 
 
 }());
