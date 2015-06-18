@@ -9,8 +9,8 @@
 
     events: {
 
-        'click #image': 'playGame',
         'click #delete': 'deleteAccount',
+        'click #takemetosingleview' : 'singleViewFunction'
     },
 
     template: hbs.main,
@@ -18,6 +18,7 @@
     initialize: function(options) {
 
         var args = options || {};
+        this.collection = args.collection;
         this.render();
         $('.container').html(this.el);
 
@@ -26,37 +27,23 @@
 
     render: function() {
 
-        this.$el.html(this.template(this.template()))
-        return this;
+        this.$el.html(this.template({ image: this.collection.toJSON() }));
+
+    },
+
+
+    singleViewFunction: function() {
+      app.mainRouter.navigate('/single', {trigger: true});
+
     },
 
 
 
 
 
-
-
-
-// CLICK ON IMAGE BEGINS GAME PLAY
-// GAME OPENS IN A NEW URL
-    image: function() {
-        window.open(this.model.get("url"));
-
-    },
-
-
-    playGame: function(event) {
-        event.preventDefault();
-
-        var image = event.target;
-        app.mainRouter.navigate('/single', {
-            trigger: true
-        });
-
-    },
 
     // DELETING ACCOUNT
-deleteAccount: function (event) {
+    deleteAccount: function (event) {
 
       event.preventDefault();
 
@@ -64,7 +51,7 @@ deleteAccount: function (event) {
       var modelID = $(button).data('id');
 
       if (window.confirm("Delete your Qpic account?")) {
-        deleteAccount.destroy().success( function () {
+        this.collection.destroy().success( function () {
            app.mainRouter.navigate('', { trigger: true });
         });
       }

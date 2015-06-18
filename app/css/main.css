@@ -49,7 +49,8 @@ header {
     float: left;
     color: #F3FFE2;
     margin: 0;
-    overflow: hidden; }
+    overflow: hidden;
+    padding: 1.5em; }
   header p {
     margin: 0;
     font-family: Michroma;
@@ -66,12 +67,20 @@ header {
     margin-left: 228px;
     position: absolute;
     font-size: 30pt; }
-  header .social {
-    overflow: hidden;
-    float: right;
-    color: white;
-    font-size: 2em;
-    padding: 1em; }
+
+.social {
+  overflow: hidden;
+  float: right;
+  color: white;
+  font-size: 2em;
+  padding: 1em; }
+
+p#logout,
+p#homeButton {
+  font-size: 12pt;
+  color: white;
+  margin-left: 0;
+  float: left; }
 
 /* SINGLE PAGE VIEW
 ------------------- */

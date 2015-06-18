@@ -68,7 +68,7 @@ header {
         color: $light;
         margin: 0;
         overflow: hidden;
-        // padding: 1.5em;
+        padding: 1.5em;
     }
     p {
         margin: 0;
@@ -89,13 +89,22 @@ header {
         position: absolute;
         font-size: 30pt;
     }
-    .social {
-        overflow: hidden;
-        float: right;
-        color: white;
-        font-size: 2em;
-        padding: 1em;
-    }
+}
+
+.social {
+    overflow: hidden;
+    float: right;
+    color: white;
+    font-size: 2em;
+    padding: 1em;
+}
+
+p#logout,
+p#homeButton {
+    font-size: 12pt;
+    color: white;
+    margin-left: 0;
+    float: left;
 }
 /* SINGLE PAGE VIEW
 ------------------- */
