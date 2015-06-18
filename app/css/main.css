@@ -51,6 +51,12 @@ header {
     padding: 1.5em; }
     header .logo p {
       margin: 0; }
+  header .social {
+    overflow: hidden;
+    float: right;
+    color: white;
+    font-size: 2em;
+    padding: 1em; }
 
 /* SINGLE PAGE VIEW
 ------------------- */
