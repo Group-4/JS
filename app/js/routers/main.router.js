@@ -12,9 +12,9 @@
     routes: {
 
       '' : 'login',
-      '/main/:id' : 'mainPage',
-      '/single' : 'singlePost',
-      '/leaderboard/:id' : 'leaderboardPage'
+      'main/:id' : 'mainPage',
+      'single' : 'singlePost',
+      'leaderboard/:id' : 'leaderboardPage'
 
       },
 
@@ -25,12 +25,14 @@
     },
 
     mainPage: function(id) {
+      console.log('mainPage');
       new app.Views.Main({
         collection: this.collection
       });
     },
 
     leaderboardPage: function(id) {
+      console.log('leaderboardPage');
       new app.Views.Leaderboard({
         collection: this.collection
       })
@@ -39,8 +41,8 @@
     singlePost: function () {
       console.log('singlePost function');
       new app.Views.Single({
-        singleID: id,
-        collection: this.collection
+        // singleID: id,
+        // collection: this.collection
       })
     }
 
