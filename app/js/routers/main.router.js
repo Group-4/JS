@@ -14,14 +14,14 @@
 
       '' : 'login',
       '/main/:id' : 'mainPage',
-      '/single/:id' : 'singlePost',
+      '/single' : 'singlePost',
       '/leaderboard/:id' : 'leaderboardPage'
 
       },
 
     login: function() {
       new app.Views.Login({
-        // collection: this.collection
+        collection: this.collection
       });
     },
 
