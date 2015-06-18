@@ -1,16 +1,15 @@
 
 <div class="mainImages">
   <h2>LET'S PLAY!</h2>
-  <div class="col1 row1 p1"><img id="#image1" src=""></div>
-  <div class="col2 row2 p2"><img id="#image2" src=""></div>
-  <div class="col3 row3 p3"><img id="#image3" src=""></div>
-  <div class="col2 row1 p4"><img id="#image4" src=""></div>
-  <div class="col2 row2 p5"><img id="#image5" src=""></div>
-  <div class="col2 row3 p6"><img id="#image6" src=""></div>
-  <div class="col3 row1 p7"><img id="#image7" src=""></div>
-  <div class="col3 row2 p8"><img id="#image8" src=""></div>
-  <div class="col3 row3 p9"><img id="#image9" src=""></div>
-</div>
+  <ul class="small-block-grid-3">
+  {{#each image}}
+  <li data-id="{{_id}}">
+
+
+</li>
+
+{{/each}}
+</ul>
 
 <div class="deleteDiv">
   <button id="#deleteButton">Delete Account</button>

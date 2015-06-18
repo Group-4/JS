@@ -28,7 +28,7 @@ template: hbs.main,
     },
 // CLICK ON IMAGE BEGINS GAME PLAY
 // GAME OPENS IN A NEW URL
-    playGame: function() {
+    image: function() {
         window.open(this.model.get("url"));
 
     },
@@ -37,8 +37,8 @@ template: hbs.main,
     playGame: function(event) {
         event.preventDefault();
 
-        var button = event.target;
-        app.mainRouter.navigate('', {
+        var image = event.target;
+        app.mainRouter.navigate('/single', {
             trigger: true
         });
 
