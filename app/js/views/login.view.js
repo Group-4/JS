@@ -65,7 +65,6 @@
         Cookies.set('username', data.username);
         app.mainRouter.navigate('/main/:id', { trigger: true });
 
-
       });
 
     },
@@ -80,8 +79,6 @@
           form = $(event.target),
           username = form.find('#loginusername').val(),
           password =  form.find('#loginpassword').val();
-
-
 
       //get data from database to make sure user has access token
       //then trigger main view upon success

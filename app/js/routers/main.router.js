@@ -14,10 +14,15 @@
 
       '' : 'login',
       'main/:id' : 'mainPage',
-      'single' : 'singlePost',
-      'leaderboard' : 'leaderboardPage'
+      'single/:id' : 'singlePost',
+      'leaderboard' : 'leaderboardPage',
+      'newpost' : 'newPost'
 
-      },
+    },
+
+    newPost: function () {
+      new app.Views.NewPost();
+    },
 
     login: function() {
       new app.Views.Login({
@@ -26,7 +31,6 @@
     },
 
     mainPage: function(id) {
-
       new app.Views.Main({
 
         // collection: this.collection
@@ -35,21 +39,19 @@
     },
 
     leaderboardPage: function() {
-
       new app.Views.Leaderboard({
         //collection: this.collection
-      })
+      });
     },
 
-    singlePost: function () {
-
+    singlePost: function (id) {
       new app.Views.Single({
-        singleID: id,
-        // collection: this.collection
-
-      })
+        singleID: id
+      });
     }
 
+
   });
+
 
 }());

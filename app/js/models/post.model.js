@@ -7,7 +7,7 @@
     idAttribute: 'id',
 
     defaults: {
-      url: '',
+      image_url: '',
       answer: '',
       userID: '',
       incorrect: 0,

@@ -6,7 +6,7 @@
     className: 'single',
 
     events: {
-      'click #makeGuess' : 'makeGuess'
+      'click #guessBtn' : 'makeGuess'
     },
 
     template: hbs.single,
@@ -14,20 +14,34 @@
     initialize: function (options) {
       var args = options || {};
 
-      // this.singleID = args.singleID,
-      // this.collection = args.collections,
+      this.singleID = args.singleID,
+      this.collection = args.collections,
 
       this.render();
       $('.container').html(this.el);
 
-    },render: function () {
-     this.collection = new app.Collections.Posts();
+    },
 
-     this.collection.fetch().done( function (data) {
+    render: function () {
 
-       var singlePost = this.collection.get(this.singleID);
-       this.$el.html(this.template(singlePost.toJSON()));
+      this.collection = new app.Collections.Posts();
 
-     }.bind(this));
+      this.collection.fetch().done( function (data) {
 
-   },
+        var singlePost = this.collection.get(this.singleID);
+        this.$el.html(this.template(singlePost.toJSON()));
+
+      }.bind(this));
+
+
+    },
+
+    makeGuess: function (e) {
+      e.preventDefault();
+      app.mainRouter.navigate('/leaderboard', {trigger: true});
+    }
+
+  });
+
+
+}());
