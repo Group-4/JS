@@ -13,8 +13,13 @@
 
     Backbone.history.start();
 
-
-
   });
+
+$('.wrapper').on('click', '#logout', function () {
+  Cookies.expire('access_token').get('access_token');
+  app.mainRouter.navigate('', { trigger: true });
+});
+
+
 
 }());

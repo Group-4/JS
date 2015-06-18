@@ -28,7 +28,9 @@
     mainPage: function(id) {
       console.log('mainPage');
       new app.Views.Main({
-      //collection: this.collection
+
+        collection: this.collection
+
       });
     },
 

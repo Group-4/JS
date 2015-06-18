@@ -20,7 +20,9 @@
       this.render();
       $('.container').html(this.el);
 
+
       app.isLoggedIn = (Cookies.get('access_token') !== undefined) ? true : false;
+
         if (app.isLoggedIn) {
           app.mainRouter.navigate('/main/:id', {trigger: true});
 
@@ -58,9 +60,6 @@
 
 
       //add new user model to data/collection and trigger main view
-
-
-
       $.post(app.rootURL + '/users/register', u.toJSON()).done ( function (data) {
         Cookies.set('access_token', data.access_token);
         Cookies.set('username', data.username);
