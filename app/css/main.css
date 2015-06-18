@@ -19,11 +19,13 @@ body {
   font-size: 62.5%;
   font-family: "Roboto", sans-serif; }
 
-input, button {
+input,
+button {
   border: none;
   border: 1px solid #ccc;
   border-radius: 3px; }
-  input:focus, button:focus {
+  input:focus,
+  button:focus {
     outline: none; }
 
 a {
@@ -49,16 +51,29 @@ header {
     margin: 0;
     overflow: hidden;
     padding: 1.5em; }
-    header .logo p {
-      margin: 0;
-      font-family: Michroma;
-      font-size: 100pt; }
-  header .social {
-    overflow: hidden;
-    float: right;
-    color: white;
-    font-size: 2em;
-    padding: 1em; }
+  header p {
+    margin: 0;
+    font-family: Michroma;
+    font-size: 120pt;
+    z-index: 1; }
+  header span {
+    font-family: Sniglet;
+    font-size: 70pt; }
+  header .fa {
+    color: #EB6015;
+    z-index: 2;
+    display: inline;
+    margin-top: -138px;
+    margin-left: 228px;
+    position: absolute;
+    font-size: 30pt; }
+
+.social {
+  overflow: hidden;
+  float: right;
+  color: white;
+  font-size: 2em;
+  padding: 1em; }
 
 /* SINGLE PAGE VIEW
 ------------------- */
