@@ -14,8 +14,8 @@
     initialize: function (options) {
       var args = options || {};
 
-      // this.singleID = args.singleID,
-      // this.collection = args.collections,
+      this.singleID = args.singleID,
+      this.collection = args.collections,
 
       this.render();
       $('.container').html(this.el);
@@ -23,8 +23,14 @@
     },
 
     render: function () {
+     this.collection = new app.Collections.Posts();
 
-      this.$el.html(this.template);
+     this.collection.fetch().done( function (data) {
+
+       var singlePost = this.collection.get(this.singleID);
+       this.$el.html(this.template(singlePost.toJSON()));
+
+     }.bind(this));
 
     },
 

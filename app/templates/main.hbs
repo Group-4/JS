@@ -22,21 +22,16 @@
 <div class="mainImages">
   <h2>LET'S PLAY!</h2>
   <button id="takemetosingleview">go to single view</button>
+
+
   <ul class="small-block-grid-3">
   {{#each image}}
   <li data-id="{{id}}">
-
-
-  <img href="#/single" src="{{ posts.url }}">
-
-  <img href="#/main" src="{{ rootURL.posts.url }}">
-
-
-
-</li>
-
-{{/each}}
-</ul>
+  <img href="#/single" src="{{ image_url }}">
+  </li>
+  {{/each}}
+  </ul>
+  </div>
 
 <div class="deleteDiv">
   <button id="#deleteButton">Delete Account</button>
