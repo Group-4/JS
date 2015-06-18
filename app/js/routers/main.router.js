@@ -17,7 +17,7 @@
       '/single/:id' : 'singlePost',
       '/leaderboard/:id' : 'leaderboardPage'
 
-    },
+      },
 
     login: function() {
       new app.Views.Login({
@@ -31,16 +31,18 @@
       });
     },
 
-    singlePost: function(id) {
-      new app.Views.Single({
-        collection: this.collection
-      });
-    },
-
     leaderboardPage: function(id) {
       new app.Views.Leaderboard({
         collection: this.collection
       })
+    },
+
+    singlePost: function () {
+      new app.Views.Single({
+        singleID: id,
+        collection: this.collection
+      })
+
     }
 
   });

@@ -59,6 +59,7 @@
 
       //get input values from form
       var self = this,
+
           form = $(event.target),
           username = form.find('#loginusername').val();
           password =  form.find('#loginpassword').val();
@@ -69,7 +70,6 @@
       loginPerson.get(this.accessToken).success(function() {
         app.mainRouter.navigate('/main', { trigger: true });
       });
-
 
     }
 
