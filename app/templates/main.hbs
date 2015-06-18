@@ -21,13 +21,13 @@
 
 <div class="mainImages">
   <h2>LET'S PLAY!</h2>
-  <button id="takemetosingleview">go to single view</button>
+
 
 
   <ul class="small-block-grid-3">
   {{#each image}}
   <li data-id="{{id}}">
-  <img href="#/single" src="{{ image_url }}">
+  <a href="#/single/{{id}}"> <img src="{{ image_url }}"></a>
   </li>
   {{/each}}
   </ul>
