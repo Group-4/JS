@@ -17,7 +17,6 @@
       'single' : 'singlePost',
       'leaderboard' : 'leaderboardPage'
 
-
       },
 
     login: function() {

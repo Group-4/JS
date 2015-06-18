@@ -21,6 +21,7 @@
   } else {
     app.mainRouter.navigate('', {trigger: true});
   }
+
   });
 
 }());

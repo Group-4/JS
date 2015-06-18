@@ -37,8 +37,18 @@ this["hbs"]["login"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"ma
     return "\n\n\n<div class=\"loginBox\">\n\n<h2>Login</h2>\n\n<div class=\"formDiv\">\n<form id=\"loginForm\" class=\"loginForm\">\n  <input type=\"text\" id=\"loginusername\" placeholder=\" username\">\n  <input type=\"password\" id=\"loginpassword\" placeholder=\" password\">\n  <button id=\"loginButton\">Login</button>\n</form>\n</div>\n\n<div class=\"registerDiv\">\n<h2>Register</h2>\n<form id=\"registerForm\" class=\"registerForm\">\n  <input type=\"email\" id=\"email\" placeholder=\" email\">\n  <input type=\"text\" id=\"regusername\" placeholder=\" username\">\n  <input type=\"password\" id=\"regpassword\" placeholder=\" password\">\n  <button id=\"registerButton\">Register</button>\n\n</form>\n\n</div>\n</div>\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
-this["hbs"]["main"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    return "";
+this["hbs"]["main"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
+    var helper;
+
+  return "  <li data-id=\""
+    + this.escapeExpression(((helper = (helper = helpers._id || (depth0 != null ? depth0._id : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"_id","hash":{},"data":data}) : helper)))
+    + "\">\n\n\n</li>\n\n";
+},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return "\n<div class=\"mainImages\">\n  <h2>LET'S PLAY!</h2>\n  <ul class=\"small-block-grid-3\">\n"
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.image : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "</ul>\n\n<div class=\"deleteDiv\">\n  <button id=\"#deleteButton\">Delete Account</button>\n</div>\n\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["single"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {

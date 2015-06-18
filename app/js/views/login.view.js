@@ -52,10 +52,12 @@
       //add new user model to data/collection and trigger main view
 
 
+
       $.post(app.rootURL + '/users/register', u.toJSON()).done ( function (data) {
         Cookies.set('access_token', data.access_token);
         Cookies.set('username', data.username);
         app.mainRouter.navigate('/single', { trigger: true });
+
 
       });
 
