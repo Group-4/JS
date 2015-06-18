@@ -29,7 +29,7 @@
     },
 
     makeGuess: function () {
-      console.log('good guess')
+      console.log('good guess');
     }
 
   });
