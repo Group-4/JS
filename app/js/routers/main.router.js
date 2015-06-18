@@ -15,8 +15,13 @@
       '' : 'login',
       'main/:id' : 'mainPage',
       'single/:id' : 'singlePost',
-      'leaderboard' : 'leaderboardPage'
+      'leaderboard' : 'leaderboardPage',
+      'newpost' : 'newPost'
 
+    },
+
+    newPost: function () {
+      new app.Views.NewPost();
     },
 
     login: function() {
@@ -36,18 +41,17 @@
     leaderboardPage: function() {
       new app.Views.Leaderboard({
         //collection: this.collection
-      })
+      });
     },
 
     singlePost: function (id) {
-        new app.Views.Single({
+      new app.Views.Single({
         singleID: id
-        })
-
-
-
+      });
     }
 
-  })
+
+  });
+
 
 }());

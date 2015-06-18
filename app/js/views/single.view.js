@@ -23,14 +23,16 @@
     },
 
     render: function () {
-     this.collection = new app.Collections.Posts();
 
-     this.collection.fetch().done( function (data) {
+      this.collection = new app.Collections.Posts();
 
-       var singlePost = this.collection.get(this.singleID);
-       this.$el.html(this.template(singlePost.toJSON()));
+      this.collection.fetch().done( function (data) {
 
-     }.bind(this));
+        var singlePost = this.collection.get(this.singleID);
+        this.$el.html(this.template(singlePost.toJSON()));
+
+      }.bind(this));
+
 
     },
 

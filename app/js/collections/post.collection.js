@@ -6,10 +6,9 @@
 
     model: app.Models.PostModel,
 
-    comparator: 'incorrect',
+    // comparator: 'incorrect',
 
     url: app.rootURL + '/posts'
-
 
   });
 
