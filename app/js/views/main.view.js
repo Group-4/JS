@@ -27,7 +27,10 @@
 
     render: function() {
 
-        this.$el.html(this.template({ image: this.collection.toJSON() }));
+        this.collection = new app.Collections.Posts();
+        this.collection.fetch().done(function (data) {
+this.$el.html(this.template({ image: this.collection.toJSON() }))
+        }.bind(this));
 
     },
 

@@ -20,19 +20,14 @@
       this.render();
       $('.container').html(this.el);
 
-    },
+    },render: function () {
+     this.collection = new app.Collections.Posts();
 
-    render: function () {
-      this.$el.html(this.template());
-      // var singlePost = this.collection.get(this.singleID);
-      // this.$el.html(this.template(singlePost.toJSON()));
-    },
+     this.collection.fetch().done( function (data) {
 
-    makeGuess: function () {
-      console.log('good guess');
-    }
+       var singlePost = this.collection.get(this.singleID);
+       this.$el.html(this.template(singlePost.toJSON()));
 
-  });
+     }.bind(this));
 
-
-}());
+   },

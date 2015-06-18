@@ -26,16 +26,16 @@
     },
 
     mainPage: function(id) {
-      console.log('mainPage');
+
       new app.Views.Main({
 
-        collection: this.collection
+        // collection: this.collection
 
       });
     },
 
     leaderboardPage: function() {
-      console.log('leaderboardPage');
+
       new app.Views.Leaderboard({
         //collection: this.collection
       })
@@ -44,7 +44,7 @@
     singlePost: function () {
 
       new app.Views.Single({
-        // singleID: id,
+        singleID: id,
         // collection: this.collection
 
       })
