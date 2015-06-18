@@ -6,7 +6,7 @@
     className: 'single',
 
     events: {
-      'click #makeGuess' : 'makeGuess'
+      'click #guessBtn' : 'makeGuess'
     },
 
     template: hbs.single,
@@ -28,8 +28,9 @@
       // this.$el.html(this.template(singlePost.toJSON()));
     },
 
-    makeGuess: function () {
-      console.log('good guess');
+    makeGuess: function (e) {
+      e.preventDefault();
+      app.mainRouter.navigate('/leaderboard', {trigger: true});
     }
 
   });

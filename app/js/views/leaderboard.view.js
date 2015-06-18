@@ -6,6 +6,10 @@
 
     className: 'leaderboard',
 
+    events: {
+      'click #keepPlaying' : 'keepPlaying'
+    },
+
     template: hbs.leaderboard,
 
     initialize: function(options){
@@ -18,6 +22,11 @@
 
     render: function() {
       this.$el.html(this.template());
+    },
+
+    keepPlaying: function(e) {
+      e.preventDefault();
+      app.mainRouter.navigate('/main/:id', {trigger: true});
     }
 
   });

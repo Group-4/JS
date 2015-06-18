@@ -28,7 +28,7 @@ this["hbs"]["leaderboard"] = Handlebars.template({"1":function(depth0,helpers,pa
     + alias3(((helper = (helper = helpers.guessAnswer || (depth0 != null ? depth0.guessAnswer : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"guessAnswer","hash":{},"data":data}) : helper)))
     + "</h3>\n\n<p>Your score is now: "
     + alias3(((helper = (helper = helpers.score || (depth0 != null ? depth0.score : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"score","hash":{},"data":data}) : helper)))
-    + "</p>\n\n\n</div><!--end of congratsDiv-->\n\n\n<div class=\"leaderboardDiv\">\n\n<h2>Here's where you stand on the Leaderboard:</h2>\n\n<ul id=\"leaderboardList\" class=\"leaderboardList\">\n"
+    + "</p>\n\n<div class=\"keepPlayingDiv\">\n  <button class=\"keepPlaying\" id=\"keepPlaying\">Keep Playing</button>\n\n</div>\n\n\n</div><!--end of congratsDiv-->\n\n\n<div class=\"leaderboardDiv\">\n\n<h2>Here's where you stand on the Leaderboard:</h2>\n\n<ul id=\"leaderboardList\" class=\"leaderboardList\">\n"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.user : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "</li>\n</ul>\n\n\n</div><!-- end of leaderboardDiv -->\n";
 },"useData":true});
@@ -38,15 +38,21 @@ this["hbs"]["login"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"ma
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["main"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
-    var helper;
+    var stack1, helper, alias1=this.escapeExpression;
 
   return "  <li data-id=\""
-    + this.escapeExpression(((helper = (helper = helpers._id || (depth0 != null ? depth0._id : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"_id","hash":{},"data":data}) : helper)))
+    + alias1(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
+    + "\">\n\n  <img href=\"#/single\" src=\""
+    + alias1(this.lambda(((stack1 = (depth0 != null ? depth0.posts : depth0)) != null ? stack1.url : stack1), depth0))
     + "\">\n\n\n</li>\n\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    var stack1;
+    var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
-  return "\n<div class=\"mainImages\">\n  <h2>LET'S PLAY!</h2>\n  <ul class=\"small-block-grid-3\">\n"
+  return "  <aside>\n      <div class=\"innerAside\">\n        <div class=\"asideTop\">\n          <h4>USERNAME</h4>\n          <div class=\"avatar\">\n            <img src=\"http://placehold.it/100x100\">\n          </div>\n          <div class=\"score\">\n            <p>Current score: </p>\n          </div>\n        </div>\n        <div class=\"leaderboardSection\">\n          <h4>Leaderboard</h4>\n          <ul id=\"leaderboard\" class=\"leaderboard\">\n            <li>"
+    + alias3(((helper = (helper = helpers.username || (depth0 != null ? depth0.username : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"username","hash":{},"data":data}) : helper)))
+    + ": </li>\n            <li>"
+    + alias3(((helper = (helper = helpers.username || (depth0 != null ? depth0.username : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"username","hash":{},"data":data}) : helper)))
+    + ": </li>\n          </ul>\n        </div>\n        </div>\n    </aside>\n\n<div class=\"mainImages\">\n  <h2>LET'S PLAY!</h2>\n  <button id=\"takemetosingleview\">go to single view</button>\n  <ul class=\"small-block-grid-3\">\n"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.image : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "</ul>\n\n<div class=\"deleteDiv\">\n  <button id=\"#deleteButton\">Delete Account</button>\n</div>\n\n";
 },"useData":true});

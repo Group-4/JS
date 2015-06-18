@@ -43,11 +43,14 @@
 
     singlePost: function () {
 
+      var allPosts = new app.Collections.Posts();
+      allPosts.fetch().done(function() {
       new app.Views.Single({
         // singleID: id,
         // collection: this.collection
+        })
 
-      })
+      });
     }
 
   });
