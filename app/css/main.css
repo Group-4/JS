@@ -19,11 +19,13 @@ body {
   font-size: 62.5%;
   font-family: "Roboto", sans-serif; }
 
-input, button {
+input,
+button {
   border: none;
   border: 1px solid #ccc;
   border-radius: 3px; }
-  input:focus, button:focus {
+  input:focus,
+  button:focus {
     outline: none; }
 
 a {
@@ -38,6 +40,7 @@ ul {
 ---------- */
 header {
   width: 100%;
+  height: 20%;
   background-color: #225378;
   overflow: hidden; }
   header .innerHeader {
@@ -48,17 +51,37 @@ header {
     color: #F3FFE2;
     margin: 0;
     overflow: hidden;
-    padding: 1.5em; }
-    header .logo p {
-      margin: 0;
-      font-family: Michroma;
-      font-size: 100pt; }
-  header .social {
-    overflow: hidden;
-    float: right;
-    color: white;
-    font-size: 2em;
     padding: 1em; }
+  header p {
+    margin: 0;
+    font-family: Electrolize;
+    font-size: 150pt;
+    z-index: 1; }
+  header span {
+    font-family: Fontdiner Swanky;
+    font-size: 55pt; }
+  header .fa {
+    color: #EB6015;
+    z-index: 2;
+    display: inline;
+    margin-top: -185px;
+    margin-left: 55px;
+    position: absolute;
+    font-size: 30pt; }
+
+.social {
+  overflow: hidden;
+  float: right;
+  color: white;
+  font-size: 2em;
+  padding: 1em; }
+
+p#logout,
+p#homeButton {
+  font-size: 12pt;
+  color: white;
+  margin-left: 0;
+  float: left; }
 
 /* SINGLE PAGE VIEW
 ------------------- */

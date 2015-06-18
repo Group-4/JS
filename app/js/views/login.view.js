@@ -20,7 +20,9 @@
       this.render();
       $('.container').html(this.el);
 
-        app.isLoggedIn = (Cookies.get('access_token') !== undefined) ? true : false;
+
+      app.isLoggedIn = (Cookies.get('access_token') !== undefined) ? true : false;
+
         if (app.isLoggedIn) {
           app.mainRouter.navigate('/main/:id', {trigger: true});
 

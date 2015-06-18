@@ -14,10 +14,17 @@
 
   });
 
-$('.wrapper').on('click', '#logout', function () {
+$('.wrapper').on('click', '#logout', function (e) {
+  e.preventDefault();
   Cookies.expire('access_token').get('access_token');
   app.mainRouter.navigate('', { trigger: true });
 });
+
+$('.wrapper').on('click', '#homeButton', function (e) {
+  e.preventDefault();
+  app.mainRouter.navigate('/main/:id', { trigger: true });
+});
+
 
 
 }());

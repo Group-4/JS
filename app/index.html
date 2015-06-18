@@ -1,56 +1,46 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Project Name</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link href="http://fonts.googleapis.com/css?family=Philosopher|Raleway|Roboto|Michroma" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="css/vendor/font-awesome.css">
-
-  <link rel="stylesheet" href="css/vendor/normalize.css">
-  <link rel="stylesheet" href="css/vendor/foundation.css">
-  <link rel="stylesheet" href="css/vendor/font-awesome.css">
-
-  <link rel="stylesheet" href="css/main.css">
+    <title>Qpic</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="http://fonts.googleapis.com/css?family=Philosopher|Raleway|Roboto|Michroma|Sniglet|Fontdiner Swanky|Aldrich|Electrolize" rel="stylesheet" type="text/css">
+    <link href="css/vendor/font-awesome.css" rel="stylesheet">
+    <link href="css/vendor/normalize.css" rel="stylesheet">
+    <link href="css/vendor/foundation.css" rel="stylesheet">
+    <link href="css/vendor/font-awesome.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
 </head>
+
+
 <body>
+    <div class="wrapper">
+        <header>
+            <div class="innerHeader">
+                <div class="logo">
+                    <p>Q<span>pic</span></p>
+                    <i class="fa fa-camera"></i>
+                </div>
+            </div>
+            <div class="social">
+                <i class="fa fa-facebook-square"></i>
+                <i class="fa fa-twitter-square"></i>
+                <i class="fa fa-apple"></i>
+                <i class="fa fa-envelope-o"></i>
+            </div>
+            <div class="logoutDiv">
+                <p class="logout" id="logout"> Logout </p>
+            </div>
 
-<div class="wrapper">
+            <div class="takeMeHomeDiv">
+                <p class="homeButton" id="homeButton"> Home </p>
+            </div>
 
+        </header>
 
-  <header>
-    <div class="innerHeader">
-      <div class="logo">
-        <p>Q</p>
-        <i class="fa fa-camera fa-3x"></i>
-      </div>
-      <div class="social">
-        <i class="fa fa-facebook-square"></i>
-        <i class="fa fa-twitter-square"></i>
-        <i class="fa fa-apple"></i>
-        <i class="fa fa-envelope-o"></i>
-      </div>
-      <div class="logoutDiv">
-        <p class="logout" id="logout">Logout</p>
-      </div>
+      <div class="container"></div>
+
     </div>
-  </header>
-
-  <div class="container">
-
-
-
-  </div>
-
-</div>
-
-  <!-- VENDOR -->
-  <script src="js/vendor/jquery.js"></script>
-  <script src="js/vendor/underscore.js"></script>
-  <script src="js/vendor/handlebars.js"></script>
-  <script src="js/vendor/backbone.js"></script>
-  <script src="js/vendor/cookies.js"></script>
-
 
   <!-- TEMPLATES -->
   <script src="js/templates.js"></script>
@@ -60,25 +50,28 @@
 
 
   <!-- CONSTRUCTOR FILES -->
- <script src="js/models/user.model.js"></script>
- <script src="js/models/post.model.js"></script>
- <script src="js/models/guess.model.js"></script>
+  <script src="js/models/user.model.js"></script>
+  <script src="js/models/post.model.js"></script>
+  <script src="js/models/guess.model.js"></script>
 
- <script src="js/collections/user.collection.js"></script>
- <script src="js/collections/post.collection.js"></script>
- <script src="js/collections/guess.collection.js"></script>
+  <script src="js/collections/user.collection.js"></script>
+  <script src="js/collections/post.collection.js"></script>
+  <script src="js/collections/guess.collection.js"></script>
 
- <script src="js/views/login.view.js"></script>
- <script src="js/views/main.view.js"></script>
- <script src="js/views/single.view.js"></script>
- <script src="js/views/leaderboard.view.js"></script>
- <script src="js/views/newpost.view.js"></script>
+  <script src="js/views/login.view.js"></script>
+  <script src="js/views/main.view.js"></script>
+  <script src="js/views/single.view.js"></script>
+  <script src="js/views/leaderboard.view.js"></script>
+  <script src="js/views/newpost.view.js"></script>
 
 
- <script src="js/routers/main.router.js"></script>
+  <script src="js/routers/main.router.js"></script>
 
   <!-- MAIN -->
   <script src="js/main.js"></script>
 
+
+
 </body>
+
 </html>

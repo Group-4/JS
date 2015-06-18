@@ -18,7 +18,7 @@
       'leaderboard' : 'leaderboardPage',
       'newpost' : 'newPost'
 
-      },
+    },
 
     newPost: function () {
       new app.Views.NewPost();
@@ -32,7 +32,9 @@
 
     mainPage: function(id) {
       new app.Views.Main({
+
         collection: this.collection
+
       });
     },
 
@@ -51,5 +53,6 @@
 
 
   });
+
 
 }());
