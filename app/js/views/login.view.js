@@ -47,7 +47,6 @@
       });
 
       //add new user model to data/collection and trigger main view
-
       $.post(app.rootURL + '/users/register', u.toJSON()).done ( function () {
         app.mainRouter.navigate('/single', { trigger: true });
       });
