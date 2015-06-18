@@ -8,8 +8,7 @@
 
     comparator: 'incorrect',
 
-    url: app.rootURL //+ endpoint
-
+    url: app.rootURL + /posts
 
 
   });

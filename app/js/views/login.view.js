@@ -4,7 +4,6 @@
 
   app.Views.Login = Backbone.View.extend({
 
-
     className: 'login',
 
     events: {
@@ -38,7 +37,9 @@
           form = $(event.target),
           username = form.find('#regusername').val(),
           email = form.find('#email').val(),
-          password =  form.find('#regpassword').val()
+          password =  form.find('#regpassword').val();
+
+
 
       //new instance of user model
       var u = new app.Models.UserModel({
@@ -49,10 +50,13 @@
 
 
       //add new user model to data/collection and trigger main view
-      $.post(app.rootURL + '/users/register', u.toJSON()).done(function() {
-        app.mainRouter.navigate('/single', {trigger:true});
+
+
+      $.post(app.rootURL + '/users/register', u.toJSON()).done ( function () {
+        app.mainRouter.navigate('/single', { trigger: true });
 
       });
+
     },
 
     //log in existing user function
@@ -73,8 +77,8 @@
 
       var loginPerson = {username: username, password: password};
 
-      $.post(app.rootURL + '/users/login', loginPerson).done(function() {
-        app.mainRouter.navigate('/single', {trigger:true});
+      $.post(app.rootURL + '/users/login', loginPerson).done( function () {
+        app.mainRouter.navigate('/single', { trigger: true });
 
       });
 
@@ -89,7 +93,6 @@
 //   Cookies.set('username', data.username);
 
 // });
-
 
 
 
