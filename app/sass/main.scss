@@ -68,24 +68,28 @@ header {
         color: $light;
         margin: 0;
         overflow: hidden;
-        padding: 1.5em;
+        padding: 1em;
     }
     p {
         margin: 0;
-        font-family: Michroma;
-        font-size: 120pt;
+        // font-family: Michroma;
+        // font-family: Aldrich;
+        font-family: Electrolize;
+        font-size: 150pt;
         z-index: 1;
     }
     span {
-        font-family: Sniglet;
-        font-size: 70pt;
+        // font-family: Sniglet;
+        font-family: Fontdiner Swanky;
+        font-size: 55pt;
+
     }
     .fa {
         color: #EB6015;
         z-index: 2;
         display: inline;
-        margin-top: -138px;
-        margin-left: 228px;
+        margin-top: -185px;
+        margin-left: 55px;
         position: absolute;
         font-size: 30pt;
     }
