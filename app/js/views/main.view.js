@@ -8,39 +8,29 @@
     className: 'main',
 
     events: {
-        'click #play': 'playGame',
-        'click #image': 'displayImage',
+
+        'click #image': 'playGame',
         'click #delete': 'deleteAccount',
-        'click #sidebar': 'showSidebar',
-        'click #score': 'displayScore',
-        'click #leaderboard': 'displayLeaderboard'
     },
+template: hbs.main,
 
     initialize: function(options) {
 
         var args = options || {};
-
-        this.singleID = args.singleID;
-        this.collection = args.collection;
-
         this.render();
         $('.container').html(this.el);
     },
 
     render: function() {
 
-        this.$el.html(this.template(this.user.model.attributes));
+        this.$el.html(this.template(this.template())
         return this;
     },
+// CLICK ON IMAGE BEGINS GAME PLAY
+// GAME OPENS IN A NEW URL
+    playGame: function() {
+        window.open(this.model.get("url"));
 
-    open: function() {
-        window.open(this.user.model.get("url")); // JAIME & KELLY - WILL USER GET UNIQUE URL? MEANING, WHERE THEY LEFT OFF IN THE GAME?  IS THAT DRIVEN BY COOKIES OR POST ID THAT WILL BE HIDDEN?
-    },
-
-    select: function() {
-        this.user.model.set({
-            selected: true
-        });
     },
 
 
@@ -53,6 +43,8 @@
         });
 
     },
+
+    // DELETING ACCOUNT
 deleteAccount: function (event) {
 
       event.preventDefault();
