@@ -4,12 +4,11 @@
 
   app.Views.Login = Backbone.View.extend({
 
-
     className: 'login',
 
     events: {
-      'submit #registerButton' : 'registerUser',
-      'submit #loginButton' : 'loginUser'
+      'submit #registerForm' : 'registerUser',
+      'submit #loginForm' : 'loginUser'
     },
 
     template: hbs.login,
@@ -32,12 +31,15 @@
     registerUser: function(e) {
       e.preventDefault();
 
+
       //get input values from form
       var self = this,
           form = $(event.target),
-          username = form.find('#regusername').val();
-          email = form.find('#email').val();
+          username = form.find('#regusername').val(),
+          email = form.find('#email').val(),
           password =  form.find('#regpassword').val();
+
+
 
       //new instance of user model
       var u = new app.Models.UserModel({
@@ -46,35 +48,51 @@
         password: password
       });
 
+
       //add new user model to data/collection and trigger main view
-      this.collection.add(u).save().success( function() {
-        // app.mainRouter.navigate('/main', { trigger: true });
+
+
+      $.post(app.rootURL + '/users/register', u.toJSON()).done ( function () {
+        app.mainRouter.navigate('/single', { trigger: true });
 
       });
+
     },
 
     //log in existing user function
     loginUser: function(e) {
       e.preventDefault();
 
+
       //get input values from form
       var self = this,
-
           form = $(event.target),
-          username = form.find('#loginusername').val();
+          username = form.find('#loginusername').val(),
           password =  form.find('#loginpassword').val();
+
+
 
       //get data from database to make sure user has access token
       //then trigger main view upon success
-      var loginPerson = this.collection.get(this.userID);
-      loginPerson.get(this.accessToken).success(function() {
-        app.mainRouter.navigate('/main', { trigger: true });
+
+      var loginPerson = {username: username, password: password};
+
+      $.post(app.rootURL + '/users/login', loginPerson).done( function () {
+        app.mainRouter.navigate('/single', { trigger: true });
+
       });
+
 
     }
 
 
   });
+
+// this.collection.add(userInstance).save().success(function(data) {
+//   Cookies.set('access_token', data.access_token);
+//   Cookies.set('username', data.username);
+
+// });
 
 
 
