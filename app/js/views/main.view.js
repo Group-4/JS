@@ -3,7 +3,7 @@
   'use strict';
 
 
-  app.Views.Main = Backbone.View.extend({
+  app.Views.Main = Backbone.View.extend ({
 
     className: 'main',
 
@@ -12,7 +12,8 @@
         'click #image': 'playGame',
         'click #delete': 'deleteAccount',
     },
-template: hbs.main,
+
+    template: hbs.main,
 
     initialize: function(options) {
 
@@ -23,7 +24,7 @@ template: hbs.main,
 
     render: function() {
 
-        this.$el.html(this.template(this.template())
+        this.$el.html(this.template(this.template()))
         return this;
     },
 // CLICK ON IMAGE BEGINS GAME PLAY
@@ -56,9 +57,9 @@ deleteAccount: function (event) {
         deleteAccount.destroy().success( function () {
            app.mainRouter.navigate('', { trigger: true });
         });
+      }
+  }
 
-
-
-  });
+});
 
 }());

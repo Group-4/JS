@@ -8,7 +8,7 @@
 
     comparator: 'incorrect',
 
-    url: app.rootURL + /posts
+    url: app.rootURL + '/posts'
 
 
   });

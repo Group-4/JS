@@ -53,7 +53,7 @@
 
 
       $.post(app.rootURL + '/users/register', u.toJSON()).done ( function () {
-        app.mainRouter.navigate('/single', { trigger: true });
+        app.mainRouter.navigate('/main', { trigger: true });
 
       });
 
@@ -87,13 +87,6 @@
 
 
   });
-
-// this.collection.add(userInstance).save().success(function(data) {
-//   Cookies.set('access_token', data.access_token);
-//   Cookies.set('username', data.username);
-
-// });
-
 
 
 }());

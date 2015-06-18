@@ -16,8 +16,6 @@
       'main/:id' : 'mainPage',
       'single' : 'singlePost',
       'leaderboard/:id' : 'leaderboardPage'
-
-
       },
 
     login: function() {
