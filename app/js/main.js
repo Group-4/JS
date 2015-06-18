@@ -13,15 +13,12 @@
 
     Backbone.history.start();
 
-
-  app.isLoggedIn = (Cookies.get('access_token') !== undefined) ? true : false;
-  if (app.isLoggedIn) {
-    app.mainRouter.navigate('/single', {trigger: true});
-
-  } else {
-    app.mainRouter.navigate('', {trigger: true});
-  }
-
   });
+
+$('.wrapper').on('click', '#logout', function () {
+  Cookies.expire('access_token').get('access_token');
+  app.mainRouter.navigate('', { trigger: true });
+});
+
 
 }());
