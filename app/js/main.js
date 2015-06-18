@@ -6,7 +6,6 @@
 
   allUsers.fetch().done( function() {
 
-
     app.mainRouter = new app.Routers.MainRouter({
       collection: allUsers
     });
