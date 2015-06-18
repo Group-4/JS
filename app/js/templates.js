@@ -38,7 +38,7 @@ this["hbs"]["login"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"ma
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["main"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    return "";
+    return "\n<div class=\"mainImages\">\n  <h2>LET'S PLAY!</h2>\n  <div class=\"col1 row1 p1\"><img id=\"#image1\" src=\"\"></div>\n  <div class=\"col2 row2 p2\"><img id=\"#image2\" src=\"\"></div>\n  <div class=\"col3 row3 p3\"><img id=\"#image3\" src=\"\"></div>\n  <div class=\"col2 row1 p4\"><img id=\"#image4\" src=\"\"></div>\n  <div class=\"col2 row2 p5\"><img id=\"#image5\" src=\"\"></div>\n  <div class=\"col2 row3 p6\"><img id=\"#image6\" src=\"\"></div>\n  <div class=\"col3 row1 p7\"><img id=\"#image7\" src=\"\"></div>\n  <div class=\"col3 row2 p8\"><img id=\"#image8\" src=\"\"></div>\n  <div class=\"col3 row3 p9\"><img id=\"#image9\" src=\"\"></div>\n</div>\n\n<div class=\"deleteDiv\">\n  <button id=\"#deleteButton\">Delete Account</button>\n</div>\n\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["single"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
