@@ -1,147 +1,153 @@
 @import "../css/vendor/bourbon/bourbon";
 @import "../css/vendor/neat/neat";
-
 /* DECLARATIONS
 ---------------- */
+
 $darkblue: #225378;
 $teal: #1695A3;
 $lightblue: #ACF0F2;
 $orange: #EB6015;
 $light: #F3FFE2;
-
-$philosopher: 'Philosopher', sans-serif;
-$raleway: 'Raleway', sans-serif;
-$roboto: 'Roboto', sans-serif;
-
+$philosopher: 'Philosopher',
+sans-serif;
+$raleway: 'Raleway',
+sans-serif;
+$roboto: 'Roboto',
+sans-serif;
 /* MIXINS
 ---------- */
 
 @mixin border() {
-  border: 1px solid #ccc;
-  border-radius: 3px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
 }
-
 /* GLOBAL
 ----------- */
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  font-size: 62.5%;
-  font-family: $roboto;
+    font-size: 62.5%;
+    font-family: $roboto;
 }
 
-input, button {
-  border: none;
-  @include border();
-
-  &:focus {
-    outline: none;
-  }
-
+input,
+button {
+    border: none;
+    @include border();
+    &:focus {
+        outline: none;
+    }
 }
 
 a {
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 ul {
-  list-style: none;
+    list-style: none;
 }
-
 /* HEADER
 ---------- */
 
 header {
-  width: 100%;
-  background-color: $darkblue;
-  overflow: hidden;
-
-  .innerHeader {
-    width: 80%;
-    margin: auto;
-  }
-
-  .logo {
-    float: left;
-    color: $light;
-    margin: 0;
+    width: 100%;
+    height: 20%;
+    background-color: $darkblue;
     overflow: hidden;
-    padding: 1.5em;
-
+    .innerHeader {
+        width: 80%;
+        margin: auto;
+    }
+    .logo {
+        float: left;
+        color: $light;
+        margin: 0;
+        overflow: hidden;
+        padding: 1em;
+    }
     p {
-      margin: 0;
-      font-family: Michroma;
-      font-size: 100pt;
+        margin: 0;
+        // font-family: Michroma;
+        // font-family: Aldrich;
+        font-family: Electrolize;
+        font-size: 150pt;
+        z-index: 1;
+    }
+    span {
+        // font-family: Sniglet;
+        font-family: Fontdiner Swanky;
+        font-size: 55pt;
 
     }
+    .fa {
+        color: #EB6015;
+        z-index: 2;
+        display: inline;
+        margin-top: -185px;
+        margin-left: 55px;
+        position: absolute;
+        font-size: 30pt;
+    }
+}
 
-  }
-
-  .social {
+.social {
     overflow: hidden;
     float: right;
     color: white;
     font-size: 2em;
     padding: 1em;
-  }
 }
 
-
+p#logout,
+p#homeButton {
+    font-size: 12pt;
+    color: white;
+    margin-left: 0;
+    float: left;
+}
 /* SINGLE PAGE VIEW
 ------------------- */
 
 .container {
-  overflow: hidden;
-  @include outer-container(100%);
-
-  aside {
-    @include span-columns(3);
-    background-color: $light;
-    height: 100vh;
-
-    .innerAside {
-      width: 90%;
-      margin: auto;
-      text-align: center;
-
-      h4 {
-        margin-top: 1em;
-      }
-    }
-
-    .asideTop {
-      margin-top: 2em;
-      border-bottom: 1px solid $darkblue;
-
-      .avatar {
-        margin: 2em;
-
-        img {
-          border-radius: 50%;
+    overflow: hidden;
+    @include outer-container(100%);
+    aside {
+        @include span-columns(3);
+        background-color: $light;
+        height: 100vh;
+        .innerAside {
+            width: 90%;
+            margin: auto;
+            text-align: center;
+            h4 {
+                margin-top: 1em;
+            }
         }
-      }
+        .asideTop {
+            margin-top: 2em;
+            border-bottom: 1px solid $darkblue;
+            .avatar {
+                margin: 2em;
+                img {
+                    border-radius: 50%;
+                }
+            }
+        }
+        ul {
+            margin: 0;
+            margin-top: 1em;
+            li {}
+        }
     }
-
-    ul {
-      margin: 0;
-      margin-top: 1em;
-
-      li {
-
-      }
+    .singleMain {
+        @include span-columns(9);
+        text-align: center;
+        margin-top: 2em;
     }
-  }
-
-  .singleMain {
-    @include span-columns(9);
-    text-align: center;
-    margin-top: 2em;
-  }
 }
