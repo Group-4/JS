@@ -38,18 +38,15 @@ this["hbs"]["login"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"ma
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["main"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
-    var stack1, helper, alias1=this.escapeExpression;
+    var stack1, helper, alias1=this.escapeExpression, alias2=this.lambda;
 
   return "  <li data-id=\""
     + alias1(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
-<<<<<<< HEAD
-    + "\">\n\n  <img href=\"#/single\" src=\""
-    + alias1(this.lambda(((stack1 = (depth0 != null ? depth0.posts : depth0)) != null ? stack1.url : stack1), depth0))
-=======
+    + "\">\n\n\n  <img href=\"#/single\" src=\""
+    + alias1(alias2(((stack1 = (depth0 != null ? depth0.posts : depth0)) != null ? stack1.url : stack1), depth0))
     + "\">\n\n  <img href=\"#/main\" src=\""
-    + alias1(this.lambda(((stack1 = ((stack1 = (depth0 != null ? depth0.rootURL : depth0)) != null ? stack1.posts : stack1)) != null ? stack1.url : stack1), depth0))
->>>>>>> d6165bf54a035259802081e22e21a9c63dd0b6b5
-    + "\">\n\n\n</li>\n\n";
+    + alias1(alias2(((stack1 = ((stack1 = (depth0 != null ? depth0.rootURL : depth0)) != null ? stack1.posts : stack1)) != null ? stack1.url : stack1), depth0))
+    + "\">\n\n\n\n</li>\n\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
