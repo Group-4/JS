@@ -30,9 +30,9 @@
       e.preventDefault();
 
       var self = this,
-          form = $(event.target),
-          email =
-          password =
+          form = $(event.target)
+          // email =
+          // password =
     }
 
 

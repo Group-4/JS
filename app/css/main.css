@@ -51,3 +51,49 @@ header {
     padding: 1.5em; }
     header .logo p {
       margin: 0; }
+
+/* SINGLE PAGE VIEW
+------------------- */
+.container {
+  overflow: hidden;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+  .container::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .container aside {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%;
+    background-color: #F3FFE2;
+    height: 100vh; }
+    .container aside:last-child {
+      margin-right: 0; }
+    .container aside .innerAside {
+      width: 90%;
+      margin: auto;
+      text-align: center; }
+      .container aside .innerAside h4 {
+        margin-top: 1em; }
+    .container aside .asideTop {
+      margin-top: 2em;
+      border-bottom: 1px solid #225378; }
+      .container aside .asideTop .avatar {
+        margin: 2em; }
+        .container aside .asideTop .avatar img {
+          border-radius: 50%; }
+    .container aside ul {
+      margin: 0;
+      margin-top: 1em; }
+  .container .singleMain {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 74.41059%;
+    text-align: center;
+    margin-top: 2em; }
+    .container .singleMain:last-child {
+      margin-right: 0; }

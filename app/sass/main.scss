@@ -81,3 +81,56 @@ header {
 
   }
 }
+
+
+/* SINGLE PAGE VIEW
+------------------- */
+
+.container {
+  overflow: hidden;
+  @include outer-container(100%);
+
+  aside {
+    @include span-columns(3);
+    background-color: $offwhite;
+    height: 100vh;
+
+    .innerAside {
+      width: 90%;
+      margin: auto;
+      text-align: center;
+
+      h4 {
+        margin-top: 1em;
+      }
+    }
+
+    .asideTop {
+      margin-top: 2em;
+      border-bottom: 1px solid $darkblue;
+
+      .avatar {
+        margin: 2em;
+
+        img {
+          border-radius: 50%;
+        }
+      }
+    }
+
+    ul {
+      margin: 0;
+      margin-top: 1em;
+
+      li {
+
+      }
+    }
+  }
+
+  .singleMain {
+    @include span-columns(9);
+    text-align: center;
+    margin-top: 2em;
+  }
+}

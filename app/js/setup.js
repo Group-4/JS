@@ -8,8 +8,9 @@
   window.app.Views = {};
   window.app.Routers = {};
 
-  app.rootURL = 'http://tiyqpic.herokuapp.com';
+  // app.rootURL = 'http://tiy-515.herokuapp.com/collections/group4test';
 
+  app.rootURL = 'http://tiyqpic.herokuapp.com';
 
 
 }());

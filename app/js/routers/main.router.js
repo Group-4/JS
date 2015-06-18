@@ -12,11 +12,20 @@
 
     routes: {
 
-      '' : 'login'
+      '' : 'login',
+      'user/post/:id' : 'singlePost'
+
     },
 
     login: function() {
       new app.Views.Login({
+        collection: this.collection
+      });
+    },
+
+    singlePost: function () {
+      new app.Views.Single({
+        singleID: id,
         collection: this.collection
       });
     }
