@@ -43,7 +43,7 @@ this["hbs"]["main"] = Handlebars.template({"1":function(depth0,helpers,partials,
   return "  <li data-id=\""
     + alias1(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
     + "\">\n\n  <img href=\"#/single\" src=\""
-    + alias1(this.lambda(((stack1 = (depth0 != null ? depth0.posts : depth0)) != null ? stack1.url : stack1), depth0))
+    + alias1(this.lambda(((stack1 = ((stack1 = (depth0 != null ? depth0.rootURL : depth0)) != null ? stack1.posts : stack1)) != null ? stack1.url : stack1), depth0))
     + "\">\n\n\n</li>\n\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
