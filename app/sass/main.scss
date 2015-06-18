@@ -7,7 +7,7 @@ $darkblue: #225378;
 $teal: #1695A3;
 $lightblue: #ACF0F2;
 $orange: #EB6015;
-$offwhite: #F3FFE2;
+$light: #F3FFE2;
 
 $philosopher: 'Philosopher', sans-serif;
 $raleway: 'Raleway', sans-serif;
@@ -70,7 +70,7 @@ header {
 
   .logo {
     float: left;
-    color: $offwhite;
+    color: $light;
     margin: 0;
     overflow: hidden;
     padding: 1.5em;
@@ -79,5 +79,66 @@ header {
       margin: 0;
     }
 
+  }
+
+  .social {
+    overflow: hidden;
+    float: right;
+    color: white;
+    font-size: 2em;
+    padding: 1em;
+  }
+}
+
+
+/* SINGLE PAGE VIEW
+------------------- */
+
+.container {
+  overflow: hidden;
+  @include outer-container(100%);
+
+  aside {
+    @include span-columns(3);
+    background-color: $light;
+    height: 100vh;
+
+    .innerAside {
+      width: 90%;
+      margin: auto;
+      text-align: center;
+
+      h4 {
+        margin-top: 1em;
+      }
+    }
+
+    .asideTop {
+      margin-top: 2em;
+      border-bottom: 1px solid $darkblue;
+
+      .avatar {
+        margin: 2em;
+
+        img {
+          border-radius: 50%;
+        }
+      }
+    }
+
+    ul {
+      margin: 0;
+      margin-top: 1em;
+
+      li {
+
+      }
+    }
+  }
+
+  .singleMain {
+    @include span-columns(9);
+    text-align: center;
+    margin-top: 2em;
   }
 }
