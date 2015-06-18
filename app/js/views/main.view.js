@@ -20,6 +20,8 @@
         var args = options || {};
         this.render();
         $('.container').html(this.el);
+
+
     },
 
     render: function() {
@@ -27,6 +29,14 @@
         this.$el.html(this.template(this.template()))
         return this;
     },
+
+
+
+
+
+
+
+
 // CLICK ON IMAGE BEGINS GAME PLAY
 // GAME OPENS IN A NEW URL
     image: function() {

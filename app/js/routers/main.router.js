@@ -27,9 +27,9 @@
 
     mainPage: function(id) {
       console.log('mainPage');
-      // new app.Views.Main({
-      //   //collection: this.collection
-      // });
+      new app.Views.Main({
+      //collection: this.collection
+      });
     },
 
     leaderboardPage: function() {
