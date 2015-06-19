@@ -1,75 +1,62 @@
-;
-(function() {
+;(function() {
 
-        'use strict';
+  'use strict';
 
+  app.Views.Main = Backbone.View.extend({
+    className: 'main',
 
-        app.Views.Main = Backbone.View.extend({
-
-                className: 'main',
-
-                events: {
-
-
-        'click #delete': 'deleteAccount',
-
+    events: {
+    'click #delete': 'deleteAccount',
     },
 
+  template: hbs.main,
 
-                template: hbs.main,
+  initialize: function(options) {
+    var args = options || {};
+    this.collection = args.collection;
+    this.render();
+    $('.container').html(this.el);
+  },
 
-                initialize: function(options) {
+  render: function() {
 
-                    var args = options || {};
-                    this.collection = args.collection;
-                    this.render();
-                    $('.container').html(this.el);
+    this.collection = new app.Collections.Posts();
 
+    this.collection.fetch().done(function(data) {
 
-                },
+    this.$el.html(this.template({image: this.collection.toJSON()}))
+    }.bind(this));
 
-                render: function() {
-                    this.collection = new app.Collections.Posts();
+  // TRINI ADDED THIS
+    this.collection.fetch().done(function(data) {
 
-                    this.collection.fetch().done(function(data) {
-                        this.$el.html(this.template({
-                            image: this.collection.toJSON()
-                        }))
-                    }.bind(this));
+      var picOwner = this.collection.get(this.owner);
+      this.$el.html(this.template(picOwner.toJSON()));
+    }.bind(this));
 
-                    // TRINI ADDED THIS
+    this.collection.fetch().done(function(data) {
+      var correctSolves = this.collection.get(this.solved);
+      this.$el.html(this.template(correctSolves.toJSON()));
+    }.bind(this));
 
-                    this.$el.html(this.template({
-                        owner: this.collection.toJSON()
-                    }))
-                }.bind(this));
+    },
+// DELETING ACCOUNT
+deleteAccount: function(event) {
+event.preventDefault();
 
-            this.$el.html(this.template({
-                solved: this.collection.toJSON()
-            }))
-        }.bind(this));
+var button = event.target;
+var modelID = $(button).data('id');
 
-},
+if (window.confirm("Delete your Qpic account?")) {
+    this.collection.destroy().success(function() {
+        app.mainRouter.navigate('', {
+            trigger: true
+          });
+       });
 
-
-
-    // DELETING ACCOUNT
-    deleteAccount: function(event) {
-
-        event.preventDefault();
-
-        var button = event.target;
-        var modelID = $(button).data('id');
-
-        if (window.confirm("Delete your Qpic account?")) {
-            this.collection.destroy().success(function() {
-                app.mainRouter.navigate('', {
-                    trigger: true
-                });
-            });
-        }
+      }
     }
 
-});
-
+  });
 }());
+
