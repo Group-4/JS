@@ -31,13 +31,11 @@
   <li data-id="{{id}}">
     <div class="imageWrap">
       <a href="#/single/{{id}}"><img src="{{ image_url }}"></a>
-
+    </div>
 
   {{!-- TRINI ADDED THIS FOR OWNER & NUMBER OF CORRECT/INCORRECT ANSWERS --}}
-{{!--   <li data-id="{{ user_id }}"> "{{ owner }}" "{{ answer }}" --}}
 
-
-  </li>
+    <li data-id="{{ user_id }}"> "{{ owner }}" "{{ answer }}" "{{solved_by}}"</li>
   {{/each}}
   </ul>
   </div>

@@ -46,7 +46,15 @@ this["hbs"]["main"] = Handlebars.template({"1":function(depth0,helpers,partials,
     + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
     + "\"><img src=\""
     + alias3(((helper = (helper = helpers.image_url || (depth0 != null ? depth0.image_url : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"image_url","hash":{},"data":data}) : helper)))
-    + "\"></a>\n\n\n\n\n  </li>\n";
+    + "\"></a>\n    </div>\n\n\n    <li data-id=\""
+    + alias3(((helper = (helper = helpers.user_id || (depth0 != null ? depth0.user_id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"user_id","hash":{},"data":data}) : helper)))
+    + "\"> \""
+    + alias3(((helper = (helper = helpers.owner || (depth0 != null ? depth0.owner : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"owner","hash":{},"data":data}) : helper)))
+    + "\" \""
+    + alias3(((helper = (helper = helpers.answer || (depth0 != null ? depth0.answer : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"answer","hash":{},"data":data}) : helper)))
+    + "\" \""
+    + alias3(((helper = (helper = helpers.solved_by || (depth0 != null ? depth0.solved_by : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"solved_by","hash":{},"data":data}) : helper)))
+    + "\"</li>\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
