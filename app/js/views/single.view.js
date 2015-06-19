@@ -34,6 +34,16 @@
 
     makeGuess: function (e) {
       e.preventDefault();
+
+      var guessValue = this.$el.find('#guess').val();
+      console.log(this);
+
+      // if (guessValue === ) {
+
+      // } else {
+
+      // }
+
       app.mainRouter.navigate('leaderboard/' + this.singleID, {trigger: true});
     }
 
