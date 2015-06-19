@@ -6,16 +6,20 @@
   var allPosts = new app.Collections.Posts();
   var allGuesses = new app.Collections.Guesses();
 
+  console.log('fetching users');
+
   allUsers.fetch().done( function() {
 
-    app.mainRouter = new app.Routers.MainRouter({
-      collectionUsers: allUsers,
-      collectionPosts: allPosts,
-      collectionGuesses: allGuesses
-    });
+    console.log('fetched users');
 
-    // Backbone.history.start();
+    Backbone.history.start();
 
+  });
+
+  app.mainRouter = new app.Routers.MainRouter({
+    collectionUsers: allUsers,
+    collectionPosts: allPosts,
+    collectionGuesses: allGuesses
   });
 
 $('.wrapper').on('click', '#logout', function (e) {
