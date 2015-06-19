@@ -4,13 +4,14 @@
 
   var allUsers = new app.Collections.Users();
   var allPosts = new app.Collections.Posts();
-
+  var allGuesses = new app.Collections.Guesses();
 
   allUsers.fetch().done( function() {
 
     app.mainRouter = new app.Routers.MainRouter({
       collectionUsers: allUsers,
-      collectionPosts: allPosts
+      collectionPosts: allPosts,
+      collectionGuesses: allGuesses
     });
 
     // Backbone.history.start();

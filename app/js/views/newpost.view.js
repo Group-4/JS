@@ -6,7 +6,7 @@
     className: 'newpost',
 
     events: {
-      'submit #postImage' : 'postImage'
+      'click #submitPost' : 'postImage'
     },
 
     template: hbs.newpost,
@@ -29,7 +29,7 @@
     },
 
     postImage: function () {
-            //get input values from form
+      //get input values from form
       var self = this,
           form = $(event.target),
           image_url = form.find('#image_url').val(),
@@ -43,10 +43,10 @@
 
       $.post(app.rootURL + '/posts', p.toJSON()).done ( function (data) {
         console.log('posted to posts endpoint')
-        // app.mainRouter.navigate('/main/:id', { trigger: true });
+        $('#postImage').get(0).reset();
+        app.mainRouter.navigate('/main', { trigger: true });
       });
 
-      console.log('posted');
     }
 
   });

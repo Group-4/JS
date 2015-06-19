@@ -2,8 +2,9 @@
 
   'use strict';
 
-  app.Views.Main = Backbone.View.extend({
-    className: 'main',
+    app.Views.Main = Backbone.View.extend({
+
+      className: 'main',
 
     events: {
     'click #delete': 'deleteAccount',
@@ -22,6 +23,7 @@
 
       },
 
+
     render: function() {
 
       console.log(app.LoggedInUser);
@@ -38,8 +40,6 @@
 
       this.$el.find('.sidebar').html('<p>Hey!</p>');
     },
-
-
 
 
     // DELETING ACCOUNT

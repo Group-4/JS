@@ -16,10 +16,8 @@
     initialize: function(options) {
       var args = options || {};
       this.collectionUsers = args.collectionUsers;
-
       this.render();
       $('.container').html(this.el);
-
 
     },
 
@@ -32,15 +30,12 @@
     registerUser: function(e) {
       e.preventDefault();
 
-
       //get input values from form
       var self = this,
           form = $(event.target),
           username = form.find('#regusername').val(),
           email = form.find('#email').val(),
           password =  form.find('#regpassword').val();
-
-
 
       //new instance of user model
       var u = new app.Models.UserModel({
@@ -49,14 +44,12 @@
         password: password
       });
 
-
       //add new user model to data/collection and trigger main view
       $.post(app.rootURL + '/users/register', u.toJSON()).done ( function (data) {
         Cookies.set('access_token', data.access_token);
         Cookies.set('username', data.username);
         app.LoggedInUser = data;
         app.mainRouter.navigate('/main', { trigger: true });
-
 
       });
 
@@ -65,7 +58,6 @@
     //log in existing user function
     loginUser: function(e) {
       e.preventDefault();
-
 
       //get input values from form
       var self = this,

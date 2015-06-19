@@ -9,7 +9,7 @@
       var args = options || {};
       this.collectionUsers = args.collectionUsers;
       this.collectionPosts = args.collectionPosts;
-
+      this.collectionGuesses = args.collectionGuesses;
 
       app.isLoggedIn = (Cookies.get('access_token') !== undefined) ? true : false;
       console.log(app.isLoggedIn);
@@ -45,17 +45,14 @@
 
     login: function() {
       new app.Views.Login({
-        collectionUsers: this.collectionUsers,
+        collectionUsers: this.collectionUsers
       });
     },
 
     mainPage: function() {
-
       new app.Views.Main({
-
         collectionPosts: this.collectionPosts,
         collectionUsers: this.collectionUsers,
-
       });
     },
 

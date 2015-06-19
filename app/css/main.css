@@ -119,22 +119,22 @@ header {
   .mainImages h2 {
     display: inline-block;
     float: left; }
-  .mainImages .newpost {
+  .mainImages .newpostBtn {
     display: inline-block;
     float: right;
     border: 1px solid #225378;
     padding: 1em;
     margin: 1em;
     color: #225378; }
-    .mainImages .newpost:hover {
+    .mainImages .newpostBtn:hover {
       background-color: #FF8236;
       color: white;
       border: none; }
-    .mainImages .newpost p {
+    .mainImages .newpostBtn p {
       display: inline-block;
       float: right;
       margin: 0; }
-    .mainImages .newpost i {
+    .mainImages .newpostBtn i {
       font-size: 2em;
       display: inline-block;
       float: left;
@@ -234,5 +234,10 @@ header {
 
 /* NEW POST VIEW
 ----------------- */
-.newpostMain input {
-  width: 80%; }
+.newpost {
+  width: 100%; }
+  .newpost .newpostMain {
+    width: 80%;
+    margin: auto; }
+    .newpost .newpostMain input {
+      width: 60%; }
