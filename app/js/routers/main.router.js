@@ -9,6 +9,24 @@
       var args = options || {};
       this.collectionUsers = args.collectionUsers;
       this.collectionPosts = args.collectionPosts;
+
+
+      app.isLoggedIn = (Cookies.get('access_token') !== undefined) ? true : false;
+      console.log(app.isLoggedIn);
+
+        if (app.isLoggedIn) {
+
+        $.get(app.rootURL + '/users/current_user').done ( function (data) {
+          app.LoggedInUser = data;
+          Backbone.history.start();
+          app.mainRouter.navigate('/main', {trigger: true});
+          })
+
+        } else {
+          Backbone.history.start();
+          app.mainRouter.navigate('', {trigger: true});
+        }
+
     },
 
     routes: {
@@ -28,7 +46,6 @@
     login: function() {
       new app.Views.Login({
         collectionUsers: this.collectionUsers,
-        //singleUserID: id
       });
     },
 
@@ -37,8 +54,7 @@
       new app.Views.Main({
 
         collectionPosts: this.collectionPosts,
-        collectionUsers: this.collectionUsers
-
+        collectionUsers: this.collectionUsers,
 
       });
     },

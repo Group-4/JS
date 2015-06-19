@@ -20,13 +20,15 @@ this["hbs"]["leaderboard"] = Handlebars.template({"1":function(depth0,helpers,pa
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
-  return "<div class=\"congratsDiv\">\n\n<h2>Congrats "
+  return "\n<div class=\"congratsDiv\">\n\n<h2>Congrats "
     + alias3(((helper = (helper = helpers.username || (depth0 != null ? depth0.username : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"username","hash":{},"data":data}) : helper)))
-    + "! You guessed correctly!</h2>\n\n<img src=\""
+    + "! You guessed correctly!</h2>\n\n<div class=\"singleWrap\">\n    <div class=\"singleMain\">\n      <i class=\"fa fa-camera\"></i>\n      <p>posted by <span>"
+    + alias3(((helper = (helper = helpers.owner || (depth0 != null ? depth0.owner : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"owner","hash":{},"data":data}) : helper)))
+    + "<span></p>\n\n      <div class=\"image\">\n        <img src=\""
     + alias3(((helper = (helper = helpers.image_url || (depth0 != null ? depth0.image_url : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"image_url","hash":{},"data":data}) : helper)))
-    + "\">\n\n<h3>"
+    + "\">\n\n        <div class=\"imageInfo\">\n          <h3>Correct Answer: "
     + alias3(((helper = (helper = helpers.guessAnswer || (depth0 != null ? depth0.guessAnswer : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"guessAnswer","hash":{},"data":data}) : helper)))
-    + "</h3>\n\n<p>Your score is now: "
+    + "</h3>\n\n          <p>Total Incorrect: </p>\n\n\n          <!-- would be cool to add div with user's score and addClass show on hover for this information -->\n\n        </div>\n      </div>\n\n<p>Your score is now: "
     + alias3(((helper = (helper = helpers.score || (depth0 != null ? depth0.score : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"score","hash":{},"data":data}) : helper)))
     + "</p>\n\n<div class=\"keepPlayingDiv\">\n  <button class=\"keepPlaying\" id=\"keepPlaying\">Keep Playing</button>\n\n</div>\n\n\n</div><!--end of congratsDiv-->\n\n\n<div class=\"leaderboardDiv\">\n\n<h2>Here's where you stand on the Leaderboard:</h2>\n\n<ul id=\"leaderboardList\" class=\"leaderboardList\">\n"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.user : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
@@ -48,19 +50,27 @@ this["hbs"]["main"] = Handlebars.template({"1":function(depth0,helpers,partials,
     + alias3(((helper = (helper = helpers.image_url || (depth0 != null ? depth0.image_url : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"image_url","hash":{},"data":data}) : helper)))
     + "\"></a>\n\n    </div>\n\n  </li>\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
+    var stack1;
 
-  return "  <aside>\n      <div class=\"innerAside\">\n        <div class=\"asideTop\">\n          <h4>USERNAME</h4>\n          <div class=\"avatar\">\n            <img src=\"http://placehold.it/100x100\">\n          </div>\n          <div class=\"score\">\n            <p>Current score: </p>\n          </div>\n        </div>\n        <div class=\"leaderboardSection\">\n          <h4>Leaderboard</h4>\n          <ul id=\"leaderboard\" class=\"leaderboard\">\n            <li>"
-    + alias3(((helper = (helper = helpers.username || (depth0 != null ? depth0.username : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"username","hash":{},"data":data}) : helper)))
-    + ": </li>\n            <li>"
-    + alias3(((helper = (helper = helpers.username || (depth0 != null ? depth0.username : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"username","hash":{},"data":data}) : helper)))
-    + ": </li>\n          </ul>\n        </div>\n        </div>\n    </aside>\n\n<div class=\"mainImages\">\n  <h2>LET'S PLAY!</h2>\n  <a href=\"/#newpost\"><div class=\"newpost\">\n    <i class=\"fa fa-camera\"></i>\n    <p>Add a new post</p>\n  </div></a>\n\n  <ul class=\"small-block-grid-3\">\n"
+  return "\n\n<div class=\"mainImages\">\n  <h2>LET'S PLAY!</h2>\n  <a href=\"/#newpost\"><div class=\"newpost\">\n    <i class=\"fa fa-camera\"></i>\n    <p>Add a new post</p>\n  </div></a>\n\n  <ul class=\"small-block-grid-3\">\n"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.image : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "  </ul>\n  </div>\n\n<div class=\"deleteDiv\">\n  <button id=\"#deleteButton\">Delete Account</button>\n</div>\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["newpost"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     return "<div class=\"newpostMain\">\n\n  <form id=\"postImage\" class=\"postImage\">\n    <input type=\"text\" placeholder=\"Image URL\" id=\"image_url\">\n    <input type=\"text\" placeholder=\"Answer\" id=\"answer\">\n    <input type=\"text\" placeholder=\"Add a hint here\" id=\"hint\">\n    <button id=\"submitPost\">Add Post</button>\n  </form>\n\n</div>\n";
+},"useData":true});
+this["hbs"] = this["hbs"] || {};
+this["hbs"]["sidebar"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
+
+  return "\n      <div class=\"innerAside\">\n        <div class=\"asideTop\">\n          <h4>"
+    + alias3(((helper = (helper = helpers.username || (depth0 != null ? depth0.username : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"username","hash":{},"data":data}) : helper)))
+    + "</h4>\n          <div class=\"avatar\">\n            <img src=\"http://placehold.it/100x100\">\n          </div>\n          <div class=\"score\">\n            <p>Current score: </p>\n          </div>\n        </div>\n        <div class=\"leaderboardSection\">\n          <h4>Leaderboard</h4>\n          <ul id=\"leaderboard\" class=\"leaderboard\">\n            <li>"
+    + alias3(((helper = (helper = helpers.username || (depth0 != null ? depth0.username : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"username","hash":{},"data":data}) : helper)))
+    + ": </li>\n            <li>"
+    + alias3(((helper = (helper = helpers.username || (depth0 != null ? depth0.username : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"username","hash":{},"data":data}) : helper)))
+    + ": </li>\n          </ul>\n        </div>\n        </div>\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["single"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {

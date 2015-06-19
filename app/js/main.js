@@ -5,6 +5,7 @@
   var allUsers = new app.Collections.Users();
   var allPosts = new app.Collections.Posts();
 
+
   allUsers.fetch().done( function() {
 
     app.mainRouter = new app.Routers.MainRouter({
@@ -12,7 +13,7 @@
       collectionPosts: allPosts
     });
 
-    Backbone.history.start();
+    // Backbone.history.start();
 
   });
 
