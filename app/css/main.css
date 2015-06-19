@@ -115,7 +115,7 @@ header {
 ------------------ */
 .mainImages {
   float: right;
-  width: 70%; }
+  width: 100%; }
   .mainImages h2 {
     display: inline-block;
     float: left; }
@@ -167,33 +167,6 @@ header {
     clear: both;
     content: "";
     display: table; }
-  .container aside {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 23.23176%;
-    background-color: #F3FFE2;
-    height: 100vh;
-    overflow: hidden;
-    clear: both; }
-    .container aside:last-child {
-      margin-right: 0; }
-    .container aside .innerAside {
-      width: 90%;
-      margin: auto;
-      text-align: center; }
-      .container aside .innerAside h4 {
-        margin-top: 1em; }
-    .container aside .asideTop {
-      margin-top: 2em;
-      border-bottom: 1px solid #225378; }
-      .container aside .asideTop .avatar {
-        margin: 2em; }
-        .container aside .asideTop .avatar img {
-          border-radius: 50%; }
-    .container aside ul {
-      margin: 0;
-      margin-top: 1em; }
   .container .singleWrap {
     overflow: hidden;
     float: left;
@@ -231,6 +204,34 @@ header {
       width: 90%;
       margin: auto;
       margin-bottom: 2em; }
+
+aside {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+  background-color: #F3FFE2;
+  height: 100vh;
+  overflow: hidden;
+  clear: both; }
+  aside:last-child {
+    margin-right: 0; }
+  aside .innerAside {
+    width: 90%;
+    margin: auto;
+    text-align: center; }
+    aside .innerAside h4 {
+      margin-top: 1em; }
+  aside .asideTop {
+    margin-top: 2em;
+    border-bottom: 1px solid #225378; }
+    aside .asideTop .avatar {
+      margin: 2em; }
+      aside .asideTop .avatar img {
+        border-radius: 50%; }
+  aside ul {
+    margin: 0;
+    margin-top: 1em; }
 
 /* NEW POST VIEW
 ----------------- */

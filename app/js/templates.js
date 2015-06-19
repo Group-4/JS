@@ -48,13 +48,13 @@ this["hbs"]["main"] = Handlebars.template({"1":function(depth0,helpers,partials,
     + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
     + "\"><img src=\""
     + alias3(((helper = (helper = helpers.image_url || (depth0 != null ? depth0.image_url : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"image_url","hash":{},"data":data}) : helper)))
-    + "\"></a>\n    </div>\n  </li>\n";
+    + "\"></a>\n\n  </li>\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1;
 
   return "\n\n<div class=\"mainImages\">\n  <h2>LET'S PLAY!</h2>\n  <a href=\"/#newpost\"><div class=\"newpostBtn\">\n    <i class=\"fa fa-camera\"></i>\n    <p>Add a new post</p>\n  </div></a>\n\n  <ul class=\"small-block-grid-3\">\n"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.image : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "  </ul>\n</div>\n\n<div class=\"deleteDiv\">\n  <button id=\"#deleteButton\">Delete Account</button>\n</div>\n";
+    + "  </ul>\n</div>\n\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["newpost"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
