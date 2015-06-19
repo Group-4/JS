@@ -10,7 +10,7 @@
     events: {
 
         'click #delete': 'deleteAccount',
-        'click #takemetosingleview' : 'singleViewFunction'
+
     },
 
     template: hbs.main,
@@ -33,15 +33,6 @@
       }.bind(this));
 
     },
-
-
-    singleViewFunction: function() {
-      app.mainRouter.navigate('/single', {trigger: true});
-
-    },
-
-
-
 
 
 

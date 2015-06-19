@@ -23,7 +23,7 @@ this["hbs"]["leaderboard"] = Handlebars.template({"1":function(depth0,helpers,pa
   return "<div class=\"congratsDiv\">\n\n<h2>Congrats "
     + alias3(((helper = (helper = helpers.username || (depth0 != null ? depth0.username : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"username","hash":{},"data":data}) : helper)))
     + "! You guessed correctly!</h2>\n\n<img src=\""
-    + alias3(((helper = (helper = helpers.url || (depth0 != null ? depth0.url : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"url","hash":{},"data":data}) : helper)))
+    + alias3(((helper = (helper = helpers.image_url || (depth0 != null ? depth0.image_url : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"image_url","hash":{},"data":data}) : helper)))
     + "\">\n\n<h3>"
     + alias3(((helper = (helper = helpers.guessAnswer || (depth0 != null ? depth0.guessAnswer : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"guessAnswer","hash":{},"data":data}) : helper)))
     + "</h3>\n\n<p>Your score is now: "
@@ -74,5 +74,7 @@ this["hbs"]["single"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"m
     + alias3(((helper = (helper = helpers.username || (depth0 != null ? depth0.username : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"username","hash":{},"data":data}) : helper)))
     + ": </li>\n          </ul>\n        </div>\n        </div>\n    </aside>\n\n    <div class=\"singleMain\">\n      <h3>SINGLE PAGE HEADER WILL GO HERE</h3>\n\n      <div class=\"image\">\n        <img src=\""
     + alias3(((helper = (helper = helpers.image_url || (depth0 != null ? depth0.image_url : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"image_url","hash":{},"data":data}) : helper)))
-    + "\">\n        <div class=\"imageInfo\">\n          <p>Incorrect so far: </p>\n          <p>Correct so far: \n          </p>\n          <p>Posted by </p>\n\n          <!-- would be cool to add div with user's score and addClass show on hover to this information -->\n\n        </div>\n      </div>\n\n    <form class=\"guessInput\" id=\"guessInput\">\n      <input type=\"text\" placeholder=\"What's your guess?\" id=\"guess\" class=\"guess\">\n      <button id=\"guessBtn\" class=\"guessBtn\">Submit Guess</button>\n    </form>\n\n    </div>\n\n";
+    + "\">\n\n        <div class=\"imageInfo\">\n          <p>Incorrect so far: </p>\n          <p>Correct so far: \n          </p>\n          <p>Posted by </p>\n\n          <!-- would be cool to add div with user's score and addClass show on hover to this information -->\n\n        </div>\n      </div>\n\n    <form class=\"guessInput\" id=\"guessInput\">\n      <input type=\"text\" placeholder=\"What's your guess?\" id=\"guess\" class=\"guess\">\n      <a href=\"#/leaderboard/"
+    + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
+    + "\"><button id=\"guessBtn\" class=\"guessBtn\">Submit Guess</button></a>\n    </form>\n\n    </div>\n\n";
 },"useData":true});

@@ -24,7 +24,7 @@
 
       <div class="image">
         <img src="{{image_url}}">
-        {{!-- <img src="http://placehold.it/350x450"> --}}
+
         <div class="imageInfo">
           <p>Incorrect so far: {{!-- {{}} --}}</p>
           <p>Correct so far: {{!-- {{}} --}}
@@ -38,7 +38,7 @@
 
     <form class="guessInput" id="guessInput">
       <input type="text" placeholder="What's your guess?" id="guess" class="guess">
-      <button id="guessBtn" class="guessBtn">Submit Guess</button>
+      <a href="#/leaderboard/{{id}}"><button id="guessBtn" class="guessBtn">Submit Guess</button></a>
     </form>
 
     </div>
