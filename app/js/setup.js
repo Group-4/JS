@@ -7,6 +7,7 @@
   window.app.Collections = {};
   window.app.Views = {};
   window.app.Routers = {};
+  window.app.LoggedInUser = {};
 
 
   app.rootURL = 'http://tiyqpic.herokuapp.com';

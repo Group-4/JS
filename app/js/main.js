@@ -3,14 +3,18 @@
   'use strict';
 
   var allUsers = new app.Collections.Users();
+  var allPosts = new app.Collections.Posts();
+  var allGuesses = new app.Collections.Guesses();
 
   allUsers.fetch().done( function() {
 
     app.mainRouter = new app.Routers.MainRouter({
-      collection: allUsers
+      collectionUsers: allUsers,
+      collectionPosts: allPosts,
+      collectionGuesses: allGuesses
     });
 
-    Backbone.history.start();
+    // Backbone.history.start();
 
   });
 
@@ -22,7 +26,7 @@ $('.wrapper').on('click', '#logout', function (e) {
 
 $('.wrapper').on('click', '#homeButton', function (e) {
   e.preventDefault();
-  app.mainRouter.navigate('/main/:id', { trigger: true });
+  app.mainRouter.navigate('/main', { trigger: true });
 });
 
 
