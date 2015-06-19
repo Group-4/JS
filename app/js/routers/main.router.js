@@ -53,7 +53,8 @@
     mainPage: function() {
       new app.Views.Main({
         collectionPosts: this.collectionPosts,
-        collectionUsers: this.collectionUsers
+        collectionUsers: this.collectionUsers,
+        collectionUserPosts: this.collectionUserPosts
       });
     },
 
