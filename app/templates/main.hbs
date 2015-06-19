@@ -6,19 +6,25 @@
   </div></a>
 
   <ul class="small-block-grid-3">
-{{#each image}}
- <li data-id="{{id}}">
 
-   <div class="imageWrap">
-     <div class="actualImage">
-       <a href="#/single/{{id}}"><img src="{{ image_url }}"></a>
-     </div>
-     <p>posted by: {{owner}}</p>
-     <p>first solved by: {{solved_by}}</p>
-   </div>
+    {{#each image}}
+     <li data-id="{{id}}">
 
- </li>
- {{/each}}
+       <div class="imageWrap">
+         <div class="actualImage">
+           <a href="#/single/{{id}}"><img src="{{ image_url }}"></a>
+         </div>
+         <p>posted by: {{owner}}</p>
+         <p>first solved by: {{solved_by}}</p>
+       </div>
+
+     </li>
+    {{/each}}
+
   </ul>
+
+<<<<<<< HEAD
+=======
 </div>
 
+>>>>>>> dev

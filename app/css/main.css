@@ -145,6 +145,10 @@ header {
     height: 250px;
     overflow: hidden;
     border-radius: 4px; }
+    .mainImages .imageWrap .actualImage {
+      overflow: hidden; }
+      .mainImages .imageWrap .actualImage p {
+        display: block; }
 
 /* SINGLE PAGE VIEW
 ------------------- */
