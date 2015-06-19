@@ -38,7 +38,7 @@
         this.$el.html(this.template({ image: this.collectionPosts.toJSON() }))
       }.bind(this));
 
-      this.$el.find('.sidebar').html('<p>Hey!</p>');
+      $('.sidebar').html(this.templateSidebar(app.LoggedInUser));
     },
 
 
