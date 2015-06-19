@@ -18,7 +18,8 @@
     initialize: function(options) {
 
         var args = options || {};
-        this.collection = args.collection;
+        this.collectionUsers = args.collectionUsers;
+        this.collectionPosts = args.collectionPosts;
         this.render();
         $('.container').html(this.el);
 
@@ -26,10 +27,10 @@
     },
 
     render: function() {
-      this.collection = new app.Collections.Posts();
 
-      this.collection.fetch().done(function (data) {
-        this.$el.html(this.template({ image: this.collection.toJSON() }))
+
+      this.collectionPosts.fetch().done(function (data) {
+        this.$el.html(this.template({ image: this.collectionPosts.toJSON() }))
       }.bind(this));
 
     },

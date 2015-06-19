@@ -3,11 +3,13 @@
   'use strict';
 
   var allUsers = new app.Collections.Users();
+  var allPosts = new app.Collections.Posts();
 
   allUsers.fetch().done( function() {
 
     app.mainRouter = new app.Routers.MainRouter({
-      collection: allUsers
+      collectionUsers: allUsers,
+      collectionPosts: allPosts
     });
 
     Backbone.history.start();
@@ -22,7 +24,7 @@ $('.wrapper').on('click', '#logout', function (e) {
 
 $('.wrapper').on('click', '#homeButton', function (e) {
   e.preventDefault();
-  app.mainRouter.navigate('/main/:id', { trigger: true });
+  app.mainRouter.navigate('/main', { trigger: true });
 });
 
 

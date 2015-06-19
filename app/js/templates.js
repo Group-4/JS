@@ -1,4 +1,3 @@
-
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["example"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var helper;
@@ -47,7 +46,7 @@ this["hbs"]["main"] = Handlebars.template({"1":function(depth0,helpers,partials,
     + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
     + "\"><img src=\""
     + alias3(((helper = (helper = helpers.image_url || (depth0 != null ? depth0.image_url : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"image_url","hash":{},"data":data}) : helper)))
-    + "\"></a>\n    </div>\n\n  </li>\n";
+    + "\"></a>\n\n    </div>\n\n  </li>\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
@@ -81,4 +80,3 @@ this["hbs"]["single"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"m
     + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
     + "\"><button id=\"guessBtn\" class=\"guessBtn\">Check it!</button></a>\n\n    </form>\n\n    </div>\n  </div>\n";
 },"useData":true});
-
