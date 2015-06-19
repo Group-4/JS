@@ -2,30 +2,25 @@
 
   'use strict';
 
-
-  app.Views.Main = Backbone.View.extend ({
-
+  app.Views.Main = Backbone.View.extend({
     className: 'main',
 
     events: {
-
-        'click #delete': 'deleteAccount',
-
+    'click #delete': 'deleteAccount',
     },
 
     template: hbs.main,
     templateSidebar: hbs.sidebar,
 
-    initialize: function(options) {
 
+  initialize: function(options) {
         var args = options || {};
         this.collectionUsers = args.collectionUsers;
         this.collectionPosts = args.collectionPosts;
         this.render();
         $('.container').html(this.el);
 
-
-    },
+      },
 
     render: function() {
 
@@ -43,6 +38,7 @@
 
       this.$el.find('.sidebar').html('<p>Hey!</p>');
     },
+
 
 
 
@@ -64,4 +60,6 @@
 
 });
 
+
 }());
+
