@@ -19,8 +19,10 @@
         </div>
     </aside>
 
+  <div class="singleWrap">
     <div class="singleMain">
-      <h3>SINGLE PAGE HEADER WILL GO HERE</h3>
+      <i class="fa fa-camera"></i>
+      <p>posted by <span>{{owner}}<span></p>
 
       <div class="image">
         <img src="{{image_url}}">
@@ -29,17 +31,18 @@
           <p>Incorrect so far: {{!-- {{}} --}}</p>
           <p>Correct so far: {{!-- {{}} --}}
           </p>
-          <p>Posted by {{!-- {{}} --}}</p>
 
-          <!-- would be cool to add div with user's score and addClass show on hover to this information -->
+          <!-- would be cool to add div with user's score and addClass show on hover for this information -->
 
         </div>
       </div>
 
     <form class="guessInput" id="guessInput">
       <input type="text" placeholder="What's your guess?" id="guess" class="guess">
-      <a href="#/leaderboard/{{id}}"><button id="guessBtn" class="guessBtn">Submit Guess</button></a>
+
+      <a href="#/leaderboard/{{id}}"><button id="guessBtn" class="guessBtn">Check it!</button></a>
+
     </form>
 
     </div>
-
+  </div>
