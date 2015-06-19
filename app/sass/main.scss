@@ -111,6 +111,35 @@ p#homeButton {
     margin-left: 0;
     float: left;
 }
+
+/* MAIN PAGE VIEW
+------------------ */
+
+.mainImages {
+    float: right;
+    width: 70%;
+
+    .imageWrap {
+      position: relative;
+      width: 250px;
+      height: 250px;
+      overflow: hidden;
+      background-color: black;
+      border-radius: 4px;
+
+        img {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          height: 100%;
+          width: auto;
+          -webkit-transform: translate(-50%,-50%);
+          -ms-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+        }
+    }
+}
+
 /* SINGLE PAGE VIEW
 ------------------- */
 
@@ -151,3 +180,4 @@ p#homeButton {
         margin-top: 2em;
     }
 }
+
