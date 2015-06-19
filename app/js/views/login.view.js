@@ -19,15 +19,6 @@
       this.render();
       $('.container').html(this.el);
 
-      app.isLoggedIn = (Cookies.get('access_token') !== undefined) ? true : false;
-
-        if (app.isLoggedIn) {
-          app.mainRouter.navigate('/main', {trigger: true});
-
-        } else {
-          app.mainRouter.navigate('', {trigger: true});
-        }
-
     },
 
     render: function(){
@@ -83,7 +74,9 @@
         Cookies.set('access_token', data.access_token);
         Cookies.set('username', data.username);
         app.LoggedInUser = data;
+        console.log(app.LoggedInUser);
         app.mainRouter.navigate('/main', { trigger: true });
+
 
       });
 

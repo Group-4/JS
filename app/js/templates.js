@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["example"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var helper;
@@ -80,3 +81,5 @@ this["hbs"]["single"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"m
     + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
     + "\"><button id=\"guessBtn\" class=\"guessBtn\">Check it!</button></a>\n\n    </form>\n\n    </div>\n  </div>\n";
 },"useData":true});
+=======
+>>>>>>> 62b42813dd7237888de9699e90098ecd3a07f3e9

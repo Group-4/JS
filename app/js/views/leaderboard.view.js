@@ -22,15 +22,12 @@
     },
 
     render: function() {
-
       this.collectionPosts = new app.Collections.Posts();
 
       this.collectionPosts.fetch().done( function (data) {
         var singlePost = this.collectionPosts.get(this.singleID);
-        console.log(this);
-      this.$el.html(this.template(singlePost.toJSON()));
+        this.$el.html(this.template(singlePost.toJSON()));
     }.bind(this));
-
     },
 
     keepPlaying: function(e) {

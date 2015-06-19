@@ -13,8 +13,8 @@
 
     initialize: function (options) {
       var args = options || {};
-      this.singleID = args.singleID,
-      this.collectionPosts = args.collectionPosts,
+      this.singleID = args.singleID;
+      this.collectionPosts = args.collectionPosts;
       this.render();
       $('.container').html(this.el);
 

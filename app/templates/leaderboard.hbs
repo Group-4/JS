@@ -1,10 +1,26 @@
+
 <div class="congratsDiv">
 
 <h2>Congrats {{ username }}! You guessed correctly!</h2>
 
-<img src="{{ image_url }}">
+<div class="singleWrap">
+    <div class="singleMain">
+      <i class="fa fa-camera"></i>
+      <p>posted by <span>{{owner}}<span></p>
 
-<h3>{{ guessAnswer }}</h3>
+      <div class="image">
+        <img src="{{image_url}}">
+
+        <div class="imageInfo">
+          <h3>Correct Answer: {{ guessAnswer }}</h3>
+
+          <p>Total Incorrect: {{!-- {{}} --}}</p>
+
+
+          <!-- would be cool to add div with user's score and addClass show on hover for this information -->
+
+        </div>
+      </div>
 
 <p>Your score is now: {{ score }}</p>
 

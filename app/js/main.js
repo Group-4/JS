@@ -12,7 +12,7 @@
       collectionPosts: allPosts
     });
 
-    Backbone.history.start();
+    // Backbone.history.start();
 
   });
 
