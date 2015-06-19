@@ -10,6 +10,7 @@
     },
 
     template: hbs.single,
+    templateSidebar: hbs.sidebar,
 
     initialize: function (options) {
       var args = options || {};
@@ -35,6 +36,9 @@
       this.collectionGuesses.fetch().done( function (data) {
         console.log(this.collectionGuesses);
         // var postGuesses = this.collectionGuesses.get(this.postID)
+
+      $('.sidebar').html(this.templateSidebar(app.LoggedInUser));
+
       })
 
     },

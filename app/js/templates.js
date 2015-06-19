@@ -58,7 +58,7 @@ this["hbs"]["main"] = Handlebars.template({"1":function(depth0,helpers,partials,
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["newpost"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    return "<div class=\"newpostMain\">\n\n  <form id=\"postImage\" class=\"postImage\">\n    <input type=\"text\" placeholder=\"Image URL\" id=\"image_url\">\n    <input type=\"text\" placeholder=\"Answer\" id=\"answer\">\n    <input type=\"text\" placeholder=\"Add a hint here\" id=\"hint\">\n    <button id=\"submitPost\">Add Post</button>\n  </form>\n\n</div>\n\n";
+    return "<div class=\"newpostMain\">\n\n  <form id=\"postImage\" class=\"postImage\">\n    <input type=\"text\" placeholder=\"Image URL\" id=\"image_url\">\n    <input type=\"text\" placeholder=\"Answer\" id=\"answer\">\n    <input type=\"text\" placeholder=\"Add a hint here\" id=\"hint\">\n    <button id=\"submitPost\">Add Post</button>\n  </form>\n\n</div>\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["sidebar"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
@@ -70,7 +70,7 @@ this["hbs"]["sidebar"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"
     + alias3(((helper = (helper = helpers.username || (depth0 != null ? depth0.username : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"username","hash":{},"data":data}) : helper)))
     + ": </li>\n            <li>"
     + alias3(((helper = (helper = helpers.username || (depth0 != null ? depth0.username : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"username","hash":{},"data":data}) : helper)))
-    + ": </li>\n          </ul>\n        </div>\n        </div>\n";
+    + ": </li>\n          </ul>\n        </div>\n        </div>\n\n<div class=\"deleteDiv\">\n  <button id=\"#deleteButton\">Delete Account</button>\n</div>\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["single"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
