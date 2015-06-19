@@ -7,13 +7,14 @@
     initialize: function (options) {
 
       var args = options || {};
-      this.collection = args.collection;
+      this.collectionUsers = args.collectionUsers;
+      this.collectionPosts = args.collectionPosts;
     },
 
     routes: {
 
       '' : 'login',
-      'main/:id' : 'mainPage',
+      'main' : 'mainPage',
       'single/:id' : 'singlePost',
       'leaderboard/:id' : 'leaderboardPage',
       'newpost' : 'newPost'
@@ -26,15 +27,15 @@
 
     login: function() {
       new app.Views.Login({
-        collection: this.collection
+        collectionUsers: this.collectionUsers
       });
     },
 
-    mainPage: function(id) {
+    mainPage: function() {
+      console.log(this);
       new app.Views.Main({
-
-        // collection: this.collection
-
+        collectionUsers: this.collectionUsers,
+        collectionPosts: this.collectionPosts
       });
     },
 

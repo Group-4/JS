@@ -17,40 +17,41 @@
       initialize: function(options) {
 
       var args = options || {};
-        this.collection = args.collection;
+        this.collectionUsers = args.collectionUsers;
+        this.collectionPosts = args.collectionPosts;
         this.render();
         $('.container').html(this.el);
 
+      },
+
+      render: function() {
+
+        this.collectionPosts.fetch().done(function (data) {
+          this.$el.html(this.template({
+            image: this.collectionPosts.toJSON()
+          }))
+        }.bind(this));
 
       },
 
-                render: function() {
-                    this.collection = new app.Collections.Posts();
 
-                    this.collection.fetch().done(function(data) {
-                        this.$el.html(this.template({
-                            image: this.collection.toJSON()
-                        }))
-                    }.bind(this));
+        // TRINI ADDED THIS
 
-                    // TRINI ADDED THIS
-
-                //     this.$el.html(this.template({
-                //         owner: this.collection.toJSON()
-                //     }))
-                // }.bind(this);
+        //     this.$el.html(this.template({
+        //         owner: this.collection.toJSON()
+        //     }))
+        // }.bind(this);
 
         //     this.$el.html(this.template({
         //         solved: this.collection.toJSON()
         //     }))
         // }.bind(this));
 
-},
-
+// },
 
 
     // DELETING ACCOUNT
-    deleteAccount: function(event) {
+    deleteAccount: function (event) {
 
         event.preventDefault();
 

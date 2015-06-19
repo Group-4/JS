@@ -14,7 +14,7 @@
     initialize: function (options) {
       var args = options || {};
       this.singleID = args.singleID,
-      this.collection = args.collections,
+      this.collectionPosts = args.collectionPosts,
       this.render();
       $('.container').html(this.el);
 
@@ -22,10 +22,10 @@
 
     render: function () {
 
-      this.collection = new app.Collections.Posts();
+      this.collectionPosts = new app.Collections.Posts();
 
-      this.collection.fetch().done( function (data) {
-        var singlePost = this.collection.get(this.singleID);
+      this.collectionPosts.fetch().done( function (data) {
+        var singlePost = this.collectionPosts.get(this.singleID);
         this.$el.html(this.template(singlePost.toJSON()));
       }.bind(this));
 
@@ -34,7 +34,7 @@
 
     makeGuess: function (e) {
       e.preventDefault();
-      app.mainRouter.navigate('leaderboard/:id', {trigger: true});
+      app.mainRouter.navigate('leaderboard/' + this.singleID, {trigger: true});
     }
 
   });

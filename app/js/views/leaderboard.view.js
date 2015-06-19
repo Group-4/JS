@@ -15,7 +15,7 @@
     initialize: function(options){
       var args = options || {};
       this.singleID = args.singleID;
-      this.collection = args.collection;
+      this.collectionPosts = args.collectionPosts;
       this.render();
       $('.container').html(this.el);
 
@@ -23,19 +23,19 @@
 
     render: function() {
 
-      var allPosts = new app.Collections.Posts();
-      //var allUsers = new app.Collections.Users();
-      this.collection = allPosts;
-      allPosts.fetch().done( function (data) {
-        var singlePost = this.collection.get(this.singleID);
+      this.collectionPosts = new app.Collections.Posts();
+
+      this.collectionPosts.fetch().done( function (data) {
+        var singlePost = this.collectionPosts.get(this.singleID);
         console.log(this);
       this.$el.html(this.template(singlePost.toJSON()));
-    });
+    }.bind(this));
+
     },
 
     keepPlaying: function(e) {
       e.preventDefault();
-      app.mainRouter.navigate('/main/:id', {trigger: true});
+      app.mainRouter.navigate('/main', {trigger: true});
     }
 
   });
