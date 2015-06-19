@@ -6,14 +6,11 @@
 $darkblue: #225378;
 $teal: #1695A3;
 $lightblue: #ACF0F2;
-$orange: #EB6015;
+$orange: #FF8236;
 $light: #F3FFE2;
-$philosopher: 'Philosopher',
-sans-serif;
-$raleway: 'Raleway',
-sans-serif;
-$roboto: 'Roboto',
-sans-serif;
+$philosopher: 'Philosopher', sans-serif;
+$raleway: 'Raleway', sans-serif;
+$roboto: 'Roboto', sans-serif;
 /* MIXINS
 ---------- */
 
@@ -57,60 +54,104 @@ ul {
 
 header {
     width: 100%;
-    height: 20%;
     background-color: $darkblue;
     overflow: hidden;
+
     .innerHeader {
-        width: 80%;
-        margin: auto;
-    }
-    .logo {
-        float: left;
+      overflow: hidden;
+      width: 80%;
+      margin: auto;
+
+      .logo {
+          float: left;
+          color: $light;
+          margin: 0;
+          overflow: hidden;
+          padding: 1em;
+          display: inline-block;
+          padding: 0;
+
+        .q {
+          overflow: hidden;
+          display: inline-block;
+          position: relative;
+          padding: 0;
+
+          p {
+              margin: 0;
+              // font-family: Michroma;
+              // font-family: Aldrich;
+              font-family: Electrolize;
+              font-size: 10em;
+              padding: 0;
+          }
+        }
+
+        .pic {
+          overflow: hidden;
+          display: inline-block;
+          padding: 0;
+
+          p {
+            font-family: Fontdiner Swanky;
+            font-size: 4em;
+            padding: 0;
+          }
+        }
+
+      }
+
+      .fa-camera {
+          color: $orange;
+          display: inline;
+          position: absolute;
+          font-size: 2.8em;
+          top: 60px;
+          left: 23px;
+      }
+  }
+
+  .social {
+      overflow: hidden;
+      display: inline-block;
+      float: right;
+      font-size: 2em;
+      padding: 1em;
+
+      i {
         color: $light;
-        margin: 0;
-        overflow: hidden;
-        padding: 1em;
-    }
-    p {
-        margin: 0;
-        // font-family: Michroma;
-        // font-family: Aldrich;
-        font-family: Electrolize;
-        font-size: 150pt;
-        z-index: 1;
-    }
-    span {
-        // font-family: Sniglet;
-        font-family: Fontdiner Swanky;
-        font-size: 55pt;
+        opacity: .8;
+        cursor: pointer;
 
-    }
-    .fa {
-        color: #EB6015;
-        z-index: 2;
-        display: inline;
-        margin-top: -185px;
-        margin-left: 55px;
-        position: absolute;
-        font-size: 30pt;
-    }
-}
+        &:hover {
+          opacity: 1;
+        }
+      }
+  }
 
-.social {
-    overflow: hidden;
+  nav {
+    display: inline-block;
+    color: $light;
+    opacity: .8;
     float: right;
-    color: white;
-    font-size: 2em;
-    padding: 1em;
+    padding-top: 2em;
+
+    ul {
+      cursor: pointer;
+
+      li {
+        display: inline;
+        padding: .6em;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
 }
 
-p#logout,
-p#homeButton {
-    font-size: 12pt;
-    color: white;
-    margin-left: 0;
-    float: left;
-}
 
 /* MAIN PAGE VIEW
 ------------------ */
