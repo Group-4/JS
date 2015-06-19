@@ -116,6 +116,30 @@ header {
 .mainImages {
   float: right;
   width: 70%; }
+  .mainImages h2 {
+    display: inline-block;
+    float: left; }
+  .mainImages .newpost {
+    display: inline-block;
+    float: right;
+    border: 1px solid #225378;
+    padding: 1em;
+    margin: 1em;
+    color: #225378; }
+    .mainImages .newpost:hover {
+      background-color: #FF8236;
+      color: white;
+      border: none; }
+    .mainImages .newpost p {
+      display: inline-block;
+      float: right;
+      margin: 0; }
+    .mainImages .newpost i {
+      font-size: 2em;
+      display: inline-block;
+      float: left;
+      padding-right: .5em;
+      padding-top: .1em; }
   .mainImages .imageWrap {
     position: relative;
     width: 250px;
@@ -201,3 +225,12 @@ header {
         font-size: 1em; }
     .container .singleMain .image img {
       width: 100%; }
+    .container .singleMain .guess {
+      width: 90%;
+      margin: auto;
+      margin-bottom: 2em; }
+
+/* NEW POST VIEW
+----------------- */
+.newpostMain input {
+  width: 80%; }

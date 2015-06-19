@@ -49,6 +49,8 @@ button {
   }
 }
 
+
+
 a {
     text-decoration: none;
     &:hover {
@@ -170,6 +172,40 @@ header {
     float: right;
     width: 70%;
 
+    h2 {
+      display: inline-block;
+      float: left;
+    }
+
+    .newpost {
+      display: inline-block;
+      float: right;
+      border: 1px solid $darkblue;
+      padding: 1em;
+      margin: 1em;
+      color: $darkblue;
+
+      &:hover {
+        background-color: $orange;
+        color: white;
+        border: none;
+      }
+
+      p {
+        display: inline-block;
+        float: right;
+        margin: 0;
+      }
+
+      i {
+        font-size: 2em;
+        display: inline-block;
+        float: left;
+        padding-right: .5em;
+        padding-top: .1em;
+      }
+    }
+
     .imageWrap {
       position: relative;
       width: 250px;
@@ -275,8 +311,23 @@ header {
 
 
           }
+
         }
+
+      .guess {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 2em;
+      }
 
     }
 }
 
+/* NEW POST VIEW
+----------------- */
+
+.newpostMain {
+  input {
+    width: 80%;
+  }
+}
