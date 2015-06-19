@@ -24,7 +24,7 @@
 
     this.collection.fetch().done(function(data) {
 
-    this.$el.html(this.template({image: this.collection.toJSON(), owner: this.collection.toJSON(), answer: this.collection.toJSON()}))
+    this.$el.html(this.template({image: this.collection.toJSON(), owner: this.collection.toJSON(), solved_by: this.collection.toJSON()}))
     }.bind(this));
 
 
