@@ -21,15 +21,22 @@
 
 <div class="mainImages">
   <h2>LET'S PLAY!</h2>
-  <button id="takemetosingleview">go to single view</button>
-
+  <a href="/#newpost"><div class="newpost">
+    <i class="fa fa-camera"></i>
+    <p>Add a new post</p>
+  </div></a>
 
   <ul class="small-block-grid-3">
   {{#each image}}
   <li data-id="{{id}}">
-  <img href="#/single" src="{{ image_url }}">
+    <div class="imageWrap">
+      <a href="#/single/{{id}}"><img src="{{ image_url }}"></a>
+    </div>
+
   {{!-- TRINI ADDED THIS FOR OWNER & NUMBER OF CORRECT/INCORRECT ANSWERS --}}
   <li data-id="{{ owner }}"> + "{{ solved }}"
+
+
   </li>
   {{/each}}
   </ul>

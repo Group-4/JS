@@ -15,7 +15,7 @@
       '' : 'login',
       'main/:id' : 'mainPage',
       'single/:id' : 'singlePost',
-      'leaderboard' : 'leaderboardPage',
+      'leaderboard/:id' : 'leaderboardPage',
       'newpost' : 'newPost'
 
     },
@@ -38,9 +38,9 @@
       });
     },
 
-    leaderboardPage: function() {
+    leaderboardPage: function(id) {
       new app.Views.Leaderboard({
-        //collection: this.collection
+        singleID: id
       });
     },
 
