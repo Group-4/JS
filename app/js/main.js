@@ -14,7 +14,7 @@
       collectionGuesses: allGuesses
     });
 
-    Backbone.history.start();
+    // Backbone.history.start();
 
   });
 

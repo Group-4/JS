@@ -22,14 +22,13 @@
     },
 
     render: function() {
-
       this.collectionPosts = new app.Collections.Posts();
 
       this.collectionPosts.fetch().done( function (data) {
         var singlePost = this.collectionPosts.get(this.singleID);
       this.$el.html(this.template(singlePost.toJSON()));
-    }.bind(this));
 
+    }.bind(this));
     },
 
     keepPlaying: function(e) {

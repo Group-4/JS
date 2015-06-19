@@ -173,7 +173,9 @@ header {
     margin-right: 2.35765%;
     width: 23.23176%;
     background-color: #F3FFE2;
-    height: 100vh; }
+    height: 100vh;
+    overflow: hidden;
+    clear: both; }
     .container aside:last-child {
       margin-right: 0; }
     .container aside .innerAside {

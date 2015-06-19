@@ -237,6 +237,8 @@ header {
         @include span-columns(3);
         background-color: $light;
         height: 100vh;
+        overflow: hidden;
+        clear: both;
 
         .innerAside {
             width: 90%;
