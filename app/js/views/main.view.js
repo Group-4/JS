@@ -1,32 +1,28 @@
 ;
 (function() {
 
-        'use strict';
+    'use strict';
 
 
-        app.Views.Main = Backbone.View.extend({
+    app.Views.Main = Backbone.View.extend({
 
-                className: 'main',
+      className: 'main',
 
-                events: {
-
-
+      events: {
         'click #delete': 'deleteAccount',
+      },
 
-    },
+      template: hbs.main,
 
+      initialize: function(options) {
 
-                template: hbs.main,
-
-                initialize: function(options) {
-
-                    var args = options || {};
-                    this.collection = args.collection;
-                    this.render();
-                    $('.container').html(this.el);
+      var args = options || {};
+        this.collection = args.collection;
+        this.render();
+        $('.container').html(this.el);
 
 
-                },
+      },
 
                 render: function() {
                     this.collection = new app.Collections.Posts();
@@ -39,15 +35,15 @@
 
                     // TRINI ADDED THIS
 
-                    this.$el.html(this.template({
-                        owner: this.collection.toJSON()
-                    }))
-                }.bind(this));
+                //     this.$el.html(this.template({
+                //         owner: this.collection.toJSON()
+                //     }))
+                // }.bind(this);
 
-            this.$el.html(this.template({
-                solved: this.collection.toJSON()
-            }))
-        }.bind(this));
+        //     this.$el.html(this.template({
+        //         solved: this.collection.toJSON()
+        //     }))
+        // }.bind(this));
 
 },
 
