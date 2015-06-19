@@ -21,7 +21,7 @@
 
 <div class="mainImages">
   <h2>LET'S PLAY!</h2>
-  <a href="/#newpost"><div class="newpost">
+  <a href="/#newpost"><div class="newpostBtn">
     <i class="fa fa-camera"></i>
     <p>Add a new post</p>
   </div></a>
@@ -32,12 +32,13 @@
     <div class="imageWrap">
       <a href="#/single/{{id}}"><img src="{{ image_url }}"></a>
     </div>
+  </li>
 
   {{!-- TRINI ADDED THIS FOR OWNER & NUMBER OF CORRECT/INCORRECT ANSWERS --}}
-{{!--   <li data-id="{{ owner }}"> + "{{ solved }}">
+  {{!-- <li data-id="{{ owner }}"> + "{{ solved }}"> --}}
 
 
-  </li> --}}
+  </li>
   {{/each}}
   </ul>
   </div>

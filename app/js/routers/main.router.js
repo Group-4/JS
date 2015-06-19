@@ -9,6 +9,7 @@
       var args = options || {};
       this.collectionUsers = args.collectionUsers;
       this.collectionPosts = args.collectionPosts;
+      this.collectionGuesses = args.collectionGuesses;
     },
 
     routes: {
@@ -32,7 +33,6 @@
     },
 
     mainPage: function() {
-      console.log(this);
       new app.Views.Main({
         collectionUsers: this.collectionUsers,
         collectionPosts: this.collectionPosts

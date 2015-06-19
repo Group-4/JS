@@ -46,7 +46,7 @@ this["hbs"]["main"] = Handlebars.template({"1":function(depth0,helpers,partials,
     + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
     + "\"><img src=\""
     + alias3(((helper = (helper = helpers.image_url || (depth0 != null ? depth0.image_url : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"image_url","hash":{},"data":data}) : helper)))
-    + "\"></a>\n    </div>\n\n";
+    + "\"></a>\n    </div>\n  </li>\n\n\n\n  </li>\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
@@ -54,7 +54,7 @@ this["hbs"]["main"] = Handlebars.template({"1":function(depth0,helpers,partials,
     + alias3(((helper = (helper = helpers.username || (depth0 != null ? depth0.username : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"username","hash":{},"data":data}) : helper)))
     + ": </li>\n            <li>"
     + alias3(((helper = (helper = helpers.username || (depth0 != null ? depth0.username : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"username","hash":{},"data":data}) : helper)))
-    + ": </li>\n          </ul>\n        </div>\n        </div>\n    </aside>\n\n<div class=\"mainImages\">\n  <h2>LET'S PLAY!</h2>\n  <a href=\"/#newpost\"><div class=\"newpost\">\n    <i class=\"fa fa-camera\"></i>\n    <p>Add a new post</p>\n  </div></a>\n\n  <ul class=\"small-block-grid-3\">\n"
+    + ": </li>\n          </ul>\n        </div>\n        </div>\n    </aside>\n\n<div class=\"mainImages\">\n  <h2>LET'S PLAY!</h2>\n  <a href=\"/#newpost\"><div class=\"newpostBtn\">\n    <i class=\"fa fa-camera\"></i>\n    <p>Add a new post</p>\n  </div></a>\n\n  <ul class=\"small-block-grid-3\">\n"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.image : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "  </ul>\n  </div>\n\n<div class=\"deleteDiv\">\n  <button id=\"#deleteButton\">Delete Account</button>\n</div>\n";
 },"useData":true});
@@ -63,8 +63,10 @@ this["hbs"]["newpost"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"
     return "<div class=\"newpostMain\">\n\n  <form id=\"postImage\" class=\"postImage\">\n    <input type=\"text\" placeholder=\"Image URL\" id=\"image_url\">\n    <input type=\"text\" placeholder=\"Answer\" id=\"answer\">\n    <input type=\"text\" placeholder=\"Add a hint here\" id=\"hint\">\n    <button id=\"submitPost\">Add Post</button>\n  </form>\n\n</div>\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
-this["hbs"]["single"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
+this["hbs"]["single"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
+    return "      <li></li>\n";
+},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
   return "    <aside>\n      <div class=\"innerAside\">\n        <div class=\"asideTop\">\n          <h4>"
     + alias3(((helper = (helper = helpers.username || (depth0 != null ? depth0.username : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"username","hash":{},"data":data}) : helper)))
@@ -76,7 +78,9 @@ this["hbs"]["single"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"m
     + alias3(((helper = (helper = helpers.owner || (depth0 != null ? depth0.owner : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"owner","hash":{},"data":data}) : helper)))
     + "<span></p>\n\n      <div class=\"image\">\n        <img src=\""
     + alias3(((helper = (helper = helpers.image_url || (depth0 != null ? depth0.image_url : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"image_url","hash":{},"data":data}) : helper)))
-    + "\">\n\n        <div class=\"imageInfo\">\n          <p>Incorrect so far: </p>\n          <p>Correct so far: \n          </p>\n\n          <!-- would be cool to add div with user's score and addClass show on hover for this information -->\n\n        </div>\n      </div>\n\n    <form class=\"guessInput\" id=\"guessInput\">\n      <input type=\"text\" placeholder=\"What's your guess?\" id=\"guess\" class=\"guess\">\n\n      <a href=\"#/leaderboard/"
+    + "\">\n\n        <div class=\"imageInfo\">\n          <p>Incorrect so far: </p>\n          <p>Correct so far: </p>\n\n          <!-- would be cool to add div with user's score and addClass show on hover for this information -->\n\n        </div>\n      </div>\n\n      <form class=\"guessInput\" id=\"guessInput\">\n        <input type=\"text\" placeholder=\"What's your guess?\" id=\"guess\" class=\"guess\">\n\n        <a href=\"#/leaderboard/"
     + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
-    + "\"><button id=\"guessBtn\" class=\"guessBtn\">Check it!</button></a>\n\n    </form>\n\n    </div>\n  </div>\n";
+    + "\"><button id=\"guessBtn\" class=\"guessBtn\">Check it!</button></a>\n\n      </form>\n\n    <div class=\"singleGuesses\" id=\"incorrectGuesses\">\n    <ul class=\"incorrectGuesses\" id=\"incorrectGuesses\">\n\n"
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.guess : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "\n    </ul>\n    </div>\n\n    </div> <!-- end singleMain -->\n\n  </div> <!-- end singleWrap -->\n";
 },"useData":true});

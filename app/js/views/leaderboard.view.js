@@ -27,7 +27,6 @@
 
       this.collectionPosts.fetch().done( function (data) {
         var singlePost = this.collectionPosts.get(this.singleID);
-        console.log(this);
       this.$el.html(this.template(singlePost.toJSON()));
     }.bind(this));
 

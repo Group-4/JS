@@ -177,7 +177,7 @@ header {
       float: left;
     }
 
-    .newpost {
+    .newpostBtn {
       display: inline-block;
       float: right;
       border: 1px solid $darkblue;
@@ -326,8 +326,15 @@ header {
 /* NEW POST VIEW
 ----------------- */
 
-.newpostMain {
-  input {
+.newpost {
+  width: 100%;
+
+  .newpostMain {
     width: 80%;
+    margin: auto;
+
+    input {
+      width: 60%;
+    }
   }
 }

@@ -6,7 +6,7 @@
 
     model: app.Models.GuessModel,
 
-    url: app.rootURL //+ endpoint
+    url: app.rootURL + '/guesses'
 
 
   });

@@ -29,20 +29,30 @@
 
         <div class="imageInfo">
           <p>Incorrect so far: {{!-- {{}} --}}</p>
-          <p>Correct so far: {{!-- {{}} --}}
-          </p>
+          <p>Correct so far: {{!-- {{}} --}}</p>
 
           <!-- would be cool to add div with user's score and addClass show on hover for this information -->
 
         </div>
       </div>
 
-    <form class="guessInput" id="guessInput">
-      <input type="text" placeholder="What's your guess?" id="guess" class="guess">
+      <form class="guessInput" id="guessInput">
+        <input type="text" placeholder="What's your guess?" id="guess" class="guess">
 
-      <a href="#/leaderboard/{{id}}"><button id="guessBtn" class="guessBtn">Check it!</button></a>
+        <a href="#/leaderboard/{{id}}"><button id="guessBtn" class="guessBtn">Check it!</button></a>
 
-    </form>
+      </form>
 
+    <div class="singleGuesses" id="incorrectGuesses">
+    <ul class="incorrectGuesses" id="incorrectGuesses">
+
+    {{#each guess}}
+      <li></li>
+    {{/each}}
+
+    </ul>
     </div>
-  </div>
+
+    </div> <!-- end singleMain -->
+
+  </div> <!-- end singleWrap -->
