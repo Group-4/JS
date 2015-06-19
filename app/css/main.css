@@ -17,7 +17,8 @@ html {
 
 body {
   font-size: 62.5%;
-  font-family: "Roboto", sans-serif; }
+  font-family: "Roboto", sans-serif;
+  background-color: #FAFAFA; }
 
 input,
 button {
@@ -27,6 +28,11 @@ button {
   input:focus,
   button:focus {
     outline: none; }
+
+button {
+  background-color: #225378; }
+  button:hover {
+    background-color: #FF8236; }
 
 a {
   text-decoration: none; }
@@ -115,7 +121,6 @@ header {
     width: 250px;
     height: 250px;
     overflow: hidden;
-    background-color: black;
     border-radius: 4px; }
     .mainImages .imageWrap img {
       position: absolute;
@@ -163,12 +168,25 @@ header {
     .container aside ul {
       margin: 0;
       margin-top: 1em; }
-  .container .singleMain {
+  .container .singleWrap {
+    overflow: hidden;
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 74.41059%;
-    text-align: center;
-    margin-top: 2em; }
-    .container .singleMain:last-child {
+    width: 74.41059%; }
+    .container .singleWrap:last-child {
       margin-right: 0; }
+  .container .singleMain {
+    background-color: white;
+    margin: auto;
+    text-align: center;
+    margin-top: 2em;
+    width: 80%;
+    border: 1px solid #EDEEEE;
+    margin-bottom: 5em; }
+    .container .singleMain .image img {
+      width: 100%; }
+    .container .singleMain .image .imageInfo p span {
+      color: #1695A3;
+      font-weight: bold;
+      font-size: 1.3em; }
