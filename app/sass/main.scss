@@ -237,10 +237,32 @@ header {
       background-color: white;
         margin: auto;
         text-align: center;
-        margin-top: 2em;
+        margin-top: 5em;
         width: 80%;
         border: 1px solid #EDEEEE;
         margin-bottom: 5em;
+        position: relative;
+
+        .fa-camera {
+          position: absolute;
+          top: 1.5em;
+          left: 1em;
+          font-size: 1.5em;
+        }
+
+        p {
+          float: left;
+          padding: 1em;
+          margin: 0;
+          padding-left: 2.5em;
+
+
+          span {
+            color: $teal;
+            font-weight: bold;
+            font-size: 1em;
+          }
+        }
 
         .image {
 
@@ -251,14 +273,7 @@ header {
 
           .imageInfo {
 
-            p {
 
-              span {
-                color: $teal;
-                font-weight: bold;
-                font-size: 1.3em;
-              }
-            }
           }
         }
 
