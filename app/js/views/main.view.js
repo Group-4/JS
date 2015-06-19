@@ -18,6 +18,7 @@
         var args = options || {};
         this.collectionUsers = args.collectionUsers;
         this.collectionPosts = args.collectionPosts;
+        // this.collectionUserPosts = args.collectionUserPosts;
         this.render();
         $('.container').html(this.el);
 
@@ -28,19 +29,12 @@
 
       console.log(app.LoggedInUser);
 
-
-      // this.collectionUsers.fetch().done(function(data) {
-      //   this.template(app.LoggedInUser);
-      // }.bind(this));
-
-
       this.collectionPosts.fetch().done(function (data) {
         this.$el.html(this.template({ image: this.collectionPosts.toJSON() }))
       }.bind(this));
 
       $('.sidebar').html(this.templateSidebar(app.LoggedInUser));
     },
-
 
     // DELETING ACCOUNT
     deleteAccount: function (event) {

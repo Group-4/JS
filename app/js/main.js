@@ -12,7 +12,7 @@
 
     console.log('fetched users');
 
-    Backbone.history.start();
+    // Backbone.history.start();
 
   });
 
