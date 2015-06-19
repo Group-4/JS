@@ -2,7 +2,7 @@
 
 <div class="mainImages">
   <h2>LET'S PLAY!</h2>
-  <a href="/#newpost"><div class="newpost">
+  <a href="/#newpost"><div class="newpostBtn">
     <i class="fa fa-camera"></i>
     <p>Add a new post</p>
   </div></a>
@@ -12,14 +12,11 @@
   <li data-id="{{id}}">
     <div class="imageWrap">
       <a href="#/single/{{id}}"><img src="{{ image_url }}"></a>
-
-
     </div>
-
   </li>
   {{/each}}
   </ul>
-  </div>
+</div>
 
 <div class="deleteDiv">
   <button id="#deleteButton">Delete Account</button>
