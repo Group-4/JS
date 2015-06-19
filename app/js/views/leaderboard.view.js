@@ -23,18 +23,18 @@
 
     render: function() {
       var allPosts = new app.Collections.Posts();
-      var allUsers = new app.Collections.Users();
-
+      //var allUsers = new app.Collections.Users();
+      this.collection = allPosts;
       allPosts.fetch().done( function (data) {
         var singlePost = this.collection.get(this.singleID);
         console.log(this);
         this.$el.html(this.template(singlePost.toJSON()));
       }.bind(this));
 
-      allUsers.fetch().done( function(data){
-        console.log(allUsers);
-        this.$el.html(this.template(this.collection.toJSON()));
-      }.bind(this));
+      // allUsers.fetch().done( function(data){
+      //   console.log(allUsers);
+      //   this.$el.html(this.template(this.collection.toJSON()));
+      // }.bind(this));
     },
 
     keepPlaying: function(e) {
