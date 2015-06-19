@@ -34,7 +34,7 @@
 
     makeGuess: function (e) {
       e.preventDefault();
-      app.mainRouter.navigate('/leaderboard/:id', {trigger: true});
+      app.mainRouter.navigate('leaderboard/:id', {trigger: true});
     }
 
   });

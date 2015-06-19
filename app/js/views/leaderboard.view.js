@@ -22,19 +22,27 @@
     },
 
     render: function() {
-      var allPosts = new app.Collections.Posts();
-      var allUsers = new app.Collections.Users();
+      this.collection = new app.Collections.Posts();
+      // var allUsers = new app.Collections.Users();
 
-      allPosts.fetch().done( function (data) {
-        var singlePost = this.collection.get(this.singleID);
-        console.log(this);
+
+      this.collection.fetch().done( function (data) {
+
+        // this.collection.each( function (d) {
+
+        // })
+
+
+        var singlePost = data.get(data.singleID);
+
+        console.log(singlePost);
         this.$el.html(this.template(singlePost.toJSON()));
       }.bind(this));
 
-      allUsers.fetch().done( function(data){
-        console.log(allUsers);
-        this.$el.html(this.template(this.collection.toJSON()));
-      }.bind(this));
+      // allUsers.fetch().done( function(data){
+      //   console.log(allUsers);
+      //   this.$el.html(this.template(this.collection.toJSON()));
+      // }.bind(this));
     },
 
     keepPlaying: function(e) {
