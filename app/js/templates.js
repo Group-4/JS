@@ -44,17 +44,21 @@ this["hbs"]["main"] = Handlebars.template({"1":function(depth0,helpers,partials,
 
   return "  <li data-id=\""
     + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
-    + "\">\n    <div class=\"imageWrap\">\n      <a href=\"#/single/"
+    + "\">\n\n    <div class=\"imageWrap\">\n      <div class=\"actualImage\">\n        <a href=\"#/single/"
     + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
     + "\"><img src=\""
     + alias3(((helper = (helper = helpers.image_url || (depth0 != null ? depth0.image_url : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"image_url","hash":{},"data":data}) : helper)))
-    + "\"></a>\n    </div>\n  </li>\n";
+    + "\"></a>\n      </div>\n      <p>posted by: "
+    + alias3(((helper = (helper = helpers.owner || (depth0 != null ? depth0.owner : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"owner","hash":{},"data":data}) : helper)))
+    + "</p>\n      <p>first solved by: "
+    + alias3(((helper = (helper = helpers.solved_by || (depth0 != null ? depth0.solved_by : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"solved_by","hash":{},"data":data}) : helper)))
+    + "</p>\n    </div>\n\n  </li>\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1;
 
   return "\n\n<div class=\"mainImages\">\n  <h2>LET'S PLAY!</h2>\n  <a href=\"/#newpost\"><div class=\"newpostBtn\">\n    <i class=\"fa fa-camera\"></i>\n    <p>Add a new post</p>\n  </div></a>\n\n  <ul class=\"small-block-grid-3\">\n"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.image : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "  </ul>\n</div>\n\n<div class=\"deleteDiv\">\n  <button id=\"#deleteButton\">Delete Account</button>\n</div>\n";
+    + "  </ul>\n\n</div>\n\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["newpost"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
@@ -66,11 +70,13 @@ this["hbs"]["sidebar"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"
 
   return "\n      <div class=\"innerAside\">\n        <div class=\"asideTop\">\n          <h4>"
     + alias3(((helper = (helper = helpers.username || (depth0 != null ? depth0.username : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"username","hash":{},"data":data}) : helper)))
-    + "</h4>\n          <div class=\"avatar\">\n            <img src=\"http://placehold.it/100x100\">\n          </div>\n          <div class=\"score\">\n            <p>Current score: </p>\n          </div>\n        </div>\n        <div class=\"leaderboardSection\">\n          <h4>Leaderboard</h4>\n          <ul id=\"leaderboard\" class=\"leaderboard\">\n            <li>"
+    + "</h4>\n          <div class=\"avatar\">\n            <img src=\"http://placehold.it/100x100\">\n          </div>\n          <div class=\"score\">\n            <p>Current score: "
+    + alias3(((helper = (helper = helpers.points || (depth0 != null ? depth0.points : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"points","hash":{},"data":data}) : helper)))
+    + "</p>\n          </div>\n        </div>\n        <div class=\"leaderboardSection\">\n          <h4>Leaderboard</h4>\n          <ul id=\"leaderboard\" class=\"leaderboard\">\n            <li>"
     + alias3(((helper = (helper = helpers.username || (depth0 != null ? depth0.username : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"username","hash":{},"data":data}) : helper)))
     + ": </li>\n            <li>"
     + alias3(((helper = (helper = helpers.username || (depth0 != null ? depth0.username : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"username","hash":{},"data":data}) : helper)))
-    + ": </li>\n          </ul>\n        </div>\n        </div>\n";
+    + ": </li>\n          </ul>\n        </div>\n        </div>\n\n<div class=\"deleteDiv\">\n  <button id=\"#deleteButton\">Delete Account</button>\n</div>\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["single"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
