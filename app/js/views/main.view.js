@@ -32,6 +32,14 @@
         this.$el.html(this.template({ image: this.collection.toJSON() }))
       }.bind(this));
 
+// TRINI ADDED THIS
+
+      this.$el.html(this.template({ owner: this.collection.toJSON() }))
+    }.bind(this));
+
+  this.$el.html(this.template({ solved: this.collection.toJSON() }))
+}.bind(this));
+
     },
 
 
@@ -39,8 +47,6 @@
       app.mainRouter.navigate('/single', {trigger: true});
 
     },
-
-
 
 
 
