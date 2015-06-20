@@ -7,7 +7,8 @@
 
     events: {
       'submit #guessInput' : 'makeGuess',
-      'click #deletePost' : 'deletePost'
+      'click #deletePost' : 'deletePost',
+      'click #seeOldGuesses' : 'oldGuesses'
     },
 
     template: hbs.single,
@@ -32,16 +33,6 @@
         this.$el.html(this.template(singlePost.toJSON()));
       }.bind(this));
 
-      this.collectionGuesses = new app.Collections.Guesses();
-
-      // this.collectionGuesses.fetch().done( function (data) {
-      //   console.log(this.collectionGuesses);
-      //   // var postGuesses = this.collectionGuesses.get(this.postID)
-
-      // $('.sidebar').html(this.templateSidebar(app.LoggedInUser));
-
-      // })
-
     },
 
     deletePost: function (e) {
@@ -64,6 +55,28 @@
       }
     })
 
+  },
+
+  oldGuesses: function () {
+    // append incorrect guesses beneath post
+    $.get(app.rootURL + '/posts/' + this.singleID + '/guesses', function (data) {
+      var allGuesses = data;
+      $('.singleGuesses').find('ul').empty();
+      allGuesses.forEach(function (guess) {
+      // console.log(guess.user_id);
+      // console.log(app.LoggedInUser.id);
+      // console.log(guess.guess);
+      if (guess.user_id === app.LoggedInUser.id) {
+        console.log('match', guess.user_id, app.LoggedInUser.id, guess.guess);
+        // var element = $('.singleGuesses').find('ul').html('hi');
+        // console.log(element);
+        $('.singleGuesses').find('#incorrectGuesses').append('<li>' + guess.guess + '</li>');
+        }
+        else {
+        $('.singleGuesses').find('#incorrectGuesses').html('<p>no previous guesses</p>');
+        }
+      })
+    })
   },
 
     makeGuess: function (e) {
@@ -90,6 +103,13 @@
         $.post(app.rootURL + '/posts/' + self.singleID + '/guesses', { guess: finalGuess }).done ( function (data) {
           console.log('nope, not right')
           $('#guessInput').get(0).reset();
+
+          console.log($('#incorrectGuesses').html())
+
+          if ($('#incorrectGuesses').html() !== '') {
+            $('#incorrectGuesses').append('<li>' + finalGuess + '</li>');
+          }
+
         })
       }
 
