@@ -68,10 +68,12 @@ header {
     width: 100%;
     background-color: $darkblue;
     overflow: hidden;
+
     .innerHeader {
         overflow: hidden;
         width: 80%;
         margin: auto;
+
         .logo {
             float: left;
             color: $light;
@@ -80,11 +82,14 @@ header {
             padding: 1em;
             display: inline-block;
             padding: 0;
+            cursor: pointer;
+
             .q {
                 overflow: hidden;
                 display: inline-block;
                 position: relative;
                 padding: 0;
+
                 p {
                     margin: 0;
                     // font-family: Michroma;
@@ -162,6 +167,7 @@ header {
         display: inline-block;
         float: left;
         font-family: $roboto;
+        color: $darkblue;
     }
 
     .rightBtns {
@@ -253,6 +259,27 @@ header {
 .container {
     overflow: hidden;
 
+    .single {
+
+      .response {
+        width: 75%;
+        margin: auto;
+        text-align: center;
+        color: $orange;
+        margin-top: 5em;
+
+        .deletedResponse {
+          font-size: 3em;
+        }
+
+        i {
+          color: $orange;
+          padding: .5em;
+          display: inline-block;
+        }
+      }
+    }
+
     .singleWrap {
       overflow: hidden;
     }
@@ -285,6 +312,18 @@ header {
                 font-size: 1em;
                 font-family: $roboto;
 
+            }
+        }
+
+        .deletePost {
+            float: right;
+            padding: .5em;
+            color: $darkblue;
+            font-size: 2em;
+            cursor: pointer;
+
+            &:hover {
+              color: $orange;
             }
         }
         .image {

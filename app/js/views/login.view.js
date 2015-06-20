@@ -8,8 +8,7 @@
 
     events: {
       'submit #registerForm' : 'registerUser',
-      'submit #loginForm' : 'loginUser',
-      // 'click #logout' : 'logout'
+      'submit #loginForm' : 'loginUser'
     },
 
     template: hbs.login,
@@ -94,13 +93,7 @@
 
       });
 
-    },
-
-    // logout: function(e) {
-    //   e.preventDefault();
-    //   Cookies.expire('access_token').get('access_token');
-    //   app.mainRouter.navigate('', { trigger: true });
-    // }
+    }
 
 
   });

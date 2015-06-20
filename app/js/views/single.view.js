@@ -6,7 +6,8 @@
     className: 'single',
 
     events: {
-      'submit #guessInput' : 'makeGuess'
+      'submit #guessInput' : 'makeGuess',
+      'click #deletePost' : 'deletePost'
     },
 
     template: hbs.single,
@@ -43,6 +44,28 @@
 
     },
 
+    deletePost: function (e) {
+    e.preventDefault();
+
+    var button = event.target;
+    console.log(button);
+    var postIdToDelete = $(button).data('id');
+    console.log(postIdToDelete);
+
+    $.ajax({
+      url: app.rootURL + '/posts/' + postIdToDelete,
+      type: 'DELETE',
+      success: function() {
+        console.log('deleted');
+        $(button).parentsUntil('.single').html('<div class="response"><p class="deletedResponse">Your post and all associated guesses have been deleted.</p><i class="fa fa-paper-plane-o deletedResponse"></i><p class="deletedResponse">Sending you back to the home page in 3 seconds...</p></div>');
+        window.setTimeout(function () {
+          app.mainRouter.navigate('/main', {trigger: true});
+          }, 3000);
+      }
+    })
+
+  },
+
     makeGuess: function (e) {
       e.preventDefault();
       var self = this;
@@ -69,7 +92,6 @@
           $('#guessInput').get(0).reset();
         })
       }
-
 
     }
 

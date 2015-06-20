@@ -27,7 +27,7 @@
 //   app.mainRouter.navigate('', { trigger: true });
 // });
 
-$('.wrapper').on('click', '#homeButton', function (e) {
+$('.wrapper').on('click', '.logo', function (e) {
   e.preventDefault();
   app.mainRouter.navigate('/main', { trigger: true });
 });

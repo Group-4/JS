@@ -8,8 +8,7 @@
 
     events: {
     'click #delete': 'deleteAccount',
-    'click #logoutBtn' : 'logout',
-    'click #deletePost' : 'deletePost'
+    'click #logoutBtn' : 'logout'
     },
 
     template: hbs.main,
@@ -28,7 +27,6 @@
     },
 
     render: function() {
-      $('.sidebar').html(this.templateSidebar(app.LoggedInUser));
 
       var self = this;
 
@@ -37,6 +35,9 @@
       }).done(function (data) {
         self.$el.html(self.template({ image: allUserPosts.responseJSON }));
       });
+
+      $('.sidebar').html(this.templateSidebar(app.LoggedInUser));
+
 
       // this.collectionPosts.fetch().done(function (data) {
       //   this.$el.html(this.template({ image: this.collectionPosts.toJSON() }))
@@ -67,25 +68,6 @@
     console.log(cookie);
     Cookies.expire('access_token', app.LoggedInUser.access_token);
     app.mainRouter.navigate('', { trigger: true });
-  },
-
-  deletePost: function (e) {
-    e.preventDefault();
-
-    var button = event.target;
-    console.log(button);
-    var postIdToDelete = $(button).data('id');
-    console.log(postIdToDelete);
-
-    $.ajax({
-      url: app.rootURL + '/posts/' + postIdToDelete,
-      type: 'DELETE',
-      success: function() {
-        console.log('deleted');
-        $(button).parentsUntil('li').fadeOut();
-      }
-    })
-
   }
 
 

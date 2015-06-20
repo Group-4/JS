@@ -59,7 +59,8 @@ header {
       overflow: hidden;
       padding: 1em;
       display: inline-block;
-      padding: 0; }
+      padding: 0;
+      cursor: pointer; }
       header .innerHeader .logo .q {
         overflow: hidden;
         display: inline-block;
@@ -120,7 +121,8 @@ header {
   .mainImages h2 {
     display: inline-block;
     float: left;
-    font-family: "Roboto", sans-serif; }
+    font-family: "Roboto", sans-serif;
+    color: #225378; }
   .mainImages .rightBtns {
     overflow: hidden; }
   .mainImages .newpostBtn {
@@ -177,6 +179,18 @@ header {
 ------------------- */
 .container {
   overflow: hidden; }
+  .container .single .response {
+    width: 75%;
+    margin: auto;
+    text-align: center;
+    color: #FF8236;
+    margin-top: 5em; }
+    .container .single .response .deletedResponse {
+      font-size: 3em; }
+    .container .single .response i {
+      color: #FF8236;
+      padding: .5em;
+      display: inline-block; }
   .container .singleWrap {
     overflow: hidden; }
   .container .singleMain {
@@ -205,6 +219,14 @@ header {
         font-weight: bold;
         font-size: 1em;
         font-family: "Roboto", sans-serif; }
+    .container .singleMain .deletePost {
+      float: right;
+      padding: .5em;
+      color: #225378;
+      font-size: 2em;
+      cursor: pointer; }
+      .container .singleMain .deletePost:hover {
+        color: #FF8236; }
     .container .singleMain .image img {
       width: 100%; }
     .container .singleMain .guess {
