@@ -21,9 +21,9 @@
       this.collectionUsers = args.collectionUsers;
       this.collectionPosts = args.collectionPosts;
       this.collectionUserPosts = args.collectionUserPosts;
+      // this.collection('destroy', this.destroyed,this);
       this.render();
       $('.container').html(this.el);
-
     },
 
     render: function() {
@@ -38,12 +38,14 @@
 
       $('.sidebar').html(this.templateSidebar(app.LoggedInUser));
 
-
       // this.collectionPosts.fetch().done(function (data) {
       //   this.$el.html(this.template({ image: this.collectionPosts.toJSON() }))
       // }.bind(this));
-
     },
+
+    // destroyed: function () {
+    //   console.log ('Delete your Qpic account?');
+    // },
 
     // DELETING ACCOUNT
   //   deleteAccount: function (event) {
