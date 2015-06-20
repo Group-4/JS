@@ -330,12 +330,74 @@ header {
             img {
                 width: 100%;
             }
-            .imageInfo {}
+            .imageInfo {
+
+              span {
+                color: $teal;
+                font-weight: bold;
+              }
+
+              .showHint {
+                cursor: pointer;
+              }
+            }
         }
         .guess {
             width: 90%;
             margin: auto;
             margin-bottom: 2em;
+            margin-left: 2em;
+            float: left;
+            width: 70%;
+            padding: 1.6em;
+        }
+
+        .guessBtn {
+          float: right;
+          margin-right: 2em;
+        }
+
+        .singleGuesses {
+          clear: both;
+
+          p {
+            display: block;
+            padding: .8em;
+            border: 1px solid $darkblue;
+            color: $darkblue;
+            font-family: $roboto;
+            cursor: pointer;
+            margin-left: 1.7em;
+
+            &:hover {
+              background-color: $orange;
+              color: white;
+              border: none;
+            }
+          }
+
+          ul {
+            display: block;
+            clear: both;
+            text-align: left;
+            margin-left: 1em;
+
+            li {
+              color: $darkblue;
+              margin-left: 2.7em;
+              padding-top: 1em;
+              position: relative;
+
+              &::before {
+                content: '\f00d';
+                font-family: FontAwesome;
+                position: absolute;
+                color: $orange;
+                left: -20px;
+              }
+            }
+          }
+
         }
     }
 }
