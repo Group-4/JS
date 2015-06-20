@@ -69,7 +69,20 @@
         singleID: id
       });
     }
+// THE ABOVE BRACKET NEEDS A COMMA IF PLANNING TO USE DELETE POST
+    // deletePost: function (id) {
+    //   new app.Views.DeleteView({
+    //     singleId: id,
+    //     collection: this.collectionUserPosts
+    //   });
+    // },
 
+// THE ABOVE BRACKET NEEDS A COMMA IF PLANNING TO USE DELETE ACCOUNT
+    // deleteAccount: function (id) {
+    //   new app.Views.Main({
+    //     collectionUsers: this.collectionUsers
+    //   });
+    }
 
   });
 
