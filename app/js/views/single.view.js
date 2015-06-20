@@ -72,9 +72,9 @@
         // console.log(element);
         $('.singleGuesses').find('#incorrectGuesses').append('<li>' + guess.guess + '</li>');
         }
-        else {
-        $('.singleGuesses').find('#incorrectGuesses').html('<p>no previous guesses</p>');
-        }
+        // else {
+        // $('.singleGuesses').find('#incorrectGuesses').html('<p>no previous guesses</p>');
+        // }
       })
     })
   },

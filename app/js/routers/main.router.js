@@ -80,7 +80,7 @@
     //   new app.Views.Main({
     //     collectionUsers: this.collectionUsers
     //   });
-    }
+    // }
 
   });
 
