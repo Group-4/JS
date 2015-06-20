@@ -12,8 +12,6 @@
       this.collectionGuesses = args.collectionGuesses;
 
       app.isLoggedIn = (Cookies.get('access_token') !== undefined) ? true : false;
-      console.log(Cookies.get('access_token'), app.isLoggedIn)
-      console.log('fffffff', app.isLoggedIn);
 
         if (app.isLoggedIn) {
 
@@ -25,7 +23,7 @@
 
         } else {
           Backbone.history.start();
-          app.mainRouter.navigate('', {trigger: true});
+          // app.mainRouter.navigate('', {trigger: true});
         }
 
     },
@@ -69,20 +67,7 @@
         singleID: id
       });
     }
-// THE ABOVE BRACKET NEEDS A COMMA IF PLANNING TO USE DELETE POST
-    // deletePost: function (id) {
-    //   new app.Views.DeleteView({
-    //     singleId: id,
-    //     collection: this.collectionUserPosts
-    //   });
-    // },
 
-// THE ABOVE BRACKET NEEDS A COMMA IF PLANNING TO USE DELETE ACCOUNT
-    // deleteAccount: function (id) {
-    //   new app.Views.Main({
-    //     collectionUsers: this.collectionUsers
-    //   });
-    }
 
   });
 
