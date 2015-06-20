@@ -6,15 +6,11 @@
   var allPosts = new app.Collections.Posts();
   var allGuesses = new app.Collections.Guesses();
 
-  console.log('fetching users');
+  // allUsers.fetch().done( function() {
 
-  allUsers.fetch().done( function() {
+  //   Backbone.history.start();
 
-    console.log('fetched users');
-
-    // Backbone.history.start();
-
-  });
+  // });
 
   app.mainRouter = new app.Routers.MainRouter({
     collectionUsers: allUsers,
@@ -22,13 +18,16 @@
     collectionGuesses: allGuesses
   });
 
-$('.wrapper').on('click', '#logout', function (e) {
-  e.preventDefault();
-  Cookies.expire('access_token').get('access_token');
-  app.mainRouter.navigate('', { trigger: true });
-});
+// $('.wrapper').on('click', '#logout', function (e) {
+//   e.preventDefault();
 
-$('.wrapper').on('click', '#homeButton', function (e) {
+//   var cookie = Cookies.get('access-token');
+//   console.log(cookie);
+//   Cookies.expire('Access-Token', undefined);
+//   app.mainRouter.navigate('', { trigger: true });
+// });
+
+$('.wrapper').on('click', '.logo', function (e) {
   e.preventDefault();
   app.mainRouter.navigate('/main', { trigger: true });
 });

@@ -9,12 +9,10 @@ $lightblue: #ACF0F2;
 $orange: #FF8236;
 $light: #F3FFE2;
 $background: #FAFAFA;
-$philosopher: 'Philosopher',
-sans-serif;
-$raleway: 'Raleway',
-sans-serif;
-$roboto: 'Roboto',
-sans-serif;
+$philosopher: 'Philosopher', sans-serif;
+$raleway: 'Raleway', sans-serif;
+$roboto: 'Roboto', sans-serif;
+
 /* MIXINS
 ---------- */
 
@@ -22,6 +20,7 @@ sans-serif;
     border: 1px solid #ccc;
     border-radius: 3px;
 }
+
 /* GLOBAL
 ----------- */
 
@@ -46,6 +45,7 @@ button {
 
 button {
     background-color: $darkblue;
+
     &:hover {
         background-color: $orange;
     }
@@ -68,10 +68,12 @@ header {
     width: 100%;
     background-color: $darkblue;
     overflow: hidden;
+
     .innerHeader {
         overflow: hidden;
         width: 80%;
         margin: auto;
+
         .logo {
             float: left;
             color: $light;
@@ -80,11 +82,14 @@ header {
             padding: 1em;
             display: inline-block;
             padding: 0;
+            cursor: pointer;
+
             .q {
                 overflow: hidden;
                 display: inline-block;
                 position: relative;
                 padding: 0;
+
                 p {
                     margin: 0;
                     // font-family: Michroma;
@@ -135,11 +140,15 @@ header {
         opacity: .8;
         float: right;
         padding-top: 2em;
+
         ul {
-            cursor: pointer;
+          cursor: pointer;
+
             li {
                 display: inline;
                 padding: .6em;
+                font-family: $roboto;
+
                 &:hover {
                     opacity: 1;
                 }
@@ -157,14 +166,23 @@ header {
     h2 {
         display: inline-block;
         float: left;
+        font-family: $roboto;
+        color: $darkblue;
+    }
+
+    .rightBtns {
+      overflow: hidden;
+
     }
     .newpostBtn {
-        display: inline-block;
         float: right;
         border: 1px solid $darkblue;
         padding: 1em;
         margin: 1em;
         color: $darkblue;
+        font-family: $roboto;
+        overflow: hidden;
+
         &:hover {
             background-color: $orange;
             color: white;
@@ -183,6 +201,28 @@ header {
             padding-top: .1em;
         }
     }
+
+    .logoutBtn {
+      float: right;
+      border: 1px solid $darkblue;
+      padding: .5em;
+      color: $darkblue;
+      font-family: $roboto;
+      cursor: pointer;
+      margin: .7em;
+
+        &:hover {
+          background-color: $orange;
+          color: white;
+          border: none;
+        }
+
+        p {
+          display: inline-block;
+          margin: 0;
+        }
+    }
+
     .imageWrap {
         // position: relative;
         width: 250px;
@@ -190,11 +230,16 @@ header {
         overflow: hidden;
         border-radius: 4px;
 
+      p {
+        margin: 0;
+        font-size: .7em;
+        clear: both;
+      }
+
         .actualImage {
           overflow: hidden;
-          p{
-            display: block;
-          }
+          height: 190px;
+
             img {
                 // position: absolute;
                 // left: 50%;
@@ -214,6 +259,27 @@ header {
 .container {
     overflow: hidden;
 
+    .single {
+
+      .response {
+        width: 75%;
+        margin: auto;
+        text-align: center;
+        color: $orange;
+        margin-top: 5em;
+
+        .deletedResponse {
+          font-size: 3em;
+        }
+
+        i {
+          color: $orange;
+          padding: .5em;
+          display: inline-block;
+        }
+      }
+    }
+
     .singleWrap {
       overflow: hidden;
     }
@@ -226,6 +292,7 @@ header {
         border: 1px solid #EDEEEE;
         margin-bottom: 5em;
         position: relative;
+        font-family: $roboto;
         .fa-camera {
             position: absolute;
             top: 1.5em;
@@ -237,22 +304,100 @@ header {
             padding: 1em;
             margin: 0;
             padding-left: 2.5em;
+            font-family: $roboto;
+
             span {
                 color: $teal;
                 font-weight: bold;
                 font-size: 1em;
+                font-family: $roboto;
+
+            }
+        }
+
+        .deletePost {
+            float: right;
+            padding: .5em;
+            color: $darkblue;
+            font-size: 2em;
+            cursor: pointer;
+
+            &:hover {
+              color: $orange;
             }
         }
         .image {
             img {
                 width: 100%;
             }
-            .imageInfo {}
+            .imageInfo {
+
+              span {
+                color: $teal;
+                font-weight: bold;
+              }
+
+              .showHint {
+                cursor: pointer;
+              }
+            }
         }
         .guess {
             width: 90%;
             margin: auto;
             margin-bottom: 2em;
+            margin-left: 2em;
+            float: left;
+            width: 70%;
+            padding: 1.6em;
+        }
+
+        .guessBtn {
+          float: right;
+          margin-right: 2em;
+        }
+
+        .singleGuesses {
+          clear: both;
+
+          p {
+            display: block;
+            padding: .8em;
+            border: 1px solid $darkblue;
+            color: $darkblue;
+            font-family: $roboto;
+            cursor: pointer;
+            margin-left: 1.7em;
+
+            &:hover {
+              background-color: $orange;
+              color: white;
+              border: none;
+            }
+          }
+
+          ul {
+            display: block;
+            clear: both;
+            text-align: left;
+            margin-left: 1em;
+
+            li {
+              color: $darkblue;
+              margin-left: 2.7em;
+              padding-top: 1em;
+              position: relative;
+
+              &::before {
+                content: '\f00d';
+                font-family: FontAwesome;
+                position: absolute;
+                color: $orange;
+                left: -20px;
+              }
+            }
+          }
+
         }
     }
 }
@@ -265,13 +410,21 @@ aside {
   overflow: hidden;
   clear: both;
 
+  button {
+    font-family: $roboto;
+  }
+
   .innerAside {
     width: 90%;
     margin: auto;
     text-align: center;
+    font-family: $roboto;
+
 
     h4 {
       margin-top: 1em;
+      font-family: $roboto;
+
     }
   }
   .asideTop {
@@ -290,6 +443,7 @@ aside {
     margin-top: 1em;
 
       li {
+
 
       }
     }

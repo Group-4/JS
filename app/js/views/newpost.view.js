@@ -6,7 +6,7 @@
     className: 'newpost',
 
     events: {
-      'click #submitPost' : 'postImage'
+      'submit #postImage' : 'postImage'
     },
 
     template: hbs.newpost,
@@ -28,7 +28,8 @@
       // this.$el.html(this.template(singlePost.toJSON()));
     },
 
-    postImage: function () {
+    postImage: function (e) {
+      e.preventDefault();
       //get input values from form
       var self = this,
           form = $(event.target),
@@ -41,10 +42,16 @@
         answer: answer
       });
 
+      // $.get(app.rootURL + '/posts', p.toJSON()).done ( function (data) {
+      //   console.log(image_url);
+      //   console.log(answer);
+      // });
+
       $.post(app.rootURL + '/posts', p.toJSON()).done ( function (data) {
-        console.log('posted to posts endpoint')
         $('#postImage').get(0).reset();
-        app.mainRouter.navigate('/main', { trigger: true });
+        // successful post alert on page
+        // button to click and add another and button to navigate home
+        // app.mainRouter.navigate('/main', { trigger: true });
       });
 
     }

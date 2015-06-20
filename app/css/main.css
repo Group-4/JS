@@ -59,7 +59,8 @@ header {
       overflow: hidden;
       padding: 1em;
       display: inline-block;
-      padding: 0; }
+      padding: 0;
+      cursor: pointer; }
       header .innerHeader .logo .q {
         overflow: hidden;
         display: inline-block;
@@ -107,7 +108,8 @@ header {
       cursor: pointer; }
       header nav ul li {
         display: inline;
-        padding: .6em; }
+        padding: .6em;
+        font-family: "Roboto", sans-serif; }
         header nav ul li:hover {
           opacity: 1; }
 
@@ -118,14 +120,19 @@ header {
   width: 100%; }
   .mainImages h2 {
     display: inline-block;
-    float: left; }
+    float: left;
+    font-family: "Roboto", sans-serif;
+    color: #225378; }
+  .mainImages .rightBtns {
+    overflow: hidden; }
   .mainImages .newpostBtn {
-    display: inline-block;
     float: right;
     border: 1px solid #225378;
     padding: 1em;
     margin: 1em;
-    color: #225378; }
+    color: #225378;
+    font-family: "Roboto", sans-serif;
+    overflow: hidden; }
     .mainImages .newpostBtn:hover {
       background-color: #FF8236;
       color: white;
@@ -140,20 +147,50 @@ header {
       float: left;
       padding-right: .5em;
       padding-top: .1em; }
+  .mainImages .logoutBtn {
+    float: right;
+    border: 1px solid #225378;
+    padding: .5em;
+    color: #225378;
+    font-family: "Roboto", sans-serif;
+    cursor: pointer;
+    margin: .7em; }
+    .mainImages .logoutBtn:hover {
+      background-color: #FF8236;
+      color: white;
+      border: none; }
+    .mainImages .logoutBtn p {
+      display: inline-block;
+      margin: 0; }
   .mainImages .imageWrap {
     width: 250px;
     height: 250px;
     overflow: hidden;
     border-radius: 4px; }
+    .mainImages .imageWrap p {
+      margin: 0;
+      font-size: .7em;
+      clear: both; }
     .mainImages .imageWrap .actualImage {
-      overflow: hidden; }
-      .mainImages .imageWrap .actualImage p {
-        display: block; }
+      overflow: hidden;
+      height: 190px; }
 
 /* SINGLE PAGE VIEW
 ------------------- */
 .container {
   overflow: hidden; }
+  .container .single .response {
+    width: 75%;
+    margin: auto;
+    text-align: center;
+    color: #FF8236;
+    margin-top: 5em; }
+    .container .single .response .deletedResponse {
+      font-size: 3em; }
+    .container .single .response i {
+      color: #FF8236;
+      padding: .5em;
+      display: inline-block; }
   .container .singleWrap {
     overflow: hidden; }
   .container .singleMain {
@@ -164,7 +201,8 @@ header {
     width: 80%;
     border: 1px solid #EDEEEE;
     margin-bottom: 5em;
-    position: relative; }
+    position: relative;
+    font-family: "Roboto", sans-serif; }
     .container .singleMain .fa-camera {
       position: absolute;
       top: 1.5em;
@@ -174,17 +212,69 @@ header {
       float: left;
       padding: 1em;
       margin: 0;
-      padding-left: 2.5em; }
+      padding-left: 2.5em;
+      font-family: "Roboto", sans-serif; }
       .container .singleMain p span {
         color: #1695A3;
         font-weight: bold;
-        font-size: 1em; }
+        font-size: 1em;
+        font-family: "Roboto", sans-serif; }
+    .container .singleMain .deletePost {
+      float: right;
+      padding: .5em;
+      color: #225378;
+      font-size: 2em;
+      cursor: pointer; }
+      .container .singleMain .deletePost:hover {
+        color: #FF8236; }
     .container .singleMain .image img {
       width: 100%; }
+    .container .singleMain .image .imageInfo span {
+      color: #1695A3;
+      font-weight: bold; }
+    .container .singleMain .image .imageInfo .showHint {
+      cursor: pointer; }
     .container .singleMain .guess {
       width: 90%;
       margin: auto;
-      margin-bottom: 2em; }
+      margin-bottom: 2em;
+      margin-left: 2em;
+      float: left;
+      width: 70%;
+      padding: 1.6em; }
+    .container .singleMain .guessBtn {
+      float: right;
+      margin-right: 2em; }
+    .container .singleMain .singleGuesses {
+      clear: both; }
+      .container .singleMain .singleGuesses p {
+        display: block;
+        padding: .8em;
+        border: 1px solid #225378;
+        color: #225378;
+        font-family: "Roboto", sans-serif;
+        cursor: pointer;
+        margin-left: 1.7em; }
+        .container .singleMain .singleGuesses p:hover {
+          background-color: #FF8236;
+          color: white;
+          border: none; }
+      .container .singleMain .singleGuesses ul {
+        display: block;
+        clear: both;
+        text-align: left;
+        margin-left: 1em; }
+        .container .singleMain .singleGuesses ul li {
+          color: #225378;
+          margin-left: 2.7em;
+          padding-top: 1em;
+          position: relative; }
+          .container .singleMain .singleGuesses ul li::before {
+            content: '\f00d';
+            font-family: FontAwesome;
+            position: absolute;
+            color: #FF8236;
+            left: -20px; }
 
 aside {
   float: left;
@@ -197,12 +287,16 @@ aside {
   clear: both; }
   aside:last-child {
     margin-right: 0; }
+  aside button {
+    font-family: "Roboto", sans-serif; }
   aside .innerAside {
     width: 90%;
     margin: auto;
-    text-align: center; }
+    text-align: center;
+    font-family: "Roboto", sans-serif; }
     aside .innerAside h4 {
-      margin-top: 1em; }
+      margin-top: 1em;
+      font-family: "Roboto", sans-serif; }
   aside .asideTop {
     margin-top: 2em;
     border-bottom: 1px solid #225378; }
