@@ -8,7 +8,8 @@
 
     events: {
       'submit #registerForm' : 'registerUser',
-      'submit #loginForm' : 'loginUser'
+      'submit #loginForm' : 'loginUser',
+      // 'click #logout' : 'logout'
     },
 
     template: hbs.login,
@@ -46,9 +47,15 @@
 
       //add new user model to data/collection and trigger main view
       $.post(app.rootURL + '/users/register', u.toJSON()).done ( function (data) {
+        // Cookies.expire('access_token', app.LoggedInUser.access_token);
         Cookies.set('access_token', data.access_token);
         Cookies.set('username', data.username);
         app.LoggedInUser = data;
+        $.ajaxSetup({
+          headers: {
+            'Access-Token' : Cookies.get('access_token')
+          }
+        });
         app.mainRouter.navigate('/main', { trigger: true });
 
       });
@@ -71,17 +78,29 @@
       var loginPerson = {username: username, password: password};
 
       $.post(app.rootURL + '/users/login', loginPerson).done( function (data) {
+        // Cookies.expire('access_token', app.LoggedInUser.access_token);
         Cookies.set('access_token', data.access_token);
         Cookies.set('username', data.username);
         app.LoggedInUser = data;
+        // var cookie = Cookies.get('access_token', data.access_token);
+        // console.log(cookie);
         console.log(app.LoggedInUser);
+        $.ajaxSetup({
+          headers: {
+            'Access-Token' : Cookies.get('access_token')
+          }
+        });
         app.mainRouter.navigate('/main', { trigger: true });
-
 
       });
 
+    },
 
-    }
+    // logout: function(e) {
+    //   e.preventDefault();
+    //   Cookies.expire('access_token').get('access_token');
+    //   app.mainRouter.navigate('', { trigger: true });
+    // }
 
 
   });

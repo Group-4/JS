@@ -6,7 +6,7 @@
     className: 'newpost',
 
     events: {
-      'click #submitPost' : 'postImage'
+      'submit #postImage' : 'postImage'
     },
 
     template: hbs.newpost,
@@ -43,12 +43,14 @@
       });
 
       // $.get(app.rootURL + '/posts', p.toJSON()).done ( function (data) {
-      //   console.log(data);
+      //   console.log(image_url);
+      //   console.log(answer);
       // });
 
       $.post(app.rootURL + '/posts', p.toJSON()).done ( function (data) {
-        console.log(image_url);
         $('#postImage').get(0).reset();
+        // successful post alert on page
+        // button to click and add another and button to navigate home
         // app.mainRouter.navigate('/main', { trigger: true });
       });
 

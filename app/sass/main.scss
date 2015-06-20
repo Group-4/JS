@@ -163,14 +163,19 @@ header {
         float: left;
         font-family: $roboto;
     }
+
+    .rightBtns {
+      overflow: hidden;
+
+    }
     .newpostBtn {
-        display: inline-block;
         float: right;
         border: 1px solid $darkblue;
         padding: 1em;
         margin: 1em;
         color: $darkblue;
         font-family: $roboto;
+        overflow: hidden;
 
         &:hover {
             background-color: $orange;
@@ -190,6 +195,28 @@ header {
             padding-top: .1em;
         }
     }
+
+    .logoutBtn {
+      float: right;
+      border: 1px solid $darkblue;
+      padding: .5em;
+      color: $darkblue;
+      font-family: $roboto;
+      cursor: pointer;
+      margin: .7em;
+
+        &:hover {
+          background-color: $orange;
+          color: white;
+          border: none;
+        }
+
+        p {
+          display: inline-block;
+          margin: 0;
+        }
+    }
+
     .imageWrap {
         // position: relative;
         width: 250px;
@@ -200,10 +227,12 @@ header {
       p {
         margin: 0;
         font-size: .7em;
+        clear: both;
       }
 
         .actualImage {
           overflow: hidden;
+          height: 190px;
 
             img {
                 // position: absolute;

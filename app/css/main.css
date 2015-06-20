@@ -121,14 +121,16 @@ header {
     display: inline-block;
     float: left;
     font-family: "Roboto", sans-serif; }
+  .mainImages .rightBtns {
+    overflow: hidden; }
   .mainImages .newpostBtn {
-    display: inline-block;
     float: right;
     border: 1px solid #225378;
     padding: 1em;
     margin: 1em;
     color: #225378;
-    font-family: "Roboto", sans-serif; }
+    font-family: "Roboto", sans-serif;
+    overflow: hidden; }
     .mainImages .newpostBtn:hover {
       background-color: #FF8236;
       color: white;
@@ -143,6 +145,21 @@ header {
       float: left;
       padding-right: .5em;
       padding-top: .1em; }
+  .mainImages .logoutBtn {
+    float: right;
+    border: 1px solid #225378;
+    padding: .5em;
+    color: #225378;
+    font-family: "Roboto", sans-serif;
+    cursor: pointer;
+    margin: .7em; }
+    .mainImages .logoutBtn:hover {
+      background-color: #FF8236;
+      color: white;
+      border: none; }
+    .mainImages .logoutBtn p {
+      display: inline-block;
+      margin: 0; }
   .mainImages .imageWrap {
     width: 250px;
     height: 250px;
@@ -150,9 +167,11 @@ header {
     border-radius: 4px; }
     .mainImages .imageWrap p {
       margin: 0;
-      font-size: .7em; }
+      font-size: .7em;
+      clear: both; }
     .mainImages .imageWrap .actualImage {
-      overflow: hidden; }
+      overflow: hidden;
+      height: 190px; }
 
 /* SINGLE PAGE VIEW
 ------------------- */
