@@ -107,7 +107,8 @@ header {
       cursor: pointer; }
       header nav ul li {
         display: inline;
-        padding: .6em; }
+        padding: .6em;
+        font-family: "Roboto", sans-serif; }
         header nav ul li:hover {
           opacity: 1; }
 
@@ -118,14 +119,16 @@ header {
   width: 100%; }
   .mainImages h2 {
     display: inline-block;
-    float: left; }
+    float: left;
+    font-family: "Roboto", sans-serif; }
   .mainImages .newpostBtn {
     display: inline-block;
     float: right;
     border: 1px solid #225378;
     padding: 1em;
     margin: 1em;
-    color: #225378; }
+    color: #225378;
+    font-family: "Roboto", sans-serif; }
     .mainImages .newpostBtn:hover {
       background-color: #FF8236;
       color: white;
@@ -145,10 +148,11 @@ header {
     height: 250px;
     overflow: hidden;
     border-radius: 4px; }
+    .mainImages .imageWrap p {
+      margin: 0;
+      font-size: .7em; }
     .mainImages .imageWrap .actualImage {
       overflow: hidden; }
-      .mainImages .imageWrap .actualImage p {
-        display: block; }
 
 /* SINGLE PAGE VIEW
 ------------------- */
@@ -164,7 +168,8 @@ header {
     width: 80%;
     border: 1px solid #EDEEEE;
     margin-bottom: 5em;
-    position: relative; }
+    position: relative;
+    font-family: "Roboto", sans-serif; }
     .container .singleMain .fa-camera {
       position: absolute;
       top: 1.5em;
@@ -174,11 +179,13 @@ header {
       float: left;
       padding: 1em;
       margin: 0;
-      padding-left: 2.5em; }
+      padding-left: 2.5em;
+      font-family: "Roboto", sans-serif; }
       .container .singleMain p span {
         color: #1695A3;
         font-weight: bold;
-        font-size: 1em; }
+        font-size: 1em;
+        font-family: "Roboto", sans-serif; }
     .container .singleMain .image img {
       width: 100%; }
     .container .singleMain .guess {
@@ -197,12 +204,16 @@ aside {
   clear: both; }
   aside:last-child {
     margin-right: 0; }
+  aside button {
+    font-family: "Roboto", sans-serif; }
   aside .innerAside {
     width: 90%;
     margin: auto;
-    text-align: center; }
+    text-align: center;
+    font-family: "Roboto", sans-serif; }
     aside .innerAside h4 {
-      margin-top: 1em; }
+      margin-top: 1em;
+      font-family: "Roboto", sans-serif; }
   aside .asideTop {
     margin-top: 2em;
     border-bottom: 1px solid #225378; }

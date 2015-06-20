@@ -28,7 +28,8 @@
       // this.$el.html(this.template(singlePost.toJSON()));
     },
 
-    postImage: function () {
+    postImage: function (e) {
+      e.preventDefault();
       //get input values from form
       var self = this,
           form = $(event.target),
@@ -41,10 +42,14 @@
         answer: answer
       });
 
+      // $.get(app.rootURL + '/posts', p.toJSON()).done ( function (data) {
+      //   console.log(data);
+      // });
+
       $.post(app.rootURL + '/posts', p.toJSON()).done ( function (data) {
-        console.log('posted to posts endpoint')
+        console.log(image_url);
         $('#postImage').get(0).reset();
-        app.mainRouter.navigate('/main', { trigger: true });
+        // app.mainRouter.navigate('/main', { trigger: true });
       });
 
     }

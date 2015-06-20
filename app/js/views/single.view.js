@@ -33,13 +33,13 @@
 
       this.collectionGuesses = new app.Collections.Guesses();
 
-      this.collectionGuesses.fetch().done( function (data) {
-        console.log(this.collectionGuesses);
-        // var postGuesses = this.collectionGuesses.get(this.postID)
+      // this.collectionGuesses.fetch().done( function (data) {
+      //   console.log(this.collectionGuesses);
+      //   // var postGuesses = this.collectionGuesses.get(this.postID)
 
-      $('.sidebar').html(this.templateSidebar(app.LoggedInUser));
+      // $('.sidebar').html(this.templateSidebar(app.LoggedInUser));
 
-      })
+      // })
 
     },
 

@@ -9,12 +9,10 @@ $lightblue: #ACF0F2;
 $orange: #FF8236;
 $light: #F3FFE2;
 $background: #FAFAFA;
-$philosopher: 'Philosopher',
-sans-serif;
-$raleway: 'Raleway',
-sans-serif;
-$roboto: 'Roboto',
-sans-serif;
+$philosopher: 'Philosopher', sans-serif;
+$raleway: 'Raleway', sans-serif;
+$roboto: 'Roboto', sans-serif;
+
 /* MIXINS
 ---------- */
 
@@ -22,6 +20,7 @@ sans-serif;
     border: 1px solid #ccc;
     border-radius: 3px;
 }
+
 /* GLOBAL
 ----------- */
 
@@ -46,6 +45,7 @@ button {
 
 button {
     background-color: $darkblue;
+
     &:hover {
         background-color: $orange;
     }
@@ -135,11 +135,15 @@ header {
         opacity: .8;
         float: right;
         padding-top: 2em;
+
         ul {
-            cursor: pointer;
+          cursor: pointer;
+
             li {
                 display: inline;
                 padding: .6em;
+                font-family: $roboto;
+
                 &:hover {
                     opacity: 1;
                 }
@@ -157,6 +161,7 @@ header {
     h2 {
         display: inline-block;
         float: left;
+        font-family: $roboto;
     }
     .newpostBtn {
         display: inline-block;
@@ -165,6 +170,8 @@ header {
         padding: 1em;
         margin: 1em;
         color: $darkblue;
+        font-family: $roboto;
+
         &:hover {
             background-color: $orange;
             color: white;
@@ -190,11 +197,14 @@ header {
         overflow: hidden;
         border-radius: 4px;
 
+      p {
+        margin: 0;
+        font-size: .7em;
+      }
+
         .actualImage {
           overflow: hidden;
-          p{
-            display: block;
-          }
+
             img {
                 // position: absolute;
                 // left: 50%;
@@ -226,6 +236,7 @@ header {
         border: 1px solid #EDEEEE;
         margin-bottom: 5em;
         position: relative;
+        font-family: $roboto;
         .fa-camera {
             position: absolute;
             top: 1.5em;
@@ -237,10 +248,14 @@ header {
             padding: 1em;
             margin: 0;
             padding-left: 2.5em;
+            font-family: $roboto;
+
             span {
                 color: $teal;
                 font-weight: bold;
                 font-size: 1em;
+                font-family: $roboto;
+
             }
         }
         .image {
@@ -265,13 +280,21 @@ aside {
   overflow: hidden;
   clear: both;
 
+  button {
+    font-family: $roboto;
+  }
+
   .innerAside {
     width: 90%;
     margin: auto;
     text-align: center;
+    font-family: $roboto;
+
 
     h4 {
       margin-top: 1em;
+      font-family: $roboto;
+
     }
   }
   .asideTop {
@@ -290,6 +313,7 @@ aside {
     margin-top: 1em;
 
       li {
+
 
       }
     }

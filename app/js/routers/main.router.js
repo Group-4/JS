@@ -12,8 +12,6 @@
       this.collectionGuesses = args.collectionGuesses;
 
       app.isLoggedIn = (Cookies.get('access_token') !== undefined) ? true : false;
-      console.log(Cookies.get('access_token'), app.isLoggedIn)
-      console.log('fffffff', app.isLoggedIn);
 
         if (app.isLoggedIn) {
 

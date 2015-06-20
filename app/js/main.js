@@ -6,11 +6,9 @@
   var allPosts = new app.Collections.Posts();
   var allGuesses = new app.Collections.Guesses();
 
-  console.log('fetching users');
 
   allUsers.fetch().done( function() {
 
-    console.log('fetched users');
 
     // Backbone.history.start();
 
