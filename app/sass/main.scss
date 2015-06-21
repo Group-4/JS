@@ -225,6 +225,13 @@ header {
         display: inline;
         border: 1px solid #ACF0F2;
         padding: 10px 20px 100px 20px;
+
+        .actualImage {
+          overflow: hidden;
+          height: 170px;
+          clear: both;
+        }
+
         .poster {
             display: inline;
             color: #1695A3;
@@ -254,21 +261,7 @@ header {
                 span b {
                     margin: 0;
                     text-align: center;
-                    .actualImage {
-                        overflow: hidden;
-                        height: 200px;
-                        img {
 
-                            // position: absolute;
-                            // // left: 50%;
-                            // // top: 50%;
-                            // // height: 100%;
-                            // width: auto;
-                            // -webkit-transform: translate(-50%, -50%);
-                            // -ms-transform: translate(-50%, -50%);
-                            // transform: translate(-50%, -50%);
-                        }
-                    }
                 }
             }
         }

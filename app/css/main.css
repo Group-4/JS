@@ -173,6 +173,10 @@ header {
     display: inline;
     border: 1px solid #ACF0F2;
     padding: 10px 20px 100px 20px; }
+    .mainImages .imageWrap .actualImage {
+      overflow: hidden;
+      height: 170px;
+      clear: both; }
     .mainImages .imageWrap .poster {
       display: inline;
       color: #1695A3;
@@ -200,9 +204,6 @@ header {
         .mainImages .imageWrap #databox p span b {
           margin: 0;
           text-align: center; }
-          .mainImages .imageWrap #databox p span b .actualImage {
-            overflow: hidden;
-            height: 200px; }
 
 /* SINGLE PAGE VIEW
 }
