@@ -55,29 +55,41 @@
   },
 
   oldGuesses: function () {
-    // append incorrect guesses beneath post
-    $.get(app.rootURL + '/posts/' + this.singleID + '/guesses', function (data) {
+
+    // get all guesses on individual post by logged in user
+    $.get(app.rootURL + '/users/' + app.LoggedInUser.username + '/' + this.singleID + '/guesses', function (data) {
       var allGuesses = data;
       $('.singleGuesses').find('ul').empty();
+
       allGuesses.forEach(function (guess) {
-      // console.log(guess.user_id);
-      // console.log(app.LoggedInUser.id);
-      // console.log(guess.guess);
-      if (guess.user_id === app.LoggedInUser.id) {
-        // console.log('match', guess.user_id, app.LoggedInUser.id, guess.guess);
         $('.singleGuesses').find('#incorrectGuesses').append('<li>' + guess.guess + '</li>');
-        }
-        // else {
-        // $('.singleGuesses').find('#incorrectGuesses').html('<p>no previous guesses</p>');
-        // }
       })
     })
+
+    // append incorrect guesses beneath post
+    // $.get(app.rootURL + '/posts/' + this.singleID + '/guesses', function (data) {
+    //   var allGuesses = data;
+    //   $('.singleGuesses').find('ul').empty();
+    //   allGuesses.forEach(function (guess) {
+    //   // console.log(guess.user_id);
+    //   // console.log(app.LoggedInUser.id);
+    //   // console.log(guess.guess);
+    //   if (guess.user_id === app.LoggedInUser.id) {
+    //     // console.log('match', guess.user_id, app.LoggedInUser.id, guess.guess);
+    //     $('.singleGuesses').find('#incorrectGuesses').append('<li>' + guess.guess + '</li>');
+    //     }
+    //     // else {
+    //     // $('.singleGuesses').find('#incorrectGuesses').html('<p>no previous guesses</p>');
+    //     // }
+    //   })
+    // })
   },
 
     makeGuess: function (e) {
       e.preventDefault();
       var self = this;
 
+      var guessValue = this.$el.find('#guess').val();
       var guessLowerCase = this.$el.find('#guess').val().toLowerCase();
       var guessNoSpaces = guessLowerCase.replace(/ /g,'');
       var finalGuess = guessNoSpaces.replace(/[&\/\\#,+()$~%.'":*?<>{}!]/g, '');
@@ -98,7 +110,7 @@
         $.post(app.rootURL + '/posts/' + self.singleID + '/guesses', { guess: finalGuess }).done ( function (data) {
           $('#guessInput').get(0).reset();
           if ($('#incorrectGuesses').html() !== '') {
-            $('#incorrectGuesses').append('<li>' + finalGuess + '</li>');
+            $('#incorrectGuesses').append('<li>' + guessValue + '</li>');
           }
 
         })

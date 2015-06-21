@@ -32,7 +32,7 @@
 
       var self = this;
 
-      var allUserPosts = $.get(app.rootURL + '/users/' + app.LoggedInUser.username + '/unsolved', function(data) {
+      var allUserPosts = $.get(app.rootURL + '/users/' + app.LoggedInUser.username + '/unsolved?sort=difficult', function(data) {
         var response = allUserPosts.responseJSON;
       }).done(function (data) {
         self.$el.html(self.template({ image: allUserPosts.responseJSON }));
