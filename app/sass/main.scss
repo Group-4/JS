@@ -317,6 +317,11 @@ header {
         margin-bottom: 5em;
         position: relative;
         font-family: $roboto;
+
+        .guessError {
+            padding: 0 0 1em 1.8em;
+            color: $orange;
+        }
         .fa-camera {
             position: absolute;
             top: 1.3em;
@@ -412,6 +417,8 @@ header {
                     }
                 }
             }
+
+
 
             ul {
                 display: block;

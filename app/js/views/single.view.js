@@ -86,19 +86,26 @@
       var answerNoSpaces = answerLowerCase.replace(/ /g, '');
       var finalAnswer = answerNoSpaces.replace(/[&\/\\#,+()$~%.'":;*?<>{}!]/g, '');
 
+      var postGuess = $.post(app.rootURL + '/posts/' + self.singleID + '/guesses', {guess: finalGuess})
+
+      postGuess.error( function (data) {
+        console.log('nope');
+        $('#errorMsgGuess').html('<p class="guessError">Sorry, you cannot guess on your own post.</p>')
+      });
+
       if (finalGuess === finalAnswer) {
-        $.post(app.rootURL + '/posts/' + self.singleID + '/guesses', {guess: finalGuess}).done ( function (data) {
+        postGuess.done ( function (data) {
           app.mainRouter.navigate('leaderboard/' + self.singleID, {trigger: true});
         });
 
       } else {
-        $.post(app.rootURL + '/posts/' + self.singleID + '/guesses', { guess: finalGuess }).done ( function (data) {
+        postGuess.done ( function (data) {
           $('#guessInput').get(0).reset();
           if ($('#incorrectGuesses').html() !== '') {
             $('#incorrectGuesses').append('<li>' + guessValue + '</li>');
           }
+        });
 
-        })
       }
 
     }
