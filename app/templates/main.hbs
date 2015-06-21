@@ -16,13 +16,17 @@
      <li data-id="{{id}}">
 
        <div class="imageWrap">
+        <p class="poster">
+  <i class="fa fa-camera"> Submitted by: </i>
+    <span>{{ owner }}</span></p>
+
           <div class="actualImage">
             <a href="#/single/{{id}}"><img src="{{ image_url }}"></a>
           </div>
-
-          <p>posted by: {{owner}}</p>
-          <p>first solved by: {{solved_by}}</p>
-          <P>hint: {{hint}}</p>
+  <div id="databox">
+    <p><b>FIRST SOLVED BY: </b>{{ solved_by }}</p>
+    <P><span><b>HINT: </b>{{ hint }}</span></p>
+       </div>
        </div>
 
      </li>

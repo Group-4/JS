@@ -3,16 +3,21 @@
 /* DECLARATIONS
 ---------------- */
 
+// * {
+//     border: solid 1px yellow;
+// }
 $darkblue: #225378;
 $teal: #1695A3;
 $lightblue: #ACF0F2;
 $orange: #FF8236;
 $light: #F3FFE2;
 $background: #FAFAFA;
-$philosopher: 'Philosopher', sans-serif;
-$raleway: 'Raleway', sans-serif;
-$roboto: 'Roboto', sans-serif;
-
+$philosopher: 'Philosopher',
+sans-serif;
+$raleway: 'Raleway',
+sans-serif;
+$roboto: 'Roboto',
+sans-serif;
 /* MIXINS
 ---------- */
 
@@ -20,7 +25,6 @@ $roboto: 'Roboto', sans-serif;
     border: 1px solid #ccc;
     border-radius: 3px;
 }
-
 /* GLOBAL
 ----------- */
 
@@ -45,7 +49,6 @@ button {
 
 button {
     background-color: $darkblue;
-
     &:hover {
         background-color: $orange;
     }
@@ -68,12 +71,10 @@ header {
     width: 100%;
     background-color: $darkblue;
     overflow: hidden;
-
     .innerHeader {
         overflow: hidden;
         width: 80%;
         margin: auto;
-
         .logo {
             float: left;
             color: $light;
@@ -83,13 +84,11 @@ header {
             display: inline-block;
             padding: 0;
             cursor: pointer;
-
             .q {
                 overflow: hidden;
                 display: inline-block;
                 position: relative;
                 padding: 0;
-
                 p {
                     margin: 0;
                     // font-family: Michroma;
@@ -140,15 +139,12 @@ header {
         opacity: .8;
         float: right;
         padding-top: 2em;
-
         ul {
-          cursor: pointer;
-
+            cursor: pointer;
             li {
                 display: inline;
                 padding: .6em;
                 font-family: $roboto;
-
                 &:hover {
                     opacity: 1;
                 }
@@ -162,17 +158,14 @@ header {
 .mainImages {
     float: right;
     width: 100%;
-
     h2 {
         display: inline-block;
         float: left;
         font-family: $roboto;
         color: $darkblue;
     }
-
     .rightBtns {
-      overflow: hidden;
-
+        overflow: hidden;
     }
     .newpostBtn {
         float: right;
@@ -182,7 +175,6 @@ header {
         color: $darkblue;
         font-family: $roboto;
         overflow: hidden;
-
         &:hover {
             background-color: $orange;
             color: white;
@@ -201,87 +193,109 @@ header {
             padding-top: .1em;
         }
     }
-
     .logoutBtn {
-      float: right;
-      border: 1px solid $darkblue;
-      padding: .5em;
-      color: $darkblue;
-      font-family: $roboto;
-      cursor: pointer;
-      margin: .7em;
-
+        float: right;
+        border: 1px solid $darkblue;
+        padding: .5em;
+        color: $darkblue;
+        font-family: $roboto;
+        cursor: pointer;
+        margin: .7em;
         &:hover {
-          background-color: $orange;
-          color: white;
-          border: none;
+            background-color: $orange;
+            color: white;
+            border: none;
         }
-
         p {
-          display: inline-block;
-          margin: 0;
+            display: inline-block;
+            margin: 0;
         }
     }
-
     .imageWrap {
-        // position: relative;
+        position: relative;
         width: 250px;
-        height: 250px;
+        height: 260px;
         overflow: hidden;
         border-radius: 4px;
+        margin-bottom: 2em;
+        float: right;
+        display: inline;
+        border: 1px solid #ACF0F2;
+        padding: 10px 20px 100px 20px;
+        .poster {
+            display: inline;
+            color: #1695A3;
+            float: right;
+            margin-bottom: .5em;
+            position: relative;
+            font-family: $roboto;
+            font-size: 10pt;
+            letter-spacing: .1em;
+            span {
+                font-size: 10pt;
+                color: #FF8236;
+            }
+        }
+        #databox {
+            margin-top: 0;
+            color: #1695A3;
+            font-size: 12pt;
+            font-family: $roboto;
+            overflow: hidden;
+            width: 100%;
+            p {
+                margin: 0;
+                font-size: .7em;
+                clear: both;
+                       line-height: 2em;
+                span b {
+                    margin: 0;
+                    text-align: center;
+                    .actualImage {
+                        overflow: hidden;
+                        height: 200px;
+                        img {
 
-      p {
-        margin: 0;
-        font-size: .7em;
-        clear: both;
-      }
-
-        .actualImage {
-          overflow: hidden;
-          height: 190px;
-
-            img {
-                // position: absolute;
-                // left: 50%;
-                // top: 50%;
-                // height: 100%;
-                // width: auto;
-                // -webkit-transform: translate(-50%, -50%);
-                // -ms-transform: translate(-50%, -50%);
-                // transform: translate(-50%, -50%);
+                            // position: absolute;
+                            // // left: 50%;
+                            // // top: 50%;
+                            // // height: 100%;
+                            // width: auto;
+                            // -webkit-transform: translate(-50%, -50%);
+                            // -ms-transform: translate(-50%, -50%);
+                            // transform: translate(-50%, -50%);
+                        }
+                    }
+                }
             }
         }
     }
 }
 /* SINGLE PAGE VIEW
+}
 ------------------- */
 
 .container {
     overflow: hidden;
-
     .single {
-
-      .response {
-        width: 75%;
-        margin: auto;
-        text-align: center;
-        color: $orange;
-        margin-top: 5em;
-
-        .deletedResponse {
-          font-size: 3em;
+        .response {
+            width: 75%;
+            margin: auto;
+            text-align: center;
+            color: $orange;
+            margin-top: 5em;
+            .deletedResponse {
+                font-size: 3em;
+            }
+            i {
+                color: $orange;
+                padding: .5em;
+                display: inline-block;
+            }
         }
-
-        i {
-          color: $orange;
-          padding: .5em;
-          display: inline-block;
-        }
-      }
     }
-
     .singleWrap {
-      overflow: hidden;
+        overflow: hidden;
     }
     .singleMain {
         background-color: white;
@@ -305,25 +319,22 @@ header {
             margin: 0;
             padding-left: 2.5em;
             font-family: $roboto;
-
             span {
                 color: $teal;
                 font-weight: bold;
                 font-size: 1em;
                 font-family: $roboto;
-
             }
         }
-
         .deletePost {
             float: right;
             padding: .5em;
             color: $darkblue;
             font-size: 2em;
             cursor: pointer;
-
+            margin-left: 30px;
             &:hover {
-              color: $orange;
+                color: $orange;
             }
         }
         .image {
@@ -331,15 +342,13 @@ header {
                 width: 100%;
             }
             .imageInfo {
-
-              span {
-                color: $teal;
-                font-weight: bold;
-              }
-
-              .showHint {
-                cursor: pointer;
-              }
+                span {
+                    color: $teal;
+                    font-weight: bold;
+                }
+                .showHint {
+                    cursor: pointer;
+                }
             }
         }
         .guess {
@@ -351,105 +360,84 @@ header {
             width: 70%;
             padding: 1.6em;
         }
-
         .guessBtn {
-          float: right;
-          margin-right: 2em;
+            float: right;
+            margin-right: 2em;
         }
-
         .singleGuesses {
-          clear: both;
-
-          p {
-            display: block;
-            padding: .8em;
-            border: 1px solid $darkblue;
-            color: $darkblue;
-            font-family: $roboto;
-            cursor: pointer;
-            margin-left: 1.7em;
-
-            &:hover {
-              background-color: $orange;
-              color: white;
-              border: none;
-            }
-          }
-
-          ul {
-            display: block;
             clear: both;
-            text-align: left;
-            margin-left: 1em;
-
-            li {
-              color: $darkblue;
-              margin-left: 2.7em;
-              padding-top: 1em;
-              position: relative;
-
-              &::before {
-                content: '\f00d';
-                font-family: FontAwesome;
-                position: absolute;
-                color: $orange;
-                left: -20px;
-              }
+            p {
+                display: block;
+                padding: .8em;
+                border: 1px solid $darkblue;
+                color: $darkblue;
+                font-family: $roboto;
+                cursor: pointer;
+                margin-left: 1.7em;
+                &:hover {
+                    background-color: $orange;
+                    color: white;
+                    border: none;
+                }
             }
-          }
-
+            ul {
+                display: block;
+                clear: both;
+                text-align: left;
+                margin-left: 1em;
+                li {
+                    color: $darkblue;
+                    margin-left: 2.7em;
+                    padding-top: 1em;
+                    position: relative;
+                    &::before {
+                        content: '\f00d';
+                        font-family: FontAwesome;
+                        position: absolute;
+                        color: $orange;
+                        left: -20px;
+                    }
+                }
+            }
         }
     }
 }
 
-
 aside {
-  @include span-columns(3);
-  background-color: $light;
-  height: 100vh;
-  overflow: hidden;
-  clear: both;
-
-  button {
-    font-family: $roboto;
-  }
-
-  .innerAside {
-    width: 90%;
-    margin: auto;
-    text-align: center;
-    font-family: $roboto;
-
-
-    h4 {
-      margin-top: 1em;
-      font-family: $roboto;
-
+    @include span-columns(3);
+    background-color: $light;
+    height: 100vh;
+    overflow: hidden;
+    clear: both;
+    button {
+        font-family: $roboto;
     }
-  }
-  .asideTop {
-    margin-top: 2em;
-    border-bottom: 1px solid $darkblue;
-    .avatar {
-      margin: 2em;
-
-      img {
-        border-radius: 50%;
-      }
+    .innerAside {
+        width: 90%;
+        margin: auto;
+        text-align: center;
+        font-family: $roboto;
+        h4 {
+            margin-top: 1em;
+            font-family: $roboto;
+        }
     }
-  }
-  ul {
-    margin: 0;
-    margin-top: 1em;
-
-      li {
-
-
-      }
+    .asideTop {
+        margin-top: 2em;
+        border-bottom: 1px solid $darkblue;
+        .avatar {
+            margin: 2em;
+            img {
+                // background-image: url('https://raw.githubusercontent.com/TRPMorrison/Qpic/master/Qlogo.png');
+            }
+        }
     }
-  }
-
-
+    ul {
+        margin: 0;
+        margin-top: 1em;
+        li {}
+    }
+}
 /* NEW POST VIEW
 ----------------- */
 
