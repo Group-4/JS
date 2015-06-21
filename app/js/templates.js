@@ -36,7 +36,7 @@ this["hbs"]["leaderboard"] = Handlebars.template({"1":function(depth0,helpers,pa
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["login"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    return "<div class=\"loginBox\">\n\n<h2>Login</h2>\n\n<div class=\"formDiv\">\n<form id=\"loginForm\" class=\"loginForm\">\n  <input type=\"text\" id=\"loginusername\" placeholder=\" username\">\n  <input type=\"password\" id=\"loginpassword\" placeholder=\" password\">\n  <button id=\"loginButton\">Login</button>\n</form>\n</div>\n\n<div class=\"registerDiv\">\n<h2>Register</h2>\n<form id=\"registerForm\" class=\"registerForm\">\n  <input type=\"email\" id=\"email\" placeholder=\" email\">\n  <input type=\"text\" id=\"regusername\" placeholder=\" username\">\n  <input type=\"password\" id=\"regpassword\" placeholder=\" password\">\n  <button id=\"registerButton\">Register</button>\n\n</form>\n\n</div>\n</div>\n";
+    return "<div class=\"loginBox\">\n\n<h2>Login</h2>\n\n<div class=\"formDiv\">\n<form id=\"loginForm\" class=\"loginForm\">\n  <input type=\"text\" id=\"loginusername\" placeholder=\" username\">\n  <input type=\"password\" id=\"loginpassword\" placeholder=\" password\">\n  <div class=\"errormsg\" id=\"errormsg\"></div>\n  <button id=\"loginButton\">Login</button>\n</form>\n</div>\n\n<div class=\"registerDiv\">\n<h2>Register</h2>\n<form id=\"registerForm\" class=\"registerForm\">\n  <input type=\"email\" id=\"email\" placeholder=\" email\">\n  <input type=\"text\" id=\"regusername\" placeholder=\" username\">\n  <input type=\"password\" id=\"regpassword\" placeholder=\" password\">\n  <div class=\"errormsg\" id=\"errormsgregister\"></div>\n  <button id=\"registerButton\">Register</button>\n\n</form>\n\n</div>\n</div>\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["main"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
@@ -44,7 +44,7 @@ this["hbs"]["main"] = Handlebars.template({"1":function(depth0,helpers,partials,
 
   return "     <li data-id=\""
     + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
-    + "\">\n\n       <div class=\"imageWrap\">\n        <p class=\"poster\">\n  <i class=\"fa fa-camera\"> Submitted by: </i>\n    <span>"
+    + "\">\n\n       <div class=\"imageWrap\">\n        <p class=\"poster\">\n  <i class=\"fa fa-camera\"> Posted by: </i>\n    <span>"
     + alias3(((helper = (helper = helpers.owner || (depth0 != null ? depth0.owner : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"owner","hash":{},"data":data}) : helper)))
     + "</span></p>\n\n          <div class=\"actualImage\">\n            <a href=\"#/single/"
     + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
@@ -64,7 +64,7 @@ this["hbs"]["main"] = Handlebars.template({"1":function(depth0,helpers,partials,
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["newpost"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    return "<div class=\"newpostMain\">\n\n  <form id=\"postImage\" class=\"postImage\">\n    <input type=\"text\" placeholder=\"Image URL\" id=\"image_url\">\n    <input type=\"text\" placeholder=\"Answer\" id=\"answer\">\n    <input type=\"text\" placeholder=\"Add a hint here\" id=\"hint\">\n    <button id=\"submitPost\">Add Post</button>\n    <button id=\"deletePost\">Delete Post</button>\n  </form>\n\n</div>\n";
+    return "<div class=\"newpostMain\">\n\n  <h2>Add a post. And don't make it easy!</h2>\n\n\n    <form id=\"postImage\" class=\"postImage\">\n      <input type=\"text\" placeholder=\"Image URL\" id=\"image_url\">\n      <input type=\"text\" placeholder=\"Answer\" id=\"answer\">\n      <input type=\"text\" placeholder=\"Add a hint here\" id=\"hint\">\n      <button id=\"submitPost\">Add post</button>\n    </form>\n    <button id=\"home\">Go home</button>\n\n  <div class=\"preview\" id=\"preview\"></div>\n\n\n\n</div>\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["sidebar"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
@@ -98,5 +98,5 @@ this["hbs"]["single"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"m
     + alias3(((helper = (helper = helpers.hint || (depth0 != null ? depth0.hint : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"hint","hash":{},"data":data}) : helper)))
     + "</span></p>\n\n          <!-- would be cool to add div with user's score and addClass show on hover for this information -->\n\n        </div>\n      </div>\n\n      <form class=\"guessInput\" id=\"guessInput\">\n        <input type=\"text\" placeholder=\"What's your guess?\" id=\"guess\" class=\"guess\">\n\n        <a href=\"#/leaderboard/"
     + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
-    + "\"><button id=\"guessBtn\" class=\"guessBtn\">Check it!</button></a>\n\n      </form>\n\n    <div class=\"singleGuesses\" id=\"singleGuesses\">\n    <p id=\"seeOldGuesses\">See your old guesses</p>\n      <ul class=\"incorrectGuesses\" id=\"incorrectGuesses\">\n      </ul>\n    </div>\n\n    </div> <!-- end singleMain -->\n\n  </div> <!-- end singleWrap -->\n";
+    + "\"><button id=\"guessBtn\" class=\"guessBtn\">Check it!</button></a>\n\n      </form>\n\n    <div class=\"singleGuesses\" id=\"singleGuesses\">\n    <p id=\"seeOldGuesses\">See your previous <span>incorrect</span> guesses</p>\n      <ul class=\"incorrectGuesses\" id=\"incorrectGuesses\">\n      </ul>\n    </div>\n\n    </div> <!-- end singleMain -->\n\n  </div> <!-- end singleWrap -->\n";
 },"useData":true});

@@ -113,6 +113,11 @@ header {
         header nav ul li:hover {
           opacity: 1; }
 
+/* LOGIN VIEW
+-------------- */
+.errormsg p {
+  color: #FF8236; }
+
 /* MAIN PAGE VIEW
 ------------------ */
 .mainImages {
@@ -127,10 +132,10 @@ header {
     overflow: hidden; }
   .mainImages .newpostBtn {
     float: right;
-    border: 1px solid #225378;
+    background-color: #225378;
     padding: 1em;
     margin: 1em;
-    color: #225378;
+    color: white;
     font-family: "Roboto", sans-serif;
     overflow: hidden; }
     .mainImages .newpostBtn:hover {
@@ -149,12 +154,12 @@ header {
       padding-top: .1em; }
   .mainImages .logoutBtn {
     float: right;
-    border: 1px solid #225378;
-    padding: .5em;
-    color: #225378;
+    padding: .6em;
+    color: white;
     font-family: "Roboto", sans-serif;
     cursor: pointer;
-    margin: .7em; }
+    margin: .7em;
+    background-color: #225378; }
     .mainImages .logoutBtn:hover {
       background-color: #FF8236;
       color: white;
@@ -199,14 +204,12 @@ header {
       .mainImages .imageWrap #databox p {
         margin: 0;
         font-size: .7em;
-        clear: both;
-        line-height: 2em; }
+        clear: both; }
         .mainImages .imageWrap #databox p span b {
           margin: 0;
           text-align: center; }
 
 /* SINGLE PAGE VIEW
-}
 ------------------- */
 .container {
   overflow: hidden; }
@@ -236,17 +239,19 @@ header {
     font-family: "Roboto", sans-serif; }
     .container .singleMain .fa-camera {
       position: absolute;
-      top: 1.5em;
+      top: 1.3em;
       left: 1em;
-      font-size: 1.5em; }
+      font-size: 1.5em;
+      color: #225378; }
     .container .singleMain p {
       float: left;
       padding: 1em;
       margin: 0;
       padding-left: 2.5em;
+      color: #225378;
       font-family: "Roboto", sans-serif; }
       .container .singleMain p span {
-        color: #1695A3;
+        color: #FF8236;
         font-weight: bold;
         font-size: 1em;
         font-family: "Roboto", sans-serif; }
@@ -256,13 +261,23 @@ header {
       color: #225378;
       font-size: 2em;
       cursor: pointer;
-      margin-left: 30px; }
-      .container .singleMain .deletePost:hover {
-        color: #FF8236; }
+      margin-left: 30px;
+      color: #FF8236; }
+      .container .singleMain .deletePost i {
+        color: #225378;
+        font-size: 1.5em; }
+        .container .singleMain .deletePost i:hover {
+          color: #FF8236; }
+        .container .singleMain .deletePost i .sorry {
+          font-size: .6em;
+          padding: 0;
+          padding-right: 1em;
+          color: #FF8236;
+          font-family: "Roboto", sans-serif; }
     .container .singleMain .image img {
       width: 100%; }
     .container .singleMain .image .imageInfo span {
-      color: #1695A3;
+      color: #FF8236;
       font-weight: bold; }
     .container .singleMain .image .imageInfo .showHint {
       cursor: pointer; }
@@ -287,10 +302,14 @@ header {
         font-family: "Roboto", sans-serif;
         cursor: pointer;
         margin-left: 1.7em; }
+        .container .singleMain .singleGuesses p span {
+          color: #FF8236; }
         .container .singleMain .singleGuesses p:hover {
           background-color: #FF8236;
           color: white;
           border: none; }
+          .container .singleMain .singleGuesses p:hover span {
+            color: #225378; }
       .container .singleMain .singleGuesses ul {
         display: block;
         clear: both;
@@ -342,8 +361,59 @@ aside {
 ----------------- */
 .newpost {
   width: 100%; }
+  .newpost h2 {
+    margin-top: 1em;
+    color: #225378;
+    font-family: "Roboto", sans-serif; }
   .newpost .newpostMain {
     width: 80%;
     margin: auto; }
-    .newpost .newpostMain input {
-      width: 60%; }
+    .newpost .newpostMain form {
+      display: inline; }
+      .newpost .newpostMain form input {
+        width: 60%; }
+    .newpost .newpostMain button {
+      display: inline; }
+    .newpost .newpostMain .newImageWrap {
+      position: relative;
+      width: 250px;
+      height: 260px;
+      overflow: hidden;
+      border-radius: 4px;
+      margin-bottom: 2em;
+      float: left;
+      display: inline;
+      border: 1px solid #ACF0F2;
+      padding: 10px 20px 100px 20px;
+      background-color: white; }
+      .newpost .newpostMain .newImageWrap p {
+        margin-left: 1em;
+        color: #225378;
+        margin-bottom: .5em; }
+      .newpost .newpostMain .newImageWrap .actualImage {
+        overflow: hidden;
+        height: 170px;
+        clear: both; }
+      .newpost .newpostMain .newImageWrap .poster {
+        display: inline;
+        color: #1695A3;
+        float: left;
+        margin-bottom: .5em;
+        position: relative;
+        font-family: "Roboto", sans-serif;
+        font-size: 12px;
+        letter-spacing: .1em; }
+        .newpost .newpostMain .newImageWrap .poster span {
+          font-size: 10pt;
+          color: #FF8236; }
+      .newpost .newpostMain .newImageWrap .databox {
+        margin-top: 0;
+        color: #1695A3;
+        font-size: 12pt;
+        font-family: "Roboto", sans-serif;
+        overflow: hidden;
+        width: 100%; }
+        .newpost .newpostMain .newImageWrap .databox p {
+          margin-top: 1em;
+          font-size: .7em;
+          color: #1695A3; }

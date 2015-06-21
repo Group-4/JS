@@ -49,6 +49,9 @@
         window.setTimeout(function () {
           app.mainRouter.navigate('/main', {trigger: true});
           }, 3000);
+      },
+      error: function () {
+        $(button).html('<p class="sorry">Sorry, you are not authorized to delete this post.</p>')
       }
     })
 
@@ -65,24 +68,6 @@
         $('.singleGuesses').find('#incorrectGuesses').append('<li>' + guess.guess + '</li>');
       })
     })
-
-    // append incorrect guesses beneath post
-    // $.get(app.rootURL + '/posts/' + this.singleID + '/guesses', function (data) {
-    //   var allGuesses = data;
-    //   $('.singleGuesses').find('ul').empty();
-    //   allGuesses.forEach(function (guess) {
-    //   // console.log(guess.user_id);
-    //   // console.log(app.LoggedInUser.id);
-    //   // console.log(guess.guess);
-    //   if (guess.user_id === app.LoggedInUser.id) {
-    //     // console.log('match', guess.user_id, app.LoggedInUser.id, guess.guess);
-    //     $('.singleGuesses').find('#incorrectGuesses').append('<li>' + guess.guess + '</li>');
-    //     }
-    //     // else {
-    //     // $('.singleGuesses').find('#incorrectGuesses').html('<p>no previous guesses</p>');
-    //     // }
-    //   })
-    // })
   },
 
     makeGuess: function (e) {

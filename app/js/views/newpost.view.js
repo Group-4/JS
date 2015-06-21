@@ -7,17 +7,14 @@
 
     events: {
       'submit #postImage' : 'postImage',
-      'click #delete' : 'deletePost',
+      'click #home' : 'home'
+      // 'click #delete' : 'deletePost'
     },
 
     template: hbs.newpost,
 
     initialize: function (options) {
       var args = options || {};
-
-      // this.singleID = args.singleID,
-      // this.collection = args.collections,
-
       this.render();
       $('.container').html(this.el);
 
@@ -25,8 +22,10 @@
 
     render: function () {
       this.$el.html(this.template());
-      // var singlePost = this.collection.get(this.singleID);
-      // this.$el.html(this.template(singlePost.toJSON()));
+    },
+
+    home: function () {
+      app.mainRouter.navigate('/main', { trigger: true });
     },
 
     postImage: function (e) {
@@ -35,26 +34,22 @@
       var self = this,
           form = $(event.target),
           image_url = form.find('#image_url').val(),
-          answer = form.find('#answer').val();
+          answer = form.find('#answer').val(),
+          hint = form.find('#hint').val();
 
       //new instance of user model
       var p = new app.Models.PostModel({
         image_url: image_url,
-        answer: answer
+        answer: answer,
+        hint: hint
       });
-
-      // $.get(app.rootURL + '/posts', p.toJSON()).done ( function (data) {
-      //   console.log(image_url);
-      //   console.log(answer);
-      // });
 
       $.post(app.rootURL + '/posts', p.toJSON()).done ( function (data) {
         $('#postImage').get(0).reset();
-        // successful post alert on page
-        // button to click and add another and button to navigate home
-        // app.mainRouter.navigate('/main', { trigger: true });
+        $('#preview').html('<div class="fullPreview"><p>Preview of added post</p><div class="newImageWrap"><div class="poster"><i class="fa fa-camera"> Posted by: <span>' + app.LoggedInUser.username + '</span></i></div><div class="actualImage"><img src="' + image_url + '"></div><div class="databox"><p>HINT: ' + hint + '</p></div></div></div>');
       });
     },
+
 //  DELETE POST
   //   //   $.post(app.rootURL + '/posts/:id', .toJSON()).done ( function (data) {
   //   //     $('#deletePost').get('id');

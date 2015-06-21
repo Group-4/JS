@@ -155,6 +155,16 @@ header {
     }
   }
 }
+
+/* LOGIN VIEW
+-------------- */
+
+.errormsg {
+    p {
+        color: $orange;
+    }
+}
+
 /* MAIN PAGE VIEW
 ------------------ */
 
@@ -172,10 +182,10 @@ header {
     }
     .newpostBtn {
         float: right;
-        border: 1px solid $darkblue;
+        background-color: $darkblue;
         padding: 1em;
         margin: 1em;
-        color: $darkblue;
+        color: white;
         font-family: $roboto;
         overflow: hidden;
         &:hover {
@@ -198,12 +208,12 @@ header {
     }
     .logoutBtn {
         float: right;
-        border: 1px solid $darkblue;
-        padding: .5em;
-        color: $darkblue;
+        padding: .6em;
+        color: white;
         font-family: $roboto;
         cursor: pointer;
         margin: .7em;
+        background-color: $darkblue;
         &:hover {
             background-color: $orange;
             color: white;
@@ -257,7 +267,6 @@ header {
                 margin: 0;
                 font-size: .7em;
                 clear: both;
-                       line-height: 2em;
                 span b {
                     margin: 0;
                     text-align: center;
@@ -267,8 +276,8 @@ header {
         }
     }
 }
+
 /* SINGLE PAGE VIEW
-}
 ------------------- */
 
 .container {
@@ -305,18 +314,20 @@ header {
         font-family: $roboto;
         .fa-camera {
             position: absolute;
-            top: 1.5em;
+            top: 1.3em;
             left: 1em;
             font-size: 1.5em;
+            color: $darkblue;
         }
         p {
             float: left;
             padding: 1em;
             margin: 0;
             padding-left: 2.5em;
+            color: $darkblue;
             font-family: $roboto;
             span {
-                color: $teal;
+                color: $orange;
                 font-weight: bold;
                 font-size: 1em;
                 font-family: $roboto;
@@ -329,9 +340,22 @@ header {
             font-size: 2em;
             cursor: pointer;
             margin-left: 30px;
+            color: $orange;
+
+            i {
+                color: $darkblue;
+                font-size: 1.5em;
             &:hover {
                 color: $orange;
             }
+            .sorry {
+                font-size: .6em;
+                padding: 0;
+                padding-right: 1em;
+                color: $orange;
+                font-family: $roboto;
+            }
+        }
         }
         .image {
             img {
@@ -339,7 +363,7 @@ header {
             }
             .imageInfo {
                 span {
-                    color: $teal;
+                    color: $orange;
                     font-weight: bold;
                 }
                 .showHint {
@@ -370,12 +394,20 @@ header {
                 font-family: $roboto;
                 cursor: pointer;
                 margin-left: 1.7em;
+
+                span {
+                    color: $orange;
+                }
                 &:hover {
                     background-color: $orange;
                     color: white;
                     border: none;
+                    span {
+                        color: $darkblue;
+                    }
                 }
             }
+
             ul {
                 display: block;
                 clear: both;
@@ -438,12 +470,80 @@ aside {
 ----------------- */
 
 .newpost {
+    h2 {
+        margin-top: 1em;
+        color: $darkblue;
+        font-family: $roboto;
+    }
     width: 100%;
     .newpostMain {
         width: 80%;
         margin: auto;
-        input {
-            width: 60%;
+
+        form {
+            display: inline;
+            // button {
+            //     display: inline;
+            // }
+            input {
+                width: 60%;
+            }
         }
+        button {
+            display: inline;
+        }
+
+    .newImageWrap {
+        position: relative;
+        width: 250px;
+        height: 260px;
+        overflow: hidden;
+        border-radius: 4px;
+        margin-bottom: 2em;
+        float: left;
+        display: inline;
+        border: 1px solid #ACF0F2;
+        padding: 10px 20px 100px 20px;
+        background-color: white;
+
+        p {
+            margin-left: 1em;
+            color: $darkblue;
+            margin-bottom: .5em;
+        }
+
+        .actualImage {
+          overflow: hidden;
+          height: 170px;
+          clear: both;
+        }
+        .poster {
+            display: inline;
+            color: #1695A3;
+            float: left;
+            margin-bottom: .5em;
+            position: relative;
+            font-family: $roboto;
+            font-size: 12px;
+            letter-spacing: .1em;
+            span {
+                font-size: 10pt;
+                color: $orange;
+            }
+        }
+        .databox {
+            margin-top: 0;
+            color: #1695A3;
+            font-size: 12pt;
+            font-family: $roboto;
+            overflow: hidden;
+            width: 100%;
+            p {
+                margin-top: 1em;
+                font-size: .7em;
+                color: $teal;
+            }
+        }
+    }
     }
 }
