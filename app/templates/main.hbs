@@ -1,20 +1,39 @@
-
-
 <div class="mainImages">
   <h2>LET'S PLAY!</h2>
-  <a href="/#newpost"><div class="newpostBtn">
-    <i class="fa fa-camera"></i>
-    <p>Add a new post</p>
-  </div></a>
+  <div class="rightBtns">
+    <div class="logout" id="logout">
+      <p class="logoutBtn" id="logoutBtn">Logout</p>
+    </div>
+    <a href="/#newpost"><div class="newpostBtn">
+      <i class="fa fa-camera"></i>
+      <p>Add a new post</p>
+    </div></a>
+  </div>
 
   <ul class="small-block-grid-3">
-  {{#each image}}
-  <li data-id="{{id}}">
-    <div class="imageWrap">
-      <a href="#/single/{{id}}"><img src="{{ image_url }}"></a>
 
-  </li>
-  {{/each}}
+    {{#each image}}
+     <li data-id="{{id}}">
+
+       <div class="imageWrap">
+        <p class="poster">
+  <i class="fa fa-camera"> Posted by: </i>
+    <span>{{ owner }}</span></p>
+
+          <div class="actualImage">
+            <a href="#/single/{{id}}"><img src="{{ image_url }}"></a>
+          </div>
+  <div id="databox">
+    <p><b>FIRST SOLVED BY: </b>{{ solved_by }}</p>
+    <P><span><b>HINT: </b>{{ hint }}</span></p>
+       </div>
+       </div>
+
+     </li>
+    {{/each}}
+
   </ul>
+
 </div>
+
 

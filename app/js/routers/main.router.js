@@ -12,7 +12,6 @@
       this.collectionGuesses = args.collectionGuesses;
 
       app.isLoggedIn = (Cookies.get('access_token') !== undefined) ? true : false;
-      console.log(app.isLoggedIn);
 
         if (app.isLoggedIn) {
 
@@ -24,7 +23,7 @@
 
         } else {
           Backbone.history.start();
-          app.mainRouter.navigate('', {trigger: true});
+          // app.mainRouter.navigate('', {trigger: true});
         }
 
     },
@@ -53,6 +52,7 @@
       new app.Views.Main({
         collectionPosts: this.collectionPosts,
         collectionUsers: this.collectionUsers,
+        collectionUserPosts: this.collectionUserPosts
       });
     },
 

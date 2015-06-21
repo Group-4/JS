@@ -44,13 +44,25 @@
         password: password
       });
 
+      //post request variable
+      var postRegister = $.post(app.rootURL + '/users/register', u.toJSON())
+
       //add new user model to data/collection and trigger main view
-      $.post(app.rootURL + '/users/register', u.toJSON()).done ( function (data) {
+      postRegister.done ( function (data) {
         Cookies.set('access_token', data.access_token);
         Cookies.set('username', data.username);
         app.LoggedInUser = data;
+        $.ajaxSetup({
+          headers: {
+            'Access-Token' : Cookies.get('access_token')
+          }
+        });
         app.mainRouter.navigate('/main', { trigger: true });
 
+      });
+
+      postRegister.error( function (data) {
+        $('#errormsgregister').html('<p>Sorry, that username has already been taken. Please choose another and try again.</p>')
       });
 
     },
@@ -69,17 +81,25 @@
       //then trigger main view upon success
 
       var loginPerson = {username: username, password: password};
+      var postLogin = $.post(app.rootURL + '/users/login', loginPerson)
 
-      $.post(app.rootURL + '/users/login', loginPerson).done( function (data) {
+      postLogin.done( function (data) {
         Cookies.set('access_token', data.access_token);
         Cookies.set('username', data.username);
         app.LoggedInUser = data;
-        console.log(app.LoggedInUser);
+        // console.log(app.LoggedInUser);
+        $.ajaxSetup({
+          headers: {
+            'Access-Token' : Cookies.get('access_token')
+          }
+        });
         app.mainRouter.navigate('/main', { trigger: true });
-
 
       });
 
+      postLogin.error( function (data) {
+        $('#errormsg').html('<p>Invalide username and/or password.</p>')
+      });
 
     }
 
