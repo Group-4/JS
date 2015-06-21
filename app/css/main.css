@@ -163,19 +163,49 @@ header {
       display: inline-block;
       margin: 0; }
   .mainImages .imageWrap {
+    position: relative;
     width: 250px;
-    height: 250px;
+    height: 260px;
     overflow: hidden;
-    border-radius: 4px; }
-    .mainImages .imageWrap p {
-      margin: 0;
-      font-size: .7em;
-      clear: both; }
-    .mainImages .imageWrap .actualImage {
+    border-radius: 4px;
+    margin-bottom: 2em;
+    float: right;
+    display: inline;
+    border: 1px solid #ACF0F2;
+    padding: 10px 20px 100px 20px; }
+    .mainImages .imageWrap .poster {
+      display: inline;
+      color: #1695A3;
+      float: right;
+      margin-bottom: .5em;
+      position: relative;
+      font-family: "Roboto", sans-serif;
+      font-size: 10pt;
+      letter-spacing: .1em; }
+      .mainImages .imageWrap .poster span {
+        font-size: 10pt;
+        color: #FF8236; }
+    .mainImages .imageWrap #databox {
+      margin-top: 0;
+      color: #1695A3;
+      font-size: 12pt;
+      font-family: "Roboto", sans-serif;
       overflow: hidden;
-      height: 190px; }
+      width: 100%; }
+      .mainImages .imageWrap #databox p {
+        margin: 0;
+        font-size: .7em;
+        clear: both;
+        line-height: 2em; }
+        .mainImages .imageWrap #databox p span b {
+          margin: 0;
+          text-align: center; }
+          .mainImages .imageWrap #databox p span b .actualImage {
+            overflow: hidden;
+            height: 200px; }
 
 /* SINGLE PAGE VIEW
+}
 ------------------- */
 .container {
   overflow: hidden; }
@@ -224,7 +254,8 @@ header {
       padding: .5em;
       color: #225378;
       font-size: 2em;
-      cursor: pointer; }
+      cursor: pointer;
+      margin-left: 30px; }
       .container .singleMain .deletePost:hover {
         color: #FF8236; }
     .container .singleMain .image img {
@@ -302,8 +333,6 @@ aside {
     border-bottom: 1px solid #225378; }
     aside .asideTop .avatar {
       margin: 2em; }
-      aside .asideTop .avatar img {
-        border-radius: 50%; }
   aside ul {
     margin: 0;
     margin-top: 1em; }

@@ -7,6 +7,7 @@
       className: 'main',
 
     events: {
+    'click #deletePost' : 'deletePost',
     'click #delete': 'deleteAccount',
     'click #logoutBtn' : 'logout'
     },
@@ -21,7 +22,8 @@
       this.collectionUsers = args.collectionUsers;
       this.collectionPosts = args.collectionPosts;
       this.collectionUserPosts = args.collectionUserPosts;
-      // this.collection('destroy', this.destroyed,this);
+      this.collection
+
       this.render();
       $('.container').html(this.el);
     },
@@ -37,30 +39,37 @@
       });
 
       $('.sidebar').html(this.templateSidebar(app.LoggedInUser));
-
-      // this.collectionPosts.fetch().done(function (data) {
-      //   this.$el.html(this.template({ image: this.collectionPosts.toJSON() }))
-      // }.bind(this));
+// DELETE POST
+      // if (user_id === app.LoggedInUser.id) {
+     // $('deletePost').html(this.templateNewPost(app.deletePost));
+     // DELETE ACCOUNT
+     $('deleteAccount').html(this.templateSidebar(app.deleteAccount));
     },
 
-    // destroyed: function () {
-    //   console.log ('Delete your Qpic account?');
-    // },
+
 
     // DELETING ACCOUNT
-  //   deleteAccount: function (event) {
+ // $(function () {
+ //    $(".deleteAccount").click(function () {
+ //      var button = button;
+ //      var url = "http://tiyqpic.herokuapp.com//users/:id";
+ //      var element = $(this);
+ //      var deleteID = element.attr("id");
+ //      var delUserAcct = 'id=' + deleteUserID;
 
-  //     event.preventDefault();
+ //      if(confirm("Delete your Qpic account?")){
+ //    // AJAX TO DELETE
+ //        $.ajax({
+ //          type: "POST",
+ //          url: "http://tiyqpic.herokuapp.com//users/:id",
+ //          data: delUserAcct,
+ //          success: function() {
+ //          // console.log("Your Qpic account has been deleted!");
+ //        }
+ //    });
 
-  //     var button = event.target;
-  //     var modelID = $(button).data('id');
 
-  //     // if (window.confirm("Delete your Qpic account?")) {
-  //     //   this.collection.destroy().success( function () {
-  //     //      app.mainRouter.navigate('', { trigger: true });
-  //     //   });
-  //     //}
-  // },
+ //  },
 
   logout: function(e) {
     e.preventDefault();

@@ -1,61 +1,29 @@
-// ;(function (){
+$(function() {
+    $(".deletePost").click(function() {
+        var button = button;
+        var url = "http://tiyqpic.herokuapp.com/posts/:id";
+        var element = $(this);
+        var deleteID = element.attr("id");
+        var toBeDeleted = 'id=' + deletedID;
 
-//   'use strict';
-
-//   app.Views.SingleView = Backbone.View.extend({
-
-//     className: 'main',
-
-//     template: hbs.main,
-
-//     events: {
-//       'click #delete' : 'deletePost',
-
-//     },
-
-//     template: hbs.newpost,
-
-//     initialize: function (options) {
-
-//       var args = options || {};
+        if (confirm("Delete your post?")) {
+            // AJAX TO DELETE
+            $.ajax({
+                type: "POST",
+                url: "http://tiyqpic.herokuapp.com/posts/:id",
+                data: toBeDeleted,
+                success: function() {
+                    // console.log("Your Post has been deleted!");
+                }
+            });
 
 
-//       this.collectionPosts = args.collectionPosts;
-
-//       this.collection.Posts('destroy', this.destroyed, this);
-
-//       this.render();
-//       $('.container').html(this.el);
-//     },
-
-//     render: function () {
-//  this.$el.html(this.template());
+        }
 
 
-//     },
-
-//     destroyed: function () {
-//       console.log('An image was removed');
-//     },
-
-//     deletePost: function (event) {
-
-//       var button = $(event.target),
-//           image_url = form.find('#image_url').val(),
-//           delete = $(button).data('id');
-
-//       var d = new app.Models.PostModel({
-//         image_url: image_url
-//       });
 
 
-//       if (window.confirm("Do you want to delete this image?")) {
-//         whichOne.destroy().success( function () {
-//            app.mainRouter.navigate('', { trigger: true });
-//         });
-//       }
-//     }
+    });
 
-//   });
 
-// }());
+}());
