@@ -65,96 +65,96 @@ ul {
 ---------- */
 
 header {
-    width: 100%;
-    background-color: $darkblue;
+  width: 100%;
+  background-color: $darkblue;
+  overflow: hidden;
+
+  .innerHeader {
     overflow: hidden;
+    width: 80%;
+    margin: auto;
 
-    .innerHeader {
-        overflow: hidden;
-        width: 80%;
-        margin: auto;
+    .logo {
+      float: left;
+      color: $light;
+      margin: 0;
+      overflow: hidden;
+      padding: 1em;
+      display: inline-block;
+      padding: 0;
+      cursor: pointer;
 
-        .logo {
-            float: left;
-            color: $light;
-            margin: 0;
-            overflow: hidden;
-            padding: 1em;
-            display: inline-block;
-            padding: 0;
-            cursor: pointer;
-
-            .q {
-                overflow: hidden;
-                display: inline-block;
-                position: relative;
-                padding: 0;
-
-                p {
-                    margin: 0;
-                    // font-family: Michroma;
-                    // font-family: Aldrich;
-                    font-family: Electrolize;
-                    font-size: 10em;
-                    padding: 0;
-                }
-            }
-            .pic {
-                overflow: hidden;
-                display: inline-block;
-                padding: 0;
-                p {
-                    font-family: Fontdiner Swanky;
-                    font-size: 4em;
-                    padding: 0;
-                }
-            }
-        }
-        .fa-camera {
-            color: $orange;
-            display: inline;
-            position: absolute;
-            font-size: 2.8em;
-            top: 60px;
-            left: 23px;
-        }
-    }
-    .social {
+      .q {
         overflow: hidden;
         display: inline-block;
-        float: right;
-        font-size: 2em;
-        padding: 1em;
-        i {
-            color: $light;
-            opacity: .8;
-            cursor: pointer;
-            &:hover {
-                opacity: 1;
-            }
+        position: relative;
+        padding: 0;
+
+        p {
+          margin: 0;
+          // font-family: Michroma;
+          // font-family: Aldrich;
+          font-family: Electrolize;
+          font-size: 10em;
+          padding: 0;
         }
+      }
+  .pic {
+    overflow: hidden;
+    display: inline-block;
+    padding: 0;
+      p {
+        font-family: Fontdiner Swanky;
+        font-size: 4em;
+        padding: 0;
+      }
     }
-    nav {
-        display: inline-block;
+  }
+  .fa-camera {
+    color: $orange;
+    display: inline;
+    position: absolute;
+    font-size: 2.8em;
+    top: 60px;
+    left: 23px;
+  }
+}
+  .social {
+    overflow: hidden;
+    display: inline-block;
+    float: right;
+    font-size: 2em;
+    padding: 1em;
+      i {
         color: $light;
         opacity: .8;
-        float: right;
-        padding-top: 2em;
-
-        ul {
-          cursor: pointer;
-
-            li {
-                display: inline;
-                padding: .6em;
-                font-family: $roboto;
-
-                &:hover {
-                    opacity: 1;
-                }
-            }
+        cursor: pointer;
+        &:hover {
+          opacity: 1;
         }
+      }
     }
+  nav {
+    display: inline-block;
+    color: $light;
+    opacity: .8;
+    float: right;
+    padding-top: 2em;
+
+    ul {
+      cursor: pointer;
+
+      li {
+        display: inline;
+        padding: .6em;
+        font-family: $roboto;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
 }
 /* MAIN PAGE VIEW
 ------------------ */
