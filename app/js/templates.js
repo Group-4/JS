@@ -50,9 +50,9 @@ this["hbs"]["main"] = Handlebars.template({"1":function(depth0,helpers,partials,
     + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
     + "\"><img src=\""
     + alias3(((helper = (helper = helpers.image_url || (depth0 != null ? depth0.image_url : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"image_url","hash":{},"data":data}) : helper)))
-    + "\"></a>\n          </div>\n  <div id=\"databox\">\n    <p><b>FIRST SOLVED BY: </b>"
+    + "\"></a>\n          </div>\n  <div id=\"databox\">\n    <p><b>FIRST SOLVED BY: </b><i>"
     + alias3(((helper = (helper = helpers.solved_by || (depth0 != null ? depth0.solved_by : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"solved_by","hash":{},"data":data}) : helper)))
-    + "</p>\n    <P><span><b>HINT: </b>"
+    + "</i></p>\n    <P><span><b>HINT: </b>"
     + alias3(((helper = (helper = helpers.hint || (depth0 != null ? depth0.hint : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"hint","hash":{},"data":data}) : helper)))
     + "</span></p>\n       </div>\n       </div>\n\n     </li>\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
@@ -72,7 +72,7 @@ this["hbs"]["sidebar"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"
 
   return "\n      <div class=\"innerAside\">\n        <div class=\"asideTop\">\n          <h4>"
     + alias3(((helper = (helper = helpers.username || (depth0 != null ? depth0.username : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"username","hash":{},"data":data}) : helper)))
-    + "</h4>\n          <div class=\"avatar\">\n              <img src=\"https://raw.githubusercontent.com/TRPMorrison/Qpic/master/Qlogo.png\">\n          </div>\n          <div class=\"score\">\n            <p>Current score: "
+    + "</h4>\n          <div class=\"avatar\">\n           <p>Q</p>\n        <i class=\"fa fa-camera\"></i></div>\n\n          <div class=\"score\">\n            <p>Current score: "
     + alias3(((helper = (helper = helpers.points || (depth0 != null ? depth0.points : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"points","hash":{},"data":data}) : helper)))
     + "</p>\n          </div>\n        </div>\n        <div class=\"leaderboardSection\">\n          <h4>Leaderboard</h4>\n          <ul id=\"leaderboard\" class=\"leaderboard\">\n            <li>"
     + alias3(((helper = (helper = helpers.username || (depth0 != null ? depth0.username : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"username","hash":{},"data":data}) : helper)))

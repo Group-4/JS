@@ -178,9 +178,9 @@ header {
     margin-bottom: 2em;
     float: right;
     display: inline;
-    border: 1px solid #ACF0F2;
+    border: 3px solid #ACF0F2;
     padding: 10px 20px 100px 20px;
-    background-color: white; }
+    background-color: #ACF0F2; }
     .mainImages .imageWrap .actualImage {
       overflow: hidden;
       height: 170px;
@@ -210,7 +210,8 @@ header {
         clear: both; }
         .mainImages .imageWrap #databox p span b {
           margin: 0;
-          text-align: center; }
+          text-align: center;
+          color: #FF8236; }
 
 /* SINGLE PAGE VIEW
 ------------------- */
@@ -353,15 +354,31 @@ aside {
     font-family: "Roboto", sans-serif; }
     aside .innerAside h4 {
       margin-top: 1em;
-      font-family: "Roboto", sans-serif; }
+      font-family: "Roboto", sans-serif;
+      margin-bottom: 0; }
   aside .asideTop {
     margin-top: 2em;
     border-bottom: 1px solid #225378; }
     aside .asideTop .avatar {
-      margin: 2em; }
-  aside ul {
-    margin: 0;
-    margin-top: 1em; }
+      margin: 2em;
+      color: #FF8236; }
+      aside .asideTop .avatar p {
+        margin-top: -30px;
+        font-family: Electrolize;
+        font-size: 7.5em;
+        padding: 0; }
+      aside .asideTop .avatar .fa-camera {
+        display: inline;
+        position: absolute;
+        font-size: 1.6em;
+        top: 260px;
+        margin-left: 112px;
+        left: 23px;
+        color: #1695A3; }
+
+ul {
+  margin: 0;
+  margin-top: 1em; }
 
 /* NEW POST VIEW
 ----------------- */

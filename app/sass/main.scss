@@ -98,64 +98,60 @@ header {
                     padding: 0;
                 }
             }
-  .pic {
-    overflow: hidden;
-    display: inline-block;
-    padding: 0;
-      p {
-        font-family: Fontdiner Swanky;
-        font-size: 4em;
-        padding: 0;
-      }
+            .pic {
+                overflow: hidden;
+                display: inline-block;
+                padding: 0;
+                p {
+                    font-family: Fontdiner Swanky;
+                    font-size: 4em;
+                    padding: 0;
+                }
+            }
+        }
+        .fa-camera {
+            color: $orange;
+            display: inline;
+            position: absolute;
+            font-size: 2.8em;
+            top: 60px;
+            left: 23px;
+        }
     }
-  }
-  .fa-camera {
-    color: $orange;
-    display: inline;
-    position: absolute;
-    font-size: 2.8em;
-    top: 60px;
-    left: 23px;
-  }
-}
-  .social {
-    overflow: hidden;
-    display: inline-block;
-    float: right;
-    font-size: 2em;
-    padding: 1em;
-      i {
+    .social {
+        overflow: hidden;
+        display: inline-block;
+        float: right;
+        font-size: 2em;
+        padding: 1em;
+        i {
+            color: $light;
+            opacity: .8;
+            cursor: pointer;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+    nav {
+        display: inline-block;
         color: $light;
         opacity: .8;
-        cursor: pointer;
-        &:hover {
-          opacity: 1;
+        float: right;
+        padding-top: 2em;
+        ul {
+            cursor: pointer;
+            li {
+                display: inline;
+                padding: .6em;
+                font-family: $roboto;
+                &:hover {
+                    opacity: 1;
+                }
+            }
         }
-      }
     }
-  nav {
-    display: inline-block;
-    color: $light;
-    opacity: .8;
-    float: right;
-    padding-top: 2em;
-
-    ul {
-      cursor: pointer;
-
-      li {
-        display: inline;
-        padding: .6em;
-        font-family: $roboto;
-
-        &:hover {
-          opacity: 1;
-        }
-      }
-    }
-  }
 }
-
 /* LOGIN VIEW
 -------------- */
 
@@ -164,14 +160,12 @@ header {
         color: $orange;
     }
 }
-
 /* MAIN PAGE VIEW
 ------------------ */
 
 .mainImages {
     float: right;
     width: 100%;
-
     ul {
         margin-right: 1em;
     }
@@ -237,16 +231,15 @@ header {
         margin-bottom: 2em;
         float: right;
         display: inline;
-        border: 1px solid #ACF0F2;
+        border: 3px solid #ACF0F2;
         padding: 10px 20px 100px 20px;
-        background-color: white;
-
+        // background-color: white;
+        background-color: #ACF0F2;
         .actualImage {
-          overflow: hidden;
-          height: 170px;
-          clear: both;
+            overflow: hidden;
+            height: 170px;
+            clear: both;
         }
-
         .poster {
             display: inline;
             color: #1695A3;
@@ -275,13 +268,12 @@ header {
                 span b {
                     margin: 0;
                     text-align: center;
-
+                    color: $orange;
                 }
             }
         }
     }
 }
-
 /* SINGLE PAGE VIEW
 ------------------- */
 
@@ -317,7 +309,6 @@ header {
         margin-bottom: 5em;
         position: relative;
         font-family: $roboto;
-
         .guessError {
             padding: 0 0 1em 1.8em;
             color: $orange;
@@ -351,21 +342,20 @@ header {
             cursor: pointer;
             margin-left: 30px;
             color: $orange;
-
             i {
                 color: $darkblue;
                 font-size: 1.5em;
-            &:hover {
-                color: $orange;
+                &:hover {
+                    color: $orange;
+                }
+                .sorry {
+                    font-size: .6em;
+                    padding: 0;
+                    padding-right: 1em;
+                    color: $orange;
+                    font-family: $roboto;
+                }
             }
-            .sorry {
-                font-size: .6em;
-                padding: 0;
-                padding-right: 1em;
-                color: $orange;
-                font-family: $roboto;
-            }
-        }
         }
         .image {
             img {
@@ -404,7 +394,6 @@ header {
                 font-family: $roboto;
                 cursor: pointer;
                 margin-left: 1.7em;
-
                 span {
                     color: $orange;
                 }
@@ -417,9 +406,6 @@ header {
                     }
                 }
             }
-
-
-
             ul {
                 display: block;
                 clear: both;
@@ -460,6 +446,7 @@ aside {
         h4 {
             margin-top: 1em;
             font-family: $roboto;
+            margin-bottom: 0;
         }
     }
     .asideTop {
@@ -467,16 +454,30 @@ aside {
         border-bottom: 1px solid $darkblue;
         .avatar {
             margin: 2em;
-            img {
-                // background-image: url('https://raw.githubusercontent.com/TRPMorrison/Qpic/master/Qlogo.png');
+            color: $orange;
+            p {
+                margin-top: -30px;
+                font-family: Electrolize;
+                font-size: 7.5em;
+                padding: 0;
+            }
+            .fa-camera {
+                display: inline;
+                position: absolute;
+                font-size: 1.6em;
+                top: 260px;
+                margin-left: 112px;
+                left: 23px;
+                color: $teal;
             }
         }
     }
-    ul {
-        margin: 0;
-        margin-top: 1em;
-        li {}
-    }
+}
+
+ul {
+    margin: 0;
+    margin-top: 1em;
+    li {}
 }
 /* NEW POST VIEW
 ----------------- */
@@ -491,7 +492,6 @@ aside {
     .newpostMain {
         width: 80%;
         margin: auto;
-
         form {
             display: inline;
             // button {
@@ -504,58 +504,55 @@ aside {
         button {
             display: inline;
         }
-
-    .newImageWrap {
-        position: relative;
-        width: 250px;
-        height: 260px;
-        overflow: hidden;
-        border-radius: 4px;
-        margin-bottom: 2em;
-        float: left;
-        display: inline;
-        border: 1px solid #ACF0F2;
-        padding: 10px 20px 100px 20px;
-        background-color: white;
-
-        p {
-            margin-left: 1em;
-            color: $darkblue;
-            margin-bottom: .5em;
-        }
-
-        .actualImage {
-          overflow: hidden;
-          height: 170px;
-          clear: both;
-        }
-        .poster {
-            display: inline;
-            color: #1695A3;
-            float: left;
-            margin-bottom: .5em;
+        .newImageWrap {
             position: relative;
-            font-family: $roboto;
-            font-size: 12px;
-            letter-spacing: .1em;
-            span {
-                font-size: 10pt;
-                color: $orange;
-            }
-        }
-        .databox {
-            margin-top: 0;
-            color: #1695A3;
-            font-size: 12pt;
-            font-family: $roboto;
+            width: 250px;
+            height: 260px;
             overflow: hidden;
-            width: 100%;
+            border-radius: 4px;
+            margin-bottom: 2em;
+            float: left;
+            display: inline;
+            border: 1px solid #ACF0F2;
+            padding: 10px 20px 100px 20px;
+            background-color: white;
             p {
-                margin-top: 1em;
-                font-size: .7em;
-                color: $teal;
+                margin-left: 1em;
+                color: $darkblue;
+                margin-bottom: .5em;
+            }
+            .actualImage {
+                overflow: hidden;
+                height: 170px;
+                clear: both;
+            }
+            .poster {
+                display: inline;
+                color: #1695A3;
+                float: left;
+                margin-bottom: .5em;
+                position: relative;
+                font-family: $roboto;
+                font-size: 12px;
+                letter-spacing: .1em;
+                span {
+                    font-size: 10pt;
+                    color: $orange;
+                }
+            }
+            .databox {
+                margin-top: 0;
+                color: #1695A3;
+                font-size: 12pt;
+                font-family: $roboto;
+                overflow: hidden;
+                width: 100%;
+                p {
+                    margin-top: 1em;
+                    font-size: .7em;
+                    color: $teal;
+                }
             }
         }
-    }
     }
 }
