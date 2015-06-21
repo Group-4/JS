@@ -10,12 +10,16 @@
             <p>Current score: {{points}}</p>
           </div>
         </div>
-        <div class="leaderboardSection">
+
+      {{!--   <div class="leaderboardSection">
           <h4>Leaderboard</h4>
           <ul id="leaderboard" class="leaderboard">
-            <li>{{username}}: {{!-- {{}} --}}</li>
+          {{#each user}}
+            <li>{{username}}: {{points}}</li>
+
+          {{/each}}
           </ul>
-        </div>
+        </div> --}}
         </div>
 
 <div class="deleteDiv">

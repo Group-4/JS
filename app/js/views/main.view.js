@@ -16,6 +16,8 @@
 
     templateSidebar: hbs.sidebar,
 
+    templateList: hbs.list,
+
 
     initialize: function(options) {
       var args = options || {};
@@ -38,7 +40,15 @@
         self.$el.html(self.template({ image: allUserPosts.responseJSON }));
       });
 
+      var leaderboardList = $.get(app.rootURL + '/leaderboard', function(data){
+        var response = data.toJSON;
+      }).done(function(data) {
+        $('.asideBottom').html(self.templateList({ user: leaderboardList.toJSON() }));
+
+      });
+
       $('.sidebar').html(this.templateSidebar(app.LoggedInUser));
+
 // DELETE POST
       // if (user_id === app.LoggedInUser.id) {
      // $('deletePost').html(this.templateNewPost(app.deletePost));
