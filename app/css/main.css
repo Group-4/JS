@@ -260,6 +260,8 @@ header {
         font-size: .8em;
         clear: both;
         margin-top: 1em; }
+        .mainImages .imageWrap #databox p span {
+          color: #FF8236; }
         .mainImages .imageWrap #databox p span b {
           margin: 0;
           text-align: center; }

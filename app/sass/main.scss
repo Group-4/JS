@@ -354,10 +354,14 @@ header {
                 font-size: .8em;
                 clear: both;
                 margin-top: 1em;
+
+                span {
+                    color: $orange;
+                }
+
                 span b {
                     margin: 0;
                     text-align: center;
-
                 }
             }
         }

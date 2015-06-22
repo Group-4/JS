@@ -58,7 +58,7 @@
         $(button).parentsUntil('.single').html('<div class="response"><p class="deletedResponse">Your post and all associated guesses have been deleted.</p><i class="fa fa-paper-plane-o deletedResponse"></i><p class="deletedResponse">Sending you back to the home page in 3 seconds...</p></div>');
         window.setTimeout(function () {
           app.mainRouter.navigate('/main', {trigger: true});
-          }, 3000);
+          }, 2000);
       },
       error: function () {
         $(button).html('<p class="sorry">Sorry, you are not authorized to delete this post.</p>')
