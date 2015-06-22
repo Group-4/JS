@@ -22,6 +22,8 @@
       this.render(),
       $('.container').html(this.el);
 
+
+
     },
 
     render: function () {
@@ -32,6 +34,16 @@
         var singlePost = this.collectionPosts.get(this.singleID);
         this.$el.html(this.template(singlePost.toJSON()));
       }.bind(this));
+
+      // get all guesses on individual post by logged in user
+      $.get(app.rootURL + '/users/' + app.LoggedInUser.username + '/' + this.singleID + '/guesses', function (data) {
+        var allGuesses = data;
+        $('.singleGuesses').find('ul').empty();
+
+        allGuesses.forEach(function (guess) {
+          $('.singleGuesses').find('#incorrectGuesses').append('<li>' + guess.guess + '</li>');
+        })
+      })
 
     },
 
@@ -58,16 +70,7 @@
   },
 
   oldGuesses: function () {
-
-    // get all guesses on individual post by logged in user
-    $.get(app.rootURL + '/users/' + app.LoggedInUser.username + '/' + this.singleID + '/guesses', function (data) {
-      var allGuesses = data;
-      $('.singleGuesses').find('ul').empty();
-
-      allGuesses.forEach(function (guess) {
-        $('.singleGuesses').find('#incorrectGuesses').append('<li>' + guess.guess + '</li>');
-      })
-    })
+    $('#incorrectGuesses').toggleClass('show');
   },
 
     makeGuess: function (e) {

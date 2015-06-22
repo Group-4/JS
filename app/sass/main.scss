@@ -159,10 +159,79 @@ header {
 /* LOGIN VIEW
 -------------- */
 
+.login {
+    background-color: $darkblue;
+    height: 100vh;
+    width: 100%;
+
+    .loginBox {
+        width: 50%;
+        margin: auto;
+        padding-top: 10em;
+
+        .loginLogo {
+            text-align: center;
+            padding-bottom: 2em;
+        }
+
+        h2 {
+            font-family: $roboto;
+            color: $light;
+            font-size: 2.2em;
+            padding: .3em;
+            display: inline-block;
+            float: left;
+            margin-bottom: .3em;
+        }
+
+
+        .formDiv {
+            border: 1px solid $light;
+            padding: 2em;
+
+            .signUp {
+                color: $lightblue;
+                text-decoration: underline;
+                cursor: pointer;
+                display: inline-block;
+                float: right;
+                margin: 0;
+                padding-top: .7em;
+            }
+
+            input {
+                font-family: $roboto;
+            }
+
+            button {
+                font-family: $roboto;
+
+                &:hover {
+                    border: $orange;
+                }
+            }
+        }
+
+
+
+        .formDiv {
+
+        }
+
+        .registerDiv {
+            overflow: hidden;
+        }
+    }
+}
+
 .errormsg {
     p {
         color: $orange;
     }
+}
+
+.hide {
+    display: none;
 }
 
 /* MAIN PAGE VIEW
@@ -395,6 +464,7 @@ header {
             margin-right: 2em;
         }
         .singleGuesses {
+            overflow: hidden;
             clear: both;
             p {
                 display: block;
@@ -404,6 +474,7 @@ header {
                 font-family: $roboto;
                 cursor: pointer;
                 margin-left: 1.7em;
+                margin-bottom: 1em;
 
                 span {
                     color: $orange;
@@ -420,8 +491,9 @@ header {
 
 
 
-            ul {
-                display: block;
+            .incorrectGuesses {
+                // display: block;
+                display: none;
                 clear: both;
                 text-align: left;
                 margin-left: 1em;
@@ -438,6 +510,9 @@ header {
                         left: -20px;
                     }
                 }
+            }
+            .show {
+                display: block;
             }
         }
     }

@@ -1,26 +1,33 @@
 <div class="loginBox">
 
-<h2>Login</h2>
+  <div class="loginLogo">
+    <img src="https://raw.githubusercontent.com/Group-4/Qpic-Logos/master/QpicLogo.png">
+  </div>
 
-<div class="formDiv">
-<form id="loginForm" class="loginForm">
-  <input type="text" id="loginusername" placeholder=" username">
-  <input type="password" id="loginpassword" placeholder=" password">
-  <div class="errormsg" id="errormsg"></div>
-  <button id="loginButton">Login</button>
-</form>
-</div>
 
-<div class="registerDiv">
-<h2>Register</h2>
-<form id="registerForm" class="registerForm">
-  <input type="email" id="email" placeholder=" email">
-  <input type="text" id="regusername" placeholder=" username">
-  <input type="password" id="regpassword" placeholder=" password">
-  <div class="errormsg" id="errormsgregister"></div>
-  <button id="registerButton">Register</button>
 
-</form>
+  <div class="formDiv" id="loginDiv">
+  <h2>Login</h2>
+  <p class="signUp" id="signUp">Or click here to sign up.</p>
+    <form id="loginForm" class="loginForm">
+      <input type="text" id="loginusername" placeholder=" username">
+      <input type="password" id="loginpassword" placeholder=" password">
+      <div class="errormsg" id="errormsg"></div>
+      <button id="loginButton">Login</button>
+    </form>
+  </div>
 
-</div>
+  <div class="formDiv hide" id="registerDiv">
+  <h2>Register</h2>
+  <p class="signUp" id="returnLogin">Go back to login.</p>
+
+    <form id="registerForm" class="registerForm">
+      <input type="email" id="email" placeholder=" email">
+      <input type="text" id="regusername" placeholder=" username">
+      <input type="password" id="regpassword" placeholder=" password">
+      <div class="errormsg" id="errormsgregister"></div>
+      <button id="registerButton">Register</button>
+    </form>
+  </div>
+
 </div>

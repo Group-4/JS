@@ -8,7 +8,9 @@
 
     events: {
       'submit #registerForm' : 'registerUser',
-      'submit #loginForm' : 'loginUser'
+      'submit #loginForm' : 'loginUser',
+      'click #signUp' : 'signUpForm',
+      'click #returnLogin' : 'returnToLogin'
     },
 
     template: hbs.login,
@@ -22,7 +24,23 @@
     },
 
     render: function(){
+      $('header').addClass('hide');
+      $('aside').addClass('hide');
       this.$el.html(this.template())
+    },
+
+    signUpForm: function (e) {
+      e.preventDefault();
+
+      $('#registerDiv').removeClass('hide');
+      $('#loginDiv').addClass('hide');
+    },
+
+    returnToLogin: function (e) {
+      e.preventDefault();
+
+      $('#loginDiv').removeClass('hide');
+      $('#registerDiv').addClass('hide');
     },
 
 

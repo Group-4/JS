@@ -29,7 +29,6 @@
     },
 
     render: function() {
-
       var self = this;
 
       var allUserPosts = $.get(app.rootURL + '/users/' + app.LoggedInUser.username + '/unsolved?sort=difficult', function(data) {
@@ -38,8 +37,11 @@
         self.$el.html(self.template({ image: allUserPosts.responseJSON }));
       });
 
+      $('header').removeClass('hide');
+      $('aside').removeClass('hide');
+
       $('.sidebar').html(this.templateSidebar(app.LoggedInUser));
-// DELETE POST
+      // DELETE POST
       // if (user_id === app.LoggedInUser.id) {
      // $('deletePost').html(this.templateNewPost(app.deletePost));
      // DELETE ACCOUNT
