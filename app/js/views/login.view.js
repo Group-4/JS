@@ -18,8 +18,11 @@
     initialize: function(options) {
       var args = options || {};
       this.collectionUsers = args.collectionUsers;
+      $('header').addClass('hide');
+      $('.sidebarWrapper').addClass('hide');
       this.render();
       $('.container').html(this.el);
+
 
     },
 
