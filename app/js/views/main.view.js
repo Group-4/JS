@@ -58,7 +58,7 @@
      // $('deletePost').html(this.templateNewPost(app.deletePost));
      // DELETE ACCOUNT
     //  $('deleteAccount').html(this.templateSidebar(app.deleteAccount));
-    // },
+    },
 
 
 
