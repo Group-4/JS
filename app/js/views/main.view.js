@@ -49,40 +49,40 @@
 
 
     // DELETING ACCOUNT
-  //   $(function () {
-  //   $('.deleteAccount').on('click', (function (e) {
-  //     e.preventDefault();
-  //     var button = button;
-  //     var url = this.href;
-  //     var $post = $('#deletePost');
+    // $(function () {
+    // $('.deleteAccount').on('click', (function (e) {
+    //   e.preventDefault();
+    //   var button = button;
+    //   var url = this.href;
+    //   var $post = $('#deleteAccount');
 
-  //    $('deleteAccount').removeClass('current');
-  //    $('#container').remove();
+    //  $('deleteAccount').removeClass('current');
+    //  $('#container').remove();
 
-  //     var element = $(this);
-  //     var deleteID = element.attr("id");
-  //     var delUserAcct = 'id=' + deleteUserID;
-  //     var content = $('#content');
+    //   var element = $(this);
+    //   var deleteID = element.attr("id");
+    //   var delUserAcct = 'id=' + deleteUserID;
+    //   var content = $('#content');
 
-  //    $('deleteAccount.current').removeClass('current');
-  //    $('#container').remove();
+    //  $('deleteAccount.current').removeClass('current');
+    //  $('#container').remove();
 
-  //       if(confirm("Delete your Qpic account?")){
-  //   // AJAX TO DELETE
-  //         $.ajax({
-  //           type: "POST",
-  //           url: url,
-  //           data: delUserAcct,
-  //           success: function() {
-  //         // console.log("Your Qpic account has been deleted!");
-  //       },
-  //         complete: function() {
-  //         $('#loading').remove();
-  //       },
-  //         success: function () {
-  //           $content.html( $(data).find('#container')).hide();
-  //       }
-  //   });
+    //     if(confirm("Delete your Qpic account?")){
+    // // AJAX TO DELETE
+    //       $.ajax({
+    //         type: "POST",
+    //         url: url,
+    //         data: delUserAcct,
+    //         success: function() {
+    //       // console.log("Your Qpic account has been deleted!");
+    //     },
+    //       complete: function() {
+    //       $('#loading').remove();
+    //     },
+    //       success: function () {
+    //         $content.html( $(data).find('#container')).hide();
+    //     }
+    // });
 
 
   // },
