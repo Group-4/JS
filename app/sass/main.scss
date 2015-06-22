@@ -388,6 +388,40 @@ header {
         position: relative;
         font-family: $roboto;
 
+        .singleMainTop {
+            overflow: hidden;
+
+        .deletePost {
+            float: right;
+            padding: .5em;
+            color: $darkblue;
+            font-size: 2em;
+            cursor: pointer;
+            margin-left: 30px;
+
+            &:hover {
+                color: $orange;
+            }
+
+            i {
+                color: $darkblue;
+                font-size: 1.2em;
+
+                &:hover {
+                    color: $orange;
+                }
+
+                .sorry {
+                    font-size: .6em;
+                    padding: 0;
+                    padding-right: 1em;
+                    color: $orange;
+                    font-family: $roboto;
+                }
+            }
+        }
+    }
+
         .guessError {
             padding: 0 0 1em 1.8em;
             color: $orange;
@@ -403,7 +437,7 @@ header {
             float: left;
             padding: 1em;
             margin: 0;
-            padding-left: 1em;
+            padding-left: 3em;
             color: $darkblue;
             font-family: $roboto;
             span {
@@ -431,35 +465,13 @@ header {
                 color: $teal;
             }
 
-        .deletePost {
-            float: right;
-            padding: .5em;
-            color: $darkblue;
-            font-size: 2em;
-            cursor: pointer;
-            margin-left: 30px;
-            color: $orange;
 
-            i {
-                color: $darkblue;
-                font-size: 1.5em;
-            &:hover {
-                color: $orange;
-            }
-            .sorry {
-                font-size: .6em;
-                padding: 0;
-                padding-right: 1em;
-                color: $orange;
-                font-family: $roboto;
-            }
-        }
-        }
         .image {
             img {
                 width: 100%;
             }
             .imageInfo {
+
                 span {
                     color: $orange;
                     font-weight: bold;
@@ -468,18 +480,23 @@ header {
                 }
             }
         }
+
+    .imageInfoP {
+        padding-left: 1em;
+    }
         .guess {
-            width: 90%;
             margin: auto;
             margin-bottom: 2em;
             margin-left: 2em;
             float: left;
-            width: 70%;
+            width: 60%;
             padding: 1.6em;
         }
         .guessBtn {
-            float: right;
+            float: left;
             margin-right: 2em;
+            margin-left: 1em;
+            padding: .8em;
         }
         .singleGuesses {
             overflow: hidden;
@@ -506,8 +523,6 @@ header {
                     }
                 }
             }
-
-
 
             .incorrectGuesses {
                 // display: block;

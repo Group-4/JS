@@ -1,17 +1,18 @@
   <div class="singleWrap">
     <div class="singleMain">
+    <div class="singleMainTop">
       <i class="fa fa-camera"></i>
       <p>posted by <span>{{owner}}<span></p>
       <p class="deletePost" id="deletePost" data-id="{{id}}"><i class="fa fa-minus-square" data-id="{{id}}"></i></p>
-
+    </div>
       <div class="image">
         <img src="{{image_url}}">
 
         <div class="imageInfo">
-          <p>First solved by: <span>{{solved_by}}</span></p>
-          <p>Correct so far: <span>{{times_solved}}</span></p>
-          <p>Total Attempts: <span>{{attempts}}</span></p>
-          <p id="hint">Show hint: <span class="hint">{{hint}}</span></p>
+          <p class="imageInfoP">First solved by: <span>{{solved_by}}</span></p>
+          <p class="imageInfoP">Correct so far: <span>{{times_solved}}</span></p>
+          <p class="imageInfoP">Total Attempts: <span>{{attempts}}</span></p>
+          <p class="imageInfoP" id="hint">Show hint: <span class="hint">{{hint}}</span></p>
 
           <!-- would be cool to add div with user's score and addClass show on hover for this information -->
 

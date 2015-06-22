@@ -283,6 +283,28 @@ header {
     margin-bottom: 5em;
     position: relative;
     font-family: "Roboto", sans-serif; }
+    .container .singleMain .singleMainTop {
+      overflow: hidden; }
+      .container .singleMain .singleMainTop .deletePost {
+        float: right;
+        padding: .5em;
+        color: #225378;
+        font-size: 2em;
+        cursor: pointer;
+        margin-left: 30px; }
+        .container .singleMain .singleMainTop .deletePost:hover {
+          color: #FF8236; }
+        .container .singleMain .singleMainTop .deletePost i {
+          color: #225378;
+          font-size: 1.2em; }
+          .container .singleMain .singleMainTop .deletePost i:hover {
+            color: #FF8236; }
+          .container .singleMain .singleMainTop .deletePost i .sorry {
+            font-size: .6em;
+            padding: 0;
+            padding-right: 1em;
+            color: #FF8236;
+            font-family: "Roboto", sans-serif; }
     .container .singleMain .guessError {
       padding: 0 0 1em 1.8em;
       color: #FF8236; }
@@ -296,7 +318,7 @@ header {
       float: left;
       padding: 1em;
       margin: 0;
-      padding-left: 1em;
+      padding-left: 3em;
       color: #225378;
       font-family: "Roboto", sans-serif; }
       .container .singleMain p span {
@@ -313,41 +335,25 @@ header {
       cursor: pointer; }
       .container .singleMain #hint:hover {
         color: #1695A3; }
-      .container .singleMain #hint .deletePost {
-        float: right;
-        padding: .5em;
-        color: #225378;
-        font-size: 2em;
-        cursor: pointer;
-        margin-left: 30px;
-        color: #FF8236; }
-        .container .singleMain #hint .deletePost i {
-          color: #225378;
-          font-size: 1.5em; }
-          .container .singleMain #hint .deletePost i:hover {
-            color: #FF8236; }
-          .container .singleMain #hint .deletePost i .sorry {
-            font-size: .6em;
-            padding: 0;
-            padding-right: 1em;
-            color: #FF8236;
-            font-family: "Roboto", sans-serif; }
       .container .singleMain #hint .image img {
         width: 100%; }
       .container .singleMain #hint .image .imageInfo span {
         color: #FF8236;
         font-weight: bold; }
+    .container .singleMain .imageInfoP {
+      padding-left: 1em; }
     .container .singleMain .guess {
-      width: 90%;
       margin: auto;
       margin-bottom: 2em;
       margin-left: 2em;
       float: left;
-      width: 70%;
+      width: 60%;
       padding: 1.6em; }
     .container .singleMain .guessBtn {
-      float: right;
-      margin-right: 2em; }
+      float: left;
+      margin-right: 2em;
+      margin-left: 1em;
+      padding: .8em; }
     .container .singleMain .singleGuesses {
       overflow: hidden;
       clear: both; }
