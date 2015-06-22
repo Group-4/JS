@@ -16,6 +16,8 @@
 
     templateSidebar: hbs.sidebar,
 
+    templateList: hbs.list,
+
 
     initialize: function(options) {
       var args = options || {};
@@ -40,13 +42,23 @@
       $('header').removeClass('hide');
       $('aside').removeClass('hide');
 
+      var leaderboardList = $.get(app.rootURL + '/leaderboard', function(data){
+        console.log(data);
+
+      }).done(function(data) {
+        console.log(data);
+        $('.asideBottom').html(self.templateList({user: leaderboardList.responseJSON }));
+
+      });
+
       $('.sidebar').html(this.templateSidebar(app.LoggedInUser));
-      // DELETE POST
+
+// DELETE POST
       // if (user_id === app.LoggedInUser.id) {
      // $('deletePost').html(this.templateNewPost(app.deletePost));
      // DELETE ACCOUNT
-     $('deleteAccount').html(this.templateSidebar(app.deleteAccount));
-    },
+    //  $('deleteAccount').html(this.templateSidebar(app.deleteAccount));
+    // },
 
 
 

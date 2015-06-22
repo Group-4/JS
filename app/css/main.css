@@ -402,33 +402,42 @@ header {
       .container .singleMain .singleGuesses .show {
         display: block; }
 
-aside {
+.sidebarWrapper {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 23.23176%;
   background-color: #F3FFE2;
-  height: 100vh;
   overflow: hidden;
   clear: both; }
-  aside:last-child {
+  .sidebarWrapper:last-child {
     margin-right: 0; }
-  aside button {
-    font-family: "Roboto", sans-serif; }
-  aside .innerAside {
+  .sidebarWrapper button {
+    font-family: "Roboto", sans-serif;
+    width: 100%;
+    color: #F3FFE2; }
+  .sidebarWrapper .leaderboardh4 {
+    background-color: #FF8236;
+    padding: 20px;
+    font-size: 3em;
+    border-radius: 3px;
+    color: #F3FFE2; }
+  .sidebarWrapper .leaderboard {
+    padding: 15px;
+    line-height: 2em; }
+  .sidebarWrapper .innerAside {
     width: 90%;
     margin: auto;
     text-align: center;
     font-family: "Roboto", sans-serif; }
-    aside .innerAside h4 {
+    .sidebarWrapper .innerAside h4 {
       margin-top: 1em;
       font-family: "Roboto", sans-serif; }
-  aside .asideTop {
-    margin-top: 2em;
-    border-bottom: 1px solid #225378; }
-    aside .asideTop .avatar {
+  .sidebarWrapper .asideTop {
+    margin-top: 2em; }
+    .sidebarWrapper .asideTop .avatar {
       margin: 2em; }
-  aside ul {
+  .sidebarWrapper ul {
     margin: 0;
     margin-top: 1em; }
 

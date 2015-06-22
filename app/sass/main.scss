@@ -563,14 +563,29 @@ header {
     }
 }
 
-aside {
+.sidebarWrapper {
     @include span-columns(3);
     background-color: $light;
-    height: 100vh;
+    // height: 130vh;
     overflow: hidden;
     clear: both;
     button {
         font-family: $roboto;
+        width: 100%;
+        color: $light;
+    }
+
+    .leaderboardh4 {
+        background-color: $orange;
+        padding: 20px;
+        font-size: 3em;
+        border-radius: 3px;
+        color: $light;
+    }
+
+    .leaderboard {
+        padding: 15px;
+        line-height: 2em;
     }
     .innerAside {
         width: 90%;
@@ -584,7 +599,7 @@ aside {
     }
     .asideTop {
         margin-top: 2em;
-        border-bottom: 1px solid $darkblue;
+        // border-bottom: 1px solid $darkblue;
         .avatar {
             margin: 2em;
             img {
