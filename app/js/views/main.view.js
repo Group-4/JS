@@ -40,7 +40,7 @@
       });
 
       $('header').removeClass('hide');
-      $('aside').removeClass('hide');
+      $('sidebarWrapper').removeClass('hide');
 
       var leaderboardList = $.get(app.rootURL + '/leaderboard', function(data){
         console.log(data);

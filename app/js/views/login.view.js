@@ -25,7 +25,7 @@
 
     render: function(){
       $('header').addClass('hide');
-      $('aside').addClass('hide');
+      $('.sidebarWrapper').addClass('hide');
       this.$el.html(this.template())
     },
 
