@@ -575,6 +575,11 @@ header {
         color: $light;
     }
 
+    .leaderboardScorePoints {
+        color: $orange;
+        font-weight: bold;
+    }
+
     .leaderboardh4 {
         background-color: $orange;
         padding: 10px;
