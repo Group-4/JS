@@ -8,7 +8,8 @@
     events: {
       'submit #guessInput' : 'makeGuess',
       'click #deletePost' : 'deletePost',
-      'click #seeOldGuesses' : 'oldGuesses'
+      'click #seeOldGuesses' : 'oldGuesses',
+      'click #hint' : 'showHint'
     },
 
     template: hbs.single,
@@ -68,6 +69,10 @@
 
   oldGuesses: function () {
     $('#incorrectGuesses').toggleClass('show');
+  },
+
+  showHint: function (e) {
+    $('.hint').addClass('showhint');
   },
 
     makeGuess: function (e) {

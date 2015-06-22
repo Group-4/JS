@@ -248,8 +248,9 @@ header {
       width: 100%; }
       .mainImages .imageWrap #databox p {
         margin: 0;
-        font-size: .7em;
-        clear: both; }
+        font-size: .8em;
+        clear: both;
+        margin-top: 1em; }
         .mainImages .imageWrap #databox p span b {
           margin: 0;
           text-align: center; }
@@ -295,7 +296,7 @@ header {
       float: left;
       padding: 1em;
       margin: 0;
-      padding-left: 2.5em;
+      padding-left: 1em;
       color: #225378;
       font-family: "Roboto", sans-serif; }
       .container .singleMain p span {
@@ -303,32 +304,39 @@ header {
         font-weight: bold;
         font-size: 1em;
         font-family: "Roboto", sans-serif; }
-    .container .singleMain .deletePost {
-      float: right;
-      padding: .5em;
-      color: #225378;
-      font-size: 2em;
-      cursor: pointer;
-      margin-left: 30px;
-      color: #FF8236; }
-      .container .singleMain .deletePost i {
-        color: #225378;
-        font-size: 1.5em; }
-        .container .singleMain .deletePost i:hover {
-          color: #FF8236; }
-        .container .singleMain .deletePost i .sorry {
-          font-size: .6em;
-          padding: 0;
-          padding-right: 1em;
-          color: #FF8236;
-          font-family: "Roboto", sans-serif; }
-    .container .singleMain .image img {
-      width: 100%; }
-    .container .singleMain .image .imageInfo span {
-      color: #FF8236;
-      font-weight: bold; }
-    .container .singleMain .image .imageInfo .showHint {
+      .container .singleMain p .hint {
+        display: none;
+        cursor: pointer; }
+      .container .singleMain p .showhint {
+        display: inline-block; }
+    .container .singleMain #hint {
       cursor: pointer; }
+      .container .singleMain #hint:hover {
+        color: #1695A3; }
+      .container .singleMain #hint .deletePost {
+        float: right;
+        padding: .5em;
+        color: #225378;
+        font-size: 2em;
+        cursor: pointer;
+        margin-left: 30px;
+        color: #FF8236; }
+        .container .singleMain #hint .deletePost i {
+          color: #225378;
+          font-size: 1.5em; }
+          .container .singleMain #hint .deletePost i:hover {
+            color: #FF8236; }
+          .container .singleMain #hint .deletePost i .sorry {
+            font-size: .6em;
+            padding: 0;
+            padding-right: 1em;
+            color: #FF8236;
+            font-family: "Roboto", sans-serif; }
+      .container .singleMain #hint .image img {
+        width: 100%; }
+      .container .singleMain #hint .image .imageInfo span {
+        color: #FF8236;
+        font-weight: bold; }
     .container .singleMain .guess {
       width: 90%;
       margin: auto;
@@ -469,3 +477,13 @@ aside {
           margin-top: 1em;
           font-size: .7em;
           color: #1695A3; }
+
+@media screen and (max-width: 800px) {
+  .mainImages ul {
+    width: 100%; }
+    .mainImages ul li {
+      width: 67%;
+      display: block;
+      margin: auto; }
+  .mainImages .imageWrap {
+    margin: 0; } }

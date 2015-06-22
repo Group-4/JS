@@ -339,8 +339,9 @@ header {
             width: 100%;
             p {
                 margin: 0;
-                font-size: .7em;
+                font-size: .8em;
                 clear: both;
+                margin-top: 1em;
                 span b {
                     margin: 0;
                     text-align: center;
@@ -402,7 +403,7 @@ header {
             float: left;
             padding: 1em;
             margin: 0;
-            padding-left: 2.5em;
+            padding-left: 1em;
             color: $darkblue;
             font-family: $roboto;
             span {
@@ -411,7 +412,25 @@ header {
                 font-size: 1em;
                 font-family: $roboto;
             }
+
+            .hint {
+                display: none;
+                cursor: pointer;
+            }
+
+            .showhint {
+                display: inline-block;
+            }
+
+
         }
+
+        #hint {
+            cursor: pointer;
+            &:hover {
+                color: $teal;
+            }
+
         .deletePost {
             float: right;
             padding: .5em;
@@ -445,8 +464,7 @@ header {
                     color: $orange;
                     font-weight: bold;
                 }
-                .showHint {
-                    cursor: pointer;
+
                 }
             }
         }
@@ -634,3 +652,6 @@ aside {
     }
     }
 }
+
+
+@import "_small";
