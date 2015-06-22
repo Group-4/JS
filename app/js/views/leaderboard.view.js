@@ -51,6 +51,7 @@
     keepPlaying: function(e) {
       e.preventDefault();
       app.mainRouter.navigate('/main', {trigger: true});
+      window.location.reload();
     },
 
 
