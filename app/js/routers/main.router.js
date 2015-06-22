@@ -23,7 +23,6 @@
 
         } else {
           Backbone.history.start();
-          // app.mainRouter.navigate('', {trigger: true});
         }
 
     },

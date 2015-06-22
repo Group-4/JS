@@ -84,13 +84,9 @@
 
   logout: function(e) {
     e.preventDefault();
-    // console.log(app.LoggedInUser.access_token);
     var cookie = Cookies.get('access_token', app.LoggedInUser.access_token);
-    // console.log(cookie);
     Cookies.expire('access_token', app.LoggedInUser.access_token);
     app.mainRouter.navigate('', { trigger: true });
-      $('sidebarWrapper').addClass('hide');
-
   }
 
 

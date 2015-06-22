@@ -108,7 +108,6 @@
         Cookies.set('access_token', data.access_token);
         Cookies.set('username', data.username);
         app.LoggedInUser = data;
-        // console.log(app.LoggedInUser);
         $.ajaxSetup({
           headers: {
             'Access-Token' : Cookies.get('access_token')
