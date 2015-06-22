@@ -42,8 +42,6 @@
 
       var leaderboardList = $.get(app.rootURL + '/leaderboard', function(data){
         console.log(data);
-        // var response = data.toJSON;
-        // console.log(response);
 
       }).done(function(data) {
         console.log(data);

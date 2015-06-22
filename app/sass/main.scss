@@ -452,6 +452,7 @@ header {
     button {
         font-family: $roboto;
         width: 100%;
+        color: $light;
     }
 
     .leaderboardh4 {
@@ -459,6 +460,7 @@ header {
         padding: 20px;
         font-size: 3em;
         border-radius: 3px;
+        color: $light;
     }
 
     .leaderboard {

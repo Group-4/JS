@@ -345,12 +345,14 @@ header {
     margin-right: 0; }
   .sidebarWrapper button {
     font-family: "Roboto", sans-serif;
-    width: 100%; }
+    width: 100%;
+    color: #F3FFE2; }
   .sidebarWrapper .leaderboardh4 {
     background-color: #FF8236;
     padding: 20px;
     font-size: 3em;
-    border-radius: 3px; }
+    border-radius: 3px;
+    color: #F3FFE2; }
   .sidebarWrapper .leaderboard {
     padding: 15px;
     line-height: 2em; }

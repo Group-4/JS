@@ -11,6 +11,7 @@
     },
 
     template: hbs.leaderboard,
+    templateList: hbs.list,
 
     initialize: function(options){
       var args = options || {};
@@ -24,6 +25,7 @@
     },
 
     render: function() {
+      var self = this;
       this.collectionPosts = new app.Collections.Posts();
 
       this.collectionPosts.fetch().done( function (data) {
@@ -32,15 +34,16 @@
 
     }.bind(this));
 
+      //$('.belowContainer').html(self.template(app.LoggedInUser));
 
-      // var self = this;
+      //  var leaderboardList = $.get(app.rootURL + '/leaderboard', function(data){
+      //   console.log(data);
 
-      // var leaderboardResults = $.get(app.rootURL + '/leaderboard', function(data) {
-      //   var leaderResponse = leaderboardResults.responseJSON;
-      // }).done(function (data) {
-      //   self.$el.html(self.template({ user: leaderboardResults.responseJSON }));
+      // }).done(function(data) {
+      //   console.log(data);
+      //   $('.belowContainer').html(self.templateList({user: leaderboardList.responseJSON }));
+
       // });
-
 
 
     },
@@ -50,11 +53,6 @@
       app.mainRouter.navigate('/main', {trigger: true});
     },
 
-    // leaderboardResults: function() {
-
-    //   });
-
-    // }
 
   });
 
