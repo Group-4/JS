@@ -21,9 +21,6 @@
       this.collectionGuesses = args.collectionGuesses,
       this.render(),
       $('.container').html(this.el);
-
-
-
     },
 
     render: function () {

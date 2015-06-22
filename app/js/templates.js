@@ -93,7 +93,9 @@ this["hbs"]["single"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"m
     + "\">\n\n        <div class=\"imageInfo\">\n          <p>First solved by: <span>"
     + alias3(((helper = (helper = helpers.solved_by || (depth0 != null ? depth0.solved_by : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"solved_by","hash":{},"data":data}) : helper)))
     + "</span></p>\n          <p>Correct so far: <span>"
-    + alias3(((helper = (helper = helpers.solved || (depth0 != null ? depth0.solved : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"solved","hash":{},"data":data}) : helper)))
+    + alias3(((helper = (helper = helpers.times_solved || (depth0 != null ? depth0.times_solved : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"times_solved","hash":{},"data":data}) : helper)))
+    + "</span></p>\n          <p>Total Attempts: <span>"
+    + alias3(((helper = (helper = helpers.attempts || (depth0 != null ? depth0.attempts : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"attempts","hash":{},"data":data}) : helper)))
     + "</span></p>\n          <p>Hint: <span>"
     + alias3(((helper = (helper = helpers.hint || (depth0 != null ? depth0.hint : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"hint","hash":{},"data":data}) : helper)))
     + "</span></p>\n\n          <!-- would be cool to add div with user's score and addClass show on hover for this information -->\n\n        </div>\n      </div>\n\n      <form class=\"guessInput\" id=\"guessInput\">\n        <input type=\"text\" placeholder=\"What's your guess?\" id=\"guess\" class=\"guess\">\n        <a href=\"#/leaderboard/"
