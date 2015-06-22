@@ -89,7 +89,8 @@
     // console.log(cookie);
     Cookies.expire('access_token', app.LoggedInUser.access_token);
     app.mainRouter.navigate('', { trigger: true });
-    window.location.reload();
+      $('sidebarWrapper').addClass('hide');
+
   }
 
 

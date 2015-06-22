@@ -242,9 +242,9 @@ header {
     }
 }
 
-.hide {
-    display: none;
-}
+// .hide {
+//     display: none;
+// }
 
 /* MAIN PAGE VIEW
 ------------------ */
@@ -626,6 +626,10 @@ header {
 .leaderBoardTop {
     overflow: hidden;
     width: 100%;
+}
+
+.hide {
+    display: none;
 }
 
 /* NEW POST VIEW

@@ -166,9 +166,6 @@ header {
 .errormsg p {
   color: #FF8236; }
 
-.hide {
-  display: none; }
-
 /* MAIN PAGE VIEW
 ------------------ */
 .mainImages {
@@ -449,6 +446,9 @@ header {
 .leaderBoardTop {
   overflow: hidden;
   width: 100%; }
+
+.hide {
+  display: none; }
 
 /* NEW POST VIEW
 ----------------- */
