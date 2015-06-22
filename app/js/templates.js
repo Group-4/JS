@@ -67,26 +67,12 @@ this["hbs"]["newpost"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"
     return "<div class=\"newpostMain\">\n\n  <h2>Add a post. And don't make it easy!</h2>\n\n\n    <form id=\"postImage\" class=\"postImage\">\n      <input type=\"text\" placeholder=\"Image URL\" id=\"image_url\">\n      <input type=\"text\" placeholder=\"Answer\" id=\"answer\">\n      <input type=\"text\" placeholder=\"Add a hint here\" id=\"hint\">\n      <button id=\"submitPost\">Add post</button>\n    </form>\n    <button id=\"home\">Go home</button>\n\n  <div class=\"preview\" id=\"preview\"></div>\n\n\n\n</div>\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
-this["hbs"]["sidebar"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
+this["hbs"]["sidebar"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
-
-  return "<li data-id=\""
-    + alias3(((helper = (helper = helpers.solved || (depth0 != null ? depth0.solved : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"solved","hash":{},"data":data}) : helper)))
-    + "\">\n\n  "
-    + alias3(((helper = (helper = helpers.solved || (depth0 != null ? depth0.solved : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"solved","hash":{},"data":data}) : helper)))
-    + " "
-    + alias3(((helper = (helper = helpers.attempts || (depth0 != null ? depth0.attempts : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"attempts","hash":{},"data":data}) : helper)))
-    + " "
-    + alias3(((helper = (helper = helpers.times_solved || (depth0 != null ? depth0.times_solved : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"times_solved","hash":{},"data":data}) : helper)))
-    + "\n";
-},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
   return "\n      <div class=\"innerAside\">\n        <div class=\"asideTop\">\n          <h4>"
     + alias3(((helper = (helper = helpers.username || (depth0 != null ? depth0.username : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"username","hash":{},"data":data}) : helper)))
-    + "</h4>\n          <div class=\"avatar\">\n              <img src=\"https://raw.githubusercontent.com/TRPMorrison/Qpic/master/Qlogo.png\">\n        <div class=\"solved\">\n        <button id=\"#solved\">View Solutions</button>\n          <ul id=\"userSolves\" class=\"userSolves\">\n"
-    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.solved : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "</div>\n        </div>\n          <div class=\"score\">\n            <p>Current score: "
+    + "</h4>\n          <div class=\"avatar\">\n              <img src=\"https://raw.githubusercontent.com/TRPMorrison/Qpic/master/Qlogo.png\">\n        </div>\n          <div class=\"score\">\n            <p>Current score: "
     + alias3(((helper = (helper = helpers.points || (depth0 != null ? depth0.points : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"points","hash":{},"data":data}) : helper)))
     + "</p>\n          </div>\n        </div>\n        <div class=\"leaderboardSection\">\n          <h4>Leaderboard</h4>\n          <ul id=\"leaderboard\" class=\"leaderboard\">\n            <li>"
     + alias3(((helper = (helper = helpers.username || (depth0 != null ? depth0.username : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"username","hash":{},"data":data}) : helper)))
