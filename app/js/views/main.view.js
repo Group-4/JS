@@ -43,10 +43,8 @@
       $('sidebarWrapper').removeClass('hide');
 
       var leaderboardList = $.get(app.rootURL + '/leaderboard', function(data){
-        console.log(data);
 
       }).done(function(data) {
-        console.log(data);
         $('.asideBottom').html(self.templateList({user: leaderboardList.responseJSON }));
 
       });
@@ -92,6 +90,7 @@
     // console.log(cookie);
     Cookies.expire('access_token', app.LoggedInUser.access_token);
     app.mainRouter.navigate('', { trigger: true });
+    window.location.reload();
   }
 
 

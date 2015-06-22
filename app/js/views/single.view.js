@@ -101,6 +101,7 @@
       if (finalGuess === finalAnswer) {
         postGuess.done ( function (data) {
           app.mainRouter.navigate('leaderboard/' + self.singleID, {trigger: true});
+
         });
 
       } else {
