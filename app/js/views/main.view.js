@@ -43,10 +43,7 @@
       $('sidebarWrapper').removeClass('hide');
 
       var leaderboardList = $.get(app.rootURL + '/leaderboard', function(data){
-        console.log(data);
-
       }).done(function(data) {
-        console.log(data);
         $('.asideBottom').html(self.templateList({user: leaderboardList.responseJSON }));
 
       });
