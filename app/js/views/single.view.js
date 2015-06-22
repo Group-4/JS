@@ -27,7 +27,7 @@
     render: function () {
 
       this.collectionPosts = new app.Collections.Posts();
-
+      // Get posts data and drop into template
       this.collectionPosts.fetch().done( function (data) {
         var singlePost = this.collectionPosts.get(this.singleID);
         this.$el.html(this.template(singlePost.toJSON()));
@@ -35,14 +35,13 @@
 
       // get all guesses on individual post by logged in user
       $.get(app.rootURL + '/users/' + app.LoggedInUser.username + '/' + this.singleID + '/guesses', function (data) {
-        var allGuesses = data;
-        $('.singleGuesses').find('ul').empty();
-
-        allGuesses.forEach(function (guess) {
-          $('.singleGuesses').find('#incorrectGuesses').append('<li>' + guess.guess + '</li>');
+          var allGuesses = data;
+          $('.singleGuesses').find('ul').empty();
+          // append each incorrect guess below image
+          allGuesses.forEach(function (guess) {
+            $('.singleGuesses').find('#incorrectGuesses').append('<li>' + guess.guess + '</li>');
+          })
         })
-      })
-
     },
 
     deletePost: function (e) {
@@ -50,7 +49,7 @@
 
     var button = event.target;
     var postIdToDelete = $(button).data('id');
-
+    // Send delete request to posts endpoint for individual post and return success statement
     $.ajax({
       url: app.rootURL + '/posts/' + postIdToDelete,
       type: 'DELETE',
@@ -68,16 +67,16 @@
   },
 
   oldGuesses: function () {
-          // get all guesses on individual post by logged in user
+      // get all guesses on individual post by logged in user
       $.get(app.rootURL + '/users/' + app.LoggedInUser.username + '/' + this.singleID + '/guesses', function (data) {
-        var allGuesses = data;
-        $('.singleGuesses').find('ul').empty();
-
-        allGuesses.forEach(function (guess) {
-          $('.singleGuesses').find('#incorrectGuesses').append('<li>' + guess.guess + '</li>');
+          var allGuesses = data;
+          $('.singleGuesses').find('ul').empty();
+          // Append previous guesses by logged in user to ul
+          allGuesses.forEach(function (guess) {
+            $('.singleGuesses').find('#incorrectGuesses').append('<li>' + guess.guess + '</li>');
+          })
         })
-      })
-
+    // Toggle show/hide on previous incorrect guesses
     $('#incorrectGuesses').toggleClass('show');
   },
 
@@ -88,27 +87,28 @@
     makeGuess: function (e) {
       e.preventDefault();
       var self = this;
-
+      // Get guess value, remove spaces, capital letters, spaces and special characters
       var guessValue = this.$el.find('#guess').val();
       var guessLowerCase = this.$el.find('#guess').val().toLowerCase();
       var guessNoSpaces = guessLowerCase.replace(/ /g,'');
       var finalGuess = guessNoSpaces.replace(/[&\/\\#,+()$~%.'":*?<>{}!]/g, '');
-
+      // Get answer
       var singlePost = this.collectionPosts.get(this.singleID);
       var singlePostData = singlePost.toJSON();
       var initialAnswer = singlePostData.answer;
-      var answerLowerCase = initialAnswer.toLowerCase();
-      var answerNoSpaces = answerLowerCase.replace(/ /g, '');
-      var finalAnswer = answerNoSpaces.replace(/[&\/\\#,+()$~%.'":;*?<>{}!]/g, '');
+      // var answerLowerCase = initialAnswer.toLowerCase();
+      // var answerNoSpaces = answerLowerCase.replace(/ /g, '');
+      // var finalAnswer = answerNoSpaces.replace(/[&\/\\#,+()$~%.'":;*?<>{}!]/g, '');
 
+      // Post guess to database
       var postGuess = $.post(app.rootURL + '/posts/' + self.singleID + '/guesses', {guess: finalGuess})
-
+      // Error message if they guess on their own post
       postGuess.error( function (data) {
         console.log('nope');
         $('#errorMsgGuess').html('<p class="guessError">Sorry, you cannot guess on your own post.</p>')
       });
-
-      if (finalGuess === finalAnswer) {
+      // Give user success statement if correct, add guess to incorrect list if incorrect
+      if (finalGuess === initialAnswer) {
         postGuess.done ( function (data) {
           app.mainRouter.navigate('leaderboard/' + self.singleID, {trigger: true});
         });

@@ -33,31 +33,30 @@
     render: function() {
       var self = this;
 
+      // Get all users from database and drop data into template
       var allUserPosts = $.get(app.rootURL + '/users/' + app.LoggedInUser.username + '/unsolved?sort=difficult', function(data) {
         var response = allUserPosts.responseJSON;
       }).done(function (data) {
         self.$el.html(self.template({ image: allUserPosts.responseJSON }));
       });
-
+      // Show header and sidebar
       $('header').removeClass('hide');
       $('sidebarWrapper').removeClass('hide');
-
+      // Get leaderboard data and drop into template
       var leaderboardList = $.get(app.rootURL + '/leaderboard', function(data){
       }).done(function(data) {
         $('.asideBottom').html(self.templateList({user: leaderboardList.responseJSON }));
-
       });
-
+      // Drop sidebar template into sidebar
       $('.sidebar').html(this.templateSidebar(app.LoggedInUser));
 
-// DELETE POST
+    },
+
+    // DELETE POST
       // if (user_id === app.LoggedInUser.id) {
      // $('deletePost').html(this.templateNewPost(app.deletePost));
      // DELETE ACCOUNT
     //  $('deleteAccount').html(this.templateSidebar(app.deleteAccount));
-    },
-
-
 
     // DELETING ACCOUNT
  // $(function () {
@@ -78,7 +77,6 @@
  //          // console.log("Your Qpic account has been deleted!");
  //        }
  //    });
-
 
  //  },
 

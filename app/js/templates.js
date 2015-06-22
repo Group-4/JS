@@ -86,13 +86,13 @@ this["hbs"] = this["hbs"] || {};
 this["hbs"]["single"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
-  return "  <div class=\"singleWrap\">\n    <div class=\"singleMain\">\n    <div class=\"singleMainTop\">\n      <i class=\"fa fa-camera\"></i>\n      <p>posted by <span>"
+  return "  <div class=\"singleWrap\">\n    <div class=\"singleMain\">\n      <div class=\"singleMainTop\">\n        <i class=\"fa fa-camera\"></i>\n        <p>posted by <span>"
     + alias3(((helper = (helper = helpers.owner || (depth0 != null ? depth0.owner : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"owner","hash":{},"data":data}) : helper)))
-    + "<span></p>\n      <p class=\"deletePost\" id=\"deletePost\" data-id=\""
+    + "<span></p>\n        <p class=\"deletePost\" id=\"deletePost\" data-id=\""
     + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
     + "\"><i class=\"fa fa-minus-square\" data-id=\""
     + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
-    + "\"></i></p>\n    </div>\n      <div class=\"image\">\n        <img src=\""
+    + "\"></i></p>\n      </div>\n      <div class=\"image\">\n        <img src=\""
     + alias3(((helper = (helper = helpers.image_url || (depth0 != null ? depth0.image_url : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"image_url","hash":{},"data":data}) : helper)))
     + "\">\n\n        <div class=\"imageInfo\">\n          <p class=\"imageInfoP\">First solved by: <span>"
     + alias3(((helper = (helper = helpers.solved_by || (depth0 != null ? depth0.solved_by : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"solved_by","hash":{},"data":data}) : helper)))
@@ -102,7 +102,7 @@ this["hbs"]["single"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"m
     + alias3(((helper = (helper = helpers.attempts || (depth0 != null ? depth0.attempts : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"attempts","hash":{},"data":data}) : helper)))
     + "</span></p>\n          <p class=\"imageInfoP\" id=\"hint\">Show hint: <span class=\"hint\">"
     + alias3(((helper = (helper = helpers.hint || (depth0 != null ? depth0.hint : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"hint","hash":{},"data":data}) : helper)))
-    + "</span></p>\n\n          <!-- would be cool to add div with user's score and addClass show on hover for this information -->\n\n        </div>\n      </div>\n\n      <form class=\"guessInput\" id=\"guessInput\">\n        <input type=\"text\" placeholder=\"What's your guess?\" id=\"guess\" class=\"guess\">\n        <a href=\"#/leaderboard/"
+    + "</span></p>\n        </div>\n      </div>\n\n      <form class=\"guessInput\" id=\"guessInput\">\n        <input type=\"text\" placeholder=\"What's your guess?\" id=\"guess\" class=\"guess\">\n        <a href=\"#/leaderboard/"
     + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
-    + "\"><button id=\"guessBtn\" class=\"guessBtn\">Check it!</button></a>\n\n      </form>\n      <div class=\"errormsg\" id=\"errorMsgGuess\"></div>\n\n\n    <div class=\"singleGuesses\" id=\"singleGuesses\">\n      <p id=\"seeOldGuesses\">Show / hide your <span>incorrect</span> guesses</p>\n      <ul class=\"incorrectGuesses\" id=\"incorrectGuesses\">\n      </ul>\n    </div>\n\n    <div class=\"test\"></div>\n\n    </div> <!-- end singleMain -->\n\n  </div> <!-- end singleWrap -->\n";
+    + "\"><button id=\"guessBtn\" class=\"guessBtn\">Check it!</button></a>\n      </form>\n\n      <div class=\"errormsg\" id=\"errorMsgGuess\"></div>\n\n      <div class=\"singleGuesses\" id=\"singleGuesses\">\n        <p id=\"seeOldGuesses\">Show / hide your <span>incorrect</span> guesses</p>\n        <ul class=\"incorrectGuesses\" id=\"incorrectGuesses\">\n        </ul>\n      </div>\n\n    </div> <!-- end singleMain -->\n\n  </div> <!-- end singleWrap -->\n";
 },"useData":true});

@@ -11,14 +11,13 @@
       this.collectionPosts = args.collectionPosts;
       this.collectionGuesses = args.collectionGuesses;
 
+      // check if user has an open session and navigate to correct page
       app.isLoggedIn = (Cookies.get('access_token') !== undefined) ? true : false;
-
         if (app.isLoggedIn) {
-
-        $.get(app.rootURL + '/users/current_user').done ( function (data) {
-          app.LoggedInUser = data;
-          Backbone.history.start();
-          app.mainRouter.navigate('/main', {trigger: true});
+          $.get(app.rootURL + '/users/current_user').done ( function (data) {
+            app.LoggedInUser = data;
+            Backbone.history.start();
+            app.mainRouter.navigate('/main', {trigger: true});
           })
 
         } else {
@@ -28,13 +27,11 @@
     },
 
     routes: {
-
       '' : 'login',
       'main' : 'mainPage',
       'single/:id' : 'singlePost',
       'leaderboard/:id' : 'leaderboardPage',
       'newpost' : 'newPost'
-
     },
 
     newPost: function () {

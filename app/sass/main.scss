@@ -3,9 +3,6 @@
 /* DECLARATIONS
 ---------------- */
 
-// * {
-//     border: solid 1px yellow;
-// }
 $darkblue: #225378;
 $teal: #1695A3;
 $lightblue: #ACF0F2;
@@ -22,129 +19,97 @@ sans-serif;
 ---------- */
 
 @mixin border() {
-    border: 1px solid #ccc;
-    border-radius: 3px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
+
 /* GLOBAL
 ----------- */
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    font-size: 62.5%;
-    font-family: $roboto;
-    background-color: $background;
+  font-size: 62.5%;
+  font-family: $roboto;
+  background-color: $background;
 }
 
 input,
 button {
-    border: none;
-    @include border();
-    &:focus {
-        outline: none;
-    }
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 button {
-    background-color: $darkblue;
-    &:hover {
-        background-color: $orange;
-    }
+  background-color: $darkblue;
+
+  &:hover {
+    background-color: $orange;
+  }
 }
 
 a {
-    text-decoration: none;
-    &:hover {
-        text-decoration: underline;
-    }
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
+
 /* HEADER
 ---------- */
 
 header {
-    width: 100%;
-    background-color: $darkblue;
-    overflow: hidden;
-    height: 90px;
-    padding: 10px;
-    .innerHeader {
-        overflow: hidden;
-        width: 80%;
-        margin: auto;
+  width: 100%;
+  background-color: $darkblue;
+  overflow: hidden;
+  height: 90px;
+  padding: 10px;
 
-        .logoImage {
-            display: inline-block;
-            float: left;
-            overflow: hidden;
-            cursor: pointer;
-            img {
-                height: 70px;
-            }
-        }
-        .logo {
-            float: left;
-            color: $light;
-            margin: 0;
-            overflow: hidden;
-            padding: 1em;
-            display: inline-block;
-            padding: 0;
-            cursor: pointer;
-            .q {
-                overflow: hidden;
-                display: inline-block;
-                position: relative;
-                padding: 0;
-                p {
-                    margin: 0;
-                    // font-family: Michroma;
-                    // font-family: Aldrich;
-                    font-family: Electrolize;
-                    font-size: 10em;
-                    padding: 0;
-                }
-            }
-  .pic {
+  .innerHeader {
     overflow: hidden;
-    display: inline-block;
-    padding: 0;
-      p {
-        font-family: Fontdiner Swanky;
-        font-size: 4em;
-        padding: 0;
+    width: 80%;
+    margin: auto;
+
+    .logoImage {
+      display: inline-block;
+      float: left;
+      overflow: hidden;
+      cursor: pointer;
+
+      img {
+        height: 70px;
       }
     }
   }
-  .fa-camera {
-    color: $orange;
-    display: inline;
-    position: absolute;
-    font-size: 2.8em;
-    top: 60px;
-    left: 23px;
-  }
-}
+
   .social {
     overflow: hidden;
     display: inline-block;
     float: right;
     font-size: 2em;
     padding: 1em;
-      i {
-        color: $light;
-        opacity: .8;
-        cursor: pointer;
-        &:hover {
-          opacity: 1;
-        }
+
+    i {
+      color: $light;
+      opacity: .8;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 1;
       }
     }
+  }
+
   nav {
     display: inline-block;
     color: $light;
@@ -167,207 +132,205 @@ header {
     }
   }
 }
-
 /* LOGIN VIEW
 -------------- */
 
 .login {
-    background-color: $darkblue;
-    height: 100vh;
-    width: 100%;
+  background-color: $darkblue;
+  height: 100vh;
+  width: 100%;
 
-    .loginBox {
-        width: 50%;
-        margin: auto;
-        padding-top: 10em;
+  .loginBox {
+    width: 50%;
+    margin: auto;
+    padding-top: 10em;
 
-        .loginLogo {
-            text-align: center;
-            padding-bottom: 2em;
-        }
-
-        h2 {
-            font-family: $roboto;
-            color: $light;
-            font-size: 2.2em;
-            padding: .3em;
-            display: inline-block;
-            float: left;
-            margin-bottom: .3em;
-        }
-
-
-        .formDiv {
-            border: 1px solid $light;
-            padding: 2em;
-
-            .signUp {
-                color: $lightblue;
-                text-decoration: underline;
-                cursor: pointer;
-                display: inline-block;
-                float: right;
-                margin: 0;
-                padding-top: .7em;
-            }
-
-            input {
-                font-family: $roboto;
-            }
-
-            button {
-                font-family: $roboto;
-
-                &:hover {
-                    border: $orange;
-                }
-            }
-        }
-
-
-
-        .formDiv {
-
-        }
-
-        .registerDiv {
-            overflow: hidden;
-        }
+    .loginLogo {
+      text-align: center;
+      padding-bottom: 2em;
     }
+
+    h2 {
+      font-family: $roboto;
+      color: $light;
+      font-size: 2.2em;
+      padding: .3em;
+      display: inline-block;
+      float: left;
+      margin-bottom: .3em;
+    }
+
+    .formDiv {
+      border: 1px solid $light;
+      padding: 2em;
+
+      .signUp {
+        color: $lightblue;
+        text-decoration: underline;
+        cursor: pointer;
+        display: inline-block;
+        float: right;
+        margin: 0;
+        padding-top: .7em;
+      }
+
+      input {
+        font-family: $roboto;
+      }
+
+      button {
+        font-family: $roboto;
+
+        &:hover {
+          border: $orange;
+        }
+      }
+    }
+    .registerDiv {
+      overflow: hidden;
+    }
+  }
 }
 
 .errormsg {
-    p {
-        color: $orange;
-    }
+  p {
+    color: $orange;
+  }
 }
-
-// .hide {
-//     display: none;
-// }
 
 /* MAIN PAGE VIEW
 ------------------ */
 
 .mainImages {
+  float: right;
+  width: 100%;
+
+  ul {
+    margin-right: 1em;
+  }
+
+  h2 {
+    display: inline-block;
+    float: left;
+    font-family: $roboto;
+    color: $darkblue;
+  }
+
+  .rightBtns {
+    overflow: hidden;
+  }
+
+  .newpostBtn {
     float: right;
-    width: 100%;
+    background-color: $darkblue;
+    padding: 1em;
+    margin: 1em;
+    color: white;
+    font-family: $roboto;
+    overflow: hidden;
 
-    ul {
-        margin-right: 1em;
+    &:hover {
+      background-color: $orange;
+      color: white;
+      border: none;
     }
-    h2 {
+
+    p {
+      display: inline-block;
+      float: right;
+      margin: 0;
+    }
+
+    i {
+      font-size: 2em;
+      display: inline-block;
+      float: left;
+      padding-right: .5em;
+      padding-top: .1em;
+    }
+  }
+
+  .logoutBtn {
+    float: right;
+    padding: .6em;
+    color: white;
+    font-family: $roboto;
+    cursor: pointer;
+    margin: .7em;
+    background-color: $darkblue;
+
+      &:hover {
+        background-color: $orange;
+        color: white;
+        border: none;
+      }
+
+      p {
         display: inline-block;
-        float: left;
-        font-family: $roboto;
-        color: $darkblue;
+        margin: 0;
+      }
     }
-    .rightBtns {
-        overflow: hidden;
-    }
-    .newpostBtn {
-        float: right;
-        background-color: $darkblue;
-        padding: 1em;
-        margin: 1em;
-        color: white;
-        font-family: $roboto;
-        overflow: hidden;
-        &:hover {
-            background-color: $orange;
-            color: white;
-            border: none;
-        }
-        p {
-            display: inline-block;
-            float: right;
-            margin: 0;
-        }
-        i {
-            font-size: 2em;
-            display: inline-block;
-            float: left;
-            padding-right: .5em;
-            padding-top: .1em;
-        }
-    }
-    .logoutBtn {
-        float: right;
-        padding: .6em;
-        color: white;
-        font-family: $roboto;
-        cursor: pointer;
-        margin: .7em;
-        background-color: $darkblue;
-        &:hover {
-            background-color: $orange;
-            color: white;
-            border: none;
-        }
-        p {
-            display: inline-block;
-            margin: 0;
-        }
-    }
-    .imageWrap {
-        position: relative;
-        width: 100%;
-        height: 260px;
-        overflow: hidden;
-        border-radius: 4px;
-        margin-bottom: 2em;
-        float: right;
-        display: inline;
-        border: 1px solid #ACF0F2;
-        padding: 10px 20px 100px 20px;
-        background-color: white;
+  .imageWrap {
+    position: relative;
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+    border-radius: 4px;
+    margin-bottom: 2em;
+    float: right;
+    display: inline;
+    border: 1px solid #ACF0F2;
+    padding: 10px 20px 100px 20px;
+    background-color: white;
 
-        .actualImage {
-          overflow: hidden;
-          height: 170px;
-          clear: both;
+    .actualImage {
+      overflow: hidden;
+      height: 170px;
+      clear: both;
+    }
+
+    .poster {
+      display: inline;
+      color: #1695A3;
+      float: left;
+      margin-bottom: .5em;
+      position: relative;
+      font-family: $roboto;
+      font-size: 12px;
+      letter-spacing: .1em;
+
+        span {
+          font-size: 10pt;
+          color: #FF8236;
+        }
+      }
+
+    #databox {
+      margin-top: 0;
+      color: #1695A3;
+      font-size: 12pt;
+      font-family: $roboto;
+      overflow: hidden;
+      width: 100%;
+
+      p {
+        margin: 0;
+        font-size: .8em;
+        clear: both;
+        margin-top: 1em;
+
+        span {
+          color: $orange;
         }
 
-        .poster {
-            display: inline;
-            color: #1695A3;
-            float: left;
-            margin-bottom: .5em;
-            position: relative;
-            font-family: $roboto;
-            font-size: 12px;
-            letter-spacing: .1em;
-            span {
-                font-size: 10pt;
-                color: #FF8236;
-            }
+        span b {
+          margin: 0;
+          text-align: center;
         }
-        #databox {
-            margin-top: 0;
-            color: #1695A3;
-            font-size: 12pt;
-            font-family: $roboto;
-            overflow: hidden;
-            width: 100%;
-            p {
-                margin: 0;
-                font-size: .8em;
-                clear: both;
-                margin-top: 1em;
-
-                span {
-                    color: $orange;
-                }
-
-                span b {
-                    margin: 0;
-                    text-align: center;
-                }
-            }
-        }
+      }
     }
+  }
 }
-
 /* SINGLE PAGE VIEW
 ------------------- */
 
@@ -403,41 +366,34 @@ header {
         margin-bottom: 5em;
         position: relative;
         font-family: $roboto;
-
         .singleMainTop {
             overflow: hidden;
-
-        .deletePost {
-            float: right;
-            padding: .5em;
-            color: $darkblue;
-            font-size: 2em;
-            cursor: pointer;
-            margin-left: 30px;
-
-            &:hover {
-                color: $orange;
-            }
-
-            i {
+            .deletePost {
+                float: right;
+                padding: .5em;
                 color: $darkblue;
-                font-size: 1.2em;
-
+                font-size: 2em;
+                cursor: pointer;
+                margin-left: 30px;
                 &:hover {
                     color: $orange;
                 }
-
-                .sorry {
-                    font-size: .6em;
-                    padding: 0;
-                    padding-right: 1em;
-                    color: $orange;
-                    font-family: $roboto;
+                i {
+                    color: $darkblue;
+                    font-size: 1.2em;
+                    &:hover {
+                        color: $orange;
+                    }
+                    .sorry {
+                        font-size: .6em;
+                        padding: 0;
+                        padding-right: 1em;
+                        color: $orange;
+                        font-family: $roboto;
+                    }
                 }
             }
         }
-    }
-
         .guessError {
             padding: 0 0 1em 1.8em;
             color: $orange;
@@ -462,44 +418,34 @@ header {
                 font-size: 1em;
                 font-family: $roboto;
             }
-
             .hint {
                 display: none;
                 cursor: pointer;
             }
-
             .showhint {
                 display: inline-block;
             }
-
-
         }
-
         #hint {
             cursor: pointer;
             &:hover {
                 color: $teal;
             }
-
-
-        .image {
-            img {
-                width: 100%;
-            }
-            .imageInfo {
-
-                span {
-                    color: $orange;
-                    font-weight: bold;
+            .image {
+                img {
+                    width: 100%;
                 }
-
+                .imageInfo {
+                    span {
+                        color: $orange;
+                        font-weight: bold;
+                    }
                 }
             }
         }
-
-    .imageInfoP {
-        padding-left: 1em;
-    }
+        .imageInfoP {
+            padding-left: 1em;
+        }
         .guess {
             margin: auto;
             margin-bottom: 2em;
@@ -526,7 +472,6 @@ header {
                 cursor: pointer;
                 margin-left: 1.7em;
                 margin-bottom: 1em;
-
                 span {
                     color: $orange;
                 }
@@ -539,7 +484,6 @@ header {
                     }
                 }
             }
-
             .incorrectGuesses {
                 // display: block;
                 display: none;
@@ -578,12 +522,10 @@ header {
         width: 100%;
         color: $light;
     }
-
     .leaderboardScorePoints {
         color: $orange;
         font-weight: bold;
     }
-
     .leaderboardh4 {
         background-color: $orange;
         padding: 10px;
@@ -591,7 +533,6 @@ header {
         border-radius: 3px;
         color: $light;
     }
-
     .leaderboard {
         padding: 15px;
         line-height: 2em;
@@ -631,7 +572,6 @@ header {
 .hide {
     display: none;
 }
-
 /* NEW POST VIEW
 ----------------- */
 
@@ -645,7 +585,6 @@ header {
     .newpostMain {
         width: 80%;
         margin: auto;
-
         form {
             display: inline;
             // button {
@@ -658,61 +597,57 @@ header {
         button {
             display: inline;
         }
-
-    .newImageWrap {
-        position: relative;
-        width: 250px;
-        height: 260px;
-        overflow: hidden;
-        border-radius: 4px;
-        margin-bottom: 2em;
-        float: left;
-        display: inline;
-        border: 1px solid #ACF0F2;
-        padding: 10px 20px 100px 20px;
-        background-color: white;
-
-        p {
-            margin-left: 1em;
-            color: $darkblue;
-            margin-bottom: .5em;
-        }
-
-        .actualImage {
-          overflow: hidden;
-          height: 170px;
-          clear: both;
-        }
-        .poster {
-            display: inline;
-            color: #1695A3;
-            float: left;
-            margin-bottom: .5em;
+        .newImageWrap {
             position: relative;
-            font-family: $roboto;
-            font-size: 12px;
-            letter-spacing: .1em;
-            span {
-                font-size: 10pt;
-                color: $orange;
-            }
-        }
-        .databox {
-            margin-top: 0;
-            color: #1695A3;
-            font-size: 12pt;
-            font-family: $roboto;
+            width: 250px;
+            height: 260px;
             overflow: hidden;
-            width: 100%;
+            border-radius: 4px;
+            margin-bottom: 2em;
+            float: left;
+            display: inline;
+            border: 1px solid #ACF0F2;
+            padding: 10px 20px 100px 20px;
+            background-color: white;
             p {
-                margin-top: 1em;
-                font-size: .7em;
-                color: $teal;
+                margin-left: 1em;
+                color: $darkblue;
+                margin-bottom: .5em;
+            }
+            .actualImage {
+                overflow: hidden;
+                height: 170px;
+                clear: both;
+            }
+            .poster {
+                display: inline;
+                color: #1695A3;
+                float: left;
+                margin-bottom: .5em;
+                position: relative;
+                font-family: $roboto;
+                font-size: 12px;
+                letter-spacing: .1em;
+                span {
+                    font-size: 10pt;
+                    color: $orange;
+                }
+            }
+            .databox {
+                margin-top: 0;
+                color: #1695A3;
+                font-size: 12pt;
+                font-family: $roboto;
+                overflow: hidden;
+                width: 100%;
+                p {
+                    margin-top: 1em;
+                    font-size: .7em;
+                    color: $teal;
+                }
             }
         }
-    }
     }
 }
-
 
 @import "_small";

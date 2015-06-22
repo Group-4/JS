@@ -22,9 +22,7 @@ body {
 
 input,
 button {
-  border: none;
-  border: 1px solid #ccc;
-  border-radius: 3px; }
+  border: none; }
   input:focus,
   button:focus {
     outline: none; }
@@ -61,40 +59,6 @@ header {
       cursor: pointer; }
       header .innerHeader .logoImage img {
         height: 70px; }
-    header .innerHeader .logo {
-      float: left;
-      color: #F3FFE2;
-      margin: 0;
-      overflow: hidden;
-      padding: 1em;
-      display: inline-block;
-      padding: 0;
-      cursor: pointer; }
-      header .innerHeader .logo .q {
-        overflow: hidden;
-        display: inline-block;
-        position: relative;
-        padding: 0; }
-        header .innerHeader .logo .q p {
-          margin: 0;
-          font-family: Electrolize;
-          font-size: 10em;
-          padding: 0; }
-      header .innerHeader .logo .pic {
-        overflow: hidden;
-        display: inline-block;
-        padding: 0; }
-        header .innerHeader .logo .pic p {
-          font-family: Fontdiner Swanky;
-          font-size: 4em;
-          padding: 0; }
-    header .innerHeader .fa-camera {
-      color: #FF8236;
-      display: inline;
-      position: absolute;
-      font-size: 2.8em;
-      top: 60px;
-      left: 23px; }
   header .social {
     overflow: hidden;
     display: inline-block;

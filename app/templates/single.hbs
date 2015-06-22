@@ -1,10 +1,10 @@
   <div class="singleWrap">
     <div class="singleMain">
-    <div class="singleMainTop">
-      <i class="fa fa-camera"></i>
-      <p>posted by <span>{{owner}}<span></p>
-      <p class="deletePost" id="deletePost" data-id="{{id}}"><i class="fa fa-minus-square" data-id="{{id}}"></i></p>
-    </div>
+      <div class="singleMainTop">
+        <i class="fa fa-camera"></i>
+        <p>posted by <span>{{owner}}<span></p>
+        <p class="deletePost" id="deletePost" data-id="{{id}}"><i class="fa fa-minus-square" data-id="{{id}}"></i></p>
+      </div>
       <div class="image">
         <img src="{{image_url}}">
 
@@ -13,27 +13,21 @@
           <p class="imageInfoP">Correct so far: <span>{{times_solved}}</span></p>
           <p class="imageInfoP">Total Attempts: <span>{{attempts}}</span></p>
           <p class="imageInfoP" id="hint">Show hint: <span class="hint">{{hint}}</span></p>
-
-          <!-- would be cool to add div with user's score and addClass show on hover for this information -->
-
         </div>
       </div>
 
       <form class="guessInput" id="guessInput">
         <input type="text" placeholder="What's your guess?" id="guess" class="guess">
         <a href="#/leaderboard/{{id}}"><button id="guessBtn" class="guessBtn">Check it!</button></a>
-
       </form>
+
       <div class="errormsg" id="errorMsgGuess"></div>
 
-
-    <div class="singleGuesses" id="singleGuesses">
-      <p id="seeOldGuesses">Show / hide your <span>incorrect</span> guesses</p>
-      <ul class="incorrectGuesses" id="incorrectGuesses">
-      </ul>
-    </div>
-
-    <div class="test"></div>
+      <div class="singleGuesses" id="singleGuesses">
+        <p id="seeOldGuesses">Show / hide your <span>incorrect</span> guesses</p>
+        <ul class="incorrectGuesses" id="incorrectGuesses">
+        </ul>
+      </div>
 
     </div> <!-- end singleMain -->
 
