@@ -30,9 +30,11 @@ this["hbs"]["list"] = Handlebars.template({"1":function(depth0,helpers,partials,
 
   return "            <li>"
     + alias3(((helper = (helper = helpers.username || (depth0 != null ? depth0.username : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"username","hash":{},"data":data}) : helper)))
-    + ": "
+    + ": <span class=\"leaderboardScorePoints\">"
     + alias3(((helper = (helper = helpers.points || (depth0 != null ? depth0.points : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"points","hash":{},"data":data}) : helper)))
-    + "</li>\n\n";
+    + "</span> | "
+    + alias3(((helper = (helper = helpers.win_percent || (depth0 != null ? depth0.win_percent : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"win_percent","hash":{},"data":data}) : helper)))
+    + "% correct</li>\n\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1;
 

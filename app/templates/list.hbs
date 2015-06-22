@@ -3,7 +3,7 @@
           <h4 class="leaderboardh4">Leaderboard</h4>
           <ul id="leaderboard" class="leaderboard">
           {{#each user}}
-            <li>{{username}}: {{points}}</li>
+            <li>{{username}}: <span class="leaderboardScorePoints">{{points}}</span> | {{win_percent}}% correct</li>
 
           {{/each}}
           </ul>

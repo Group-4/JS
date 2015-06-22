@@ -418,6 +418,9 @@ header {
     font-family: "Roboto", sans-serif;
     width: 100%;
     color: #F3FFE2; }
+  .sidebarWrapper .leaderboardScorePoints {
+    color: #FF8236;
+    font-weight: bold; }
   .sidebarWrapper .leaderboardh4 {
     background-color: #FF8236;
     padding: 10px;
