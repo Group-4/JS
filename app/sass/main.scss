@@ -71,10 +71,21 @@ header {
     width: 100%;
     background-color: $darkblue;
     overflow: hidden;
+    height: 90px;
+    padding: 10px;
     .innerHeader {
         overflow: hidden;
         width: 80%;
         margin: auto;
+
+        .logoImage {
+            display: inline-block;
+            float: left;
+            overflow: hidden;
+            img {
+                height: 70px;
+            }
+        }
         .logo {
             float: left;
             color: $light;

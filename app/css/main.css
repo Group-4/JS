@@ -47,11 +47,19 @@ ul {
 header {
   width: 100%;
   background-color: #225378;
-  overflow: hidden; }
+  overflow: hidden;
+  height: 90px;
+  padding: 10px; }
   header .innerHeader {
     overflow: hidden;
     width: 80%;
     margin: auto; }
+    header .innerHeader .logoImage {
+      display: inline-block;
+      float: left;
+      overflow: hidden; }
+      header .innerHeader .logoImage img {
+        height: 70px; }
     header .innerHeader .logo {
       float: left;
       color: #F3FFE2;
