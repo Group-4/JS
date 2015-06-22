@@ -70,7 +70,7 @@ this["hbs"]["sidebar"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"
 
   return "\n      <div class=\"innerAside\">\n        <div class=\"asideTop\">\n          <h4>"
     + alias3(((helper = (helper = helpers.username || (depth0 != null ? depth0.username : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"username","hash":{},"data":data}) : helper)))
-    + "</h4>\n          <div class=\"avatar\">\n              <img src=\"https://raw.githubusercontent.com/TRPMorrison/Qpic/master/Qlogo.png\">\n          </div>\n          <div class=\"score\">\n            <p>Current score: "
+    + "</h4>\n          <div class=\"avatar\">\n              <img src=\"images/q_blue_orange.png\">\n          </div>\n          <div class=\"score\">\n            <p>Current score: "
     + alias3(((helper = (helper = helpers.points || (depth0 != null ? depth0.points : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"points","hash":{},"data":data}) : helper)))
     + "</p>\n          </div>\n        </div>\n        <div class=\"leaderboardSection\">\n          <h4>Leaderboard</h4>\n          <ul id=\"leaderboard\" class=\"leaderboard\">\n            <li>"
     + alias3(((helper = (helper = helpers.username || (depth0 != null ? depth0.username : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"username","hash":{},"data":data}) : helper)))
