@@ -115,6 +115,8 @@
           }
         });
         app.mainRouter.navigate('/main', { trigger: true });
+        window.location.reload();
+
 
       });
 
