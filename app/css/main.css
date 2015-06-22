@@ -57,7 +57,8 @@ header {
     header .innerHeader .logoImage {
       display: inline-block;
       float: left;
-      overflow: hidden; }
+      overflow: hidden;
+      cursor: pointer; }
       header .innerHeader .logoImage img {
         height: 70px; }
     header .innerHeader .logo {
