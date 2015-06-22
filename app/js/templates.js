@@ -8,18 +8,20 @@ this["hbs"]["example"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["leaderboard"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
+    var stack1, alias1=this.lambda, alias2=this.escapeExpression;
 
   return "\n<div class=\"congratsDiv\">\n\n<h2>Congrats "
-    + alias3(((helper = (helper = helpers.username || (depth0 != null ? depth0.username : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"username","hash":{},"data":data}) : helper)))
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.user : depth0)) != null ? stack1.username : stack1), depth0))
     + "! You guessed correctly!</h2>\n\n<div class=\"singleWrap\">\n    <div class=\"singleMain\">\n      <i class=\"fa fa-camera\"></i>\n      <p>posted by <span>"
-    + alias3(((helper = (helper = helpers.owner || (depth0 != null ? depth0.owner : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"owner","hash":{},"data":data}) : helper)))
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.post : depth0)) != null ? stack1.owner : stack1), depth0))
     + "<span></p>\n\n      <div class=\"image\">\n        <img src=\""
-    + alias3(((helper = (helper = helpers.image_url || (depth0 != null ? depth0.image_url : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"image_url","hash":{},"data":data}) : helper)))
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.post : depth0)) != null ? stack1.image_url : stack1), depth0))
     + "\">\n\n        <div class=\"imageInfo\">\n          <h3>Correct Answer: "
-    + alias3(((helper = (helper = helpers.answer || (depth0 != null ? depth0.answer : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"answer","hash":{},"data":data}) : helper)))
-    + "</h3>\n\n          <p>Total Incorrect: </p>\n\n\n          <!-- would be cool to add div with user's score and addClass show on hover for this information -->\n\n        </div>\n      </div>\n\n<p>Your score is now: "
-    + alias3(((helper = (helper = helpers.points || (depth0 != null ? depth0.points : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"points","hash":{},"data":data}) : helper)))
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.post : depth0)) != null ? stack1.answer : stack1), depth0))
+    + "</h3>\n\n          <p>Total Attempts: "
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.post : depth0)) != null ? stack1.attempts : stack1), depth0))
+    + "</p>\n\n\n          <!-- would be cool to add div with user's score and addClass show on hover for this information -->\n\n        </div>\n      </div>\n\n<p>Your score is now: "
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.user : depth0)) != null ? stack1.points : stack1), depth0))
     + "</p>\n\n<div class=\"keepPlayingDiv\">\n  <button class=\"keepPlaying\" id=\"keepPlaying\">Keep Playing</button>\n\n</div>\n\n\n</div><!--end of congratsDiv-->\n\n\n\n\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};

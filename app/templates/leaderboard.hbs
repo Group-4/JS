@@ -1,20 +1,20 @@
 
 <div class="congratsDiv">
 
-<h2>Congrats {{ username }}! You guessed correctly!</h2>
+<h2>Congrats {{ user.username }}! You guessed correctly!</h2>
 
 <div class="singleWrap">
     <div class="singleMain">
       <i class="fa fa-camera"></i>
-      <p>posted by <span>{{owner}}<span></p>
+      <p>posted by <span>{{post.owner}}<span></p>
 
       <div class="image">
-        <img src="{{image_url}}">
+        <img src="{{post.image_url}}">
 
         <div class="imageInfo">
-          <h3>Correct Answer: {{ answer }}</h3>
+          <h3>Correct Answer: {{ post.answer }}</h3>
 
-          <p>Total Incorrect: {{!-- {{}} --}}</p>
+          <p>Total Attempts: {{post.attempts}}</p>
 
 
           <!-- would be cool to add div with user's score and addClass show on hover for this information -->
@@ -22,7 +22,7 @@
         </div>
       </div>
 
-<p>Your score is now: {{ points }}</p>
+<p>Your score is now: {{ user.points }}</p>
 
 <div class="keepPlayingDiv">
   <button class="keepPlaying" id="keepPlaying">Keep Playing</button>
