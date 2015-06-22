@@ -376,6 +376,10 @@ aside {
         left: 23px;
         color: #1695A3; }
 
+.deleteDiv {
+  margin-left: 7em;
+  margin-top: 2em; }
+
 ul {
   margin: 0;
   margin-top: 1em; }

@@ -474,6 +474,10 @@ aside {
     }
 }
 
+.deleteDiv {
+    margin-left: 7em;
+    margin-top: 2em;
+}
 ul {
     margin: 0;
     margin-top: 1em;
@@ -488,6 +492,7 @@ ul {
         color: $darkblue;
         font-family: $roboto;
     }
+
     width: 100%;
     .newpostMain {
         width: 80%;

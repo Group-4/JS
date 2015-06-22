@@ -49,27 +49,43 @@
 
 
     // DELETING ACCOUNT
- // $(function () {
- //    $(".deleteAccount").click(function () {
- //      var button = button;
- //      var url = "http://tiyqpic.herokuapp.com//users/:id";
- //      var element = $(this);
- //      var deleteID = element.attr("id");
- //      var delUserAcct = 'id=' + deleteUserID;
+  //   $(function () {
+  //   $('.deleteAccount').on('click', (function (e) {
+  //     e.preventDefault();
+  //     var button = button;
+  //     var url = this.href;
+  //     var $post = $('#deletePost');
 
- //      if(confirm("Delete your Qpic account?")){
- //    // AJAX TO DELETE
- //        $.ajax({
- //          type: "POST",
- //          url: "http://tiyqpic.herokuapp.com//users/:id",
- //          data: delUserAcct,
- //          success: function() {
- //          // console.log("Your Qpic account has been deleted!");
- //        }
- //    });
+  //    $('deleteAccount').removeClass('current');
+  //    $('#container').remove();
+
+  //     var element = $(this);
+  //     var deleteID = element.attr("id");
+  //     var delUserAcct = 'id=' + deleteUserID;
+  //     var content = $('#content');
+
+  //    $('deleteAccount.current').removeClass('current');
+  //    $('#container').remove();
+
+  //       if(confirm("Delete your Qpic account?")){
+  //   // AJAX TO DELETE
+  //         $.ajax({
+  //           type: "POST",
+  //           url: url,
+  //           data: delUserAcct,
+  //           success: function() {
+  //         // console.log("Your Qpic account has been deleted!");
+  //       },
+  //         complete: function() {
+  //         $('#loading').remove();
+  //       },
+  //         success: function () {
+  //           $content.html( $(data).find('#container')).hide();
+  //       }
+  //   });
 
 
- //  },
+  // },
 
   logout: function(e) {
     e.preventDefault();
