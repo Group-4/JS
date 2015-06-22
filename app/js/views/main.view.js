@@ -41,9 +41,13 @@
       });
 
       var leaderboardList = $.get(app.rootURL + '/leaderboard', function(data){
-        var response = data.toJSON;
+        console.log(data);
+        // var response = data.toJSON;
+        // console.log(response);
+
       }).done(function(data) {
-        $('.asideBottom').html(self.templateList({ user: leaderboardList.toJSON() }));
+        console.log(data);
+        $('.asideBottom').html(self.templateList({user: leaderboardList.responseJSON }));
 
       });
 

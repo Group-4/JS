@@ -29,7 +29,7 @@ this["hbs"]["leaderboard"] = Handlebars.template({"1":function(depth0,helpers,pa
     + "\">\n\n        <div class=\"imageInfo\">\n          <h3>Correct Answer: "
     + alias3(((helper = (helper = helpers.guessAnswer || (depth0 != null ? depth0.guessAnswer : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"guessAnswer","hash":{},"data":data}) : helper)))
     + "</h3>\n\n          <p>Total Incorrect: </p>\n\n\n          <!-- would be cool to add div with user's score and addClass show on hover for this information -->\n\n        </div>\n      </div>\n\n<p>Your score is now: "
-    + alias3(((helper = (helper = helpers.score || (depth0 != null ? depth0.score : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"score","hash":{},"data":data}) : helper)))
+    + alias3(((helper = (helper = helpers.points || (depth0 != null ? depth0.points : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"points","hash":{},"data":data}) : helper)))
     + "</p>\n\n<div class=\"keepPlayingDiv\">\n  <button class=\"keepPlaying\" id=\"keepPlaying\">Keep Playing</button>\n\n</div>\n\n\n</div><!--end of congratsDiv-->\n\n\n<div class=\"leaderboardDiv\">\n\n<h2>Here's where you stand on the Leaderboard:</h2>\n\n<ul id=\"leaderboardList\" class=\"leaderboardList\">\n"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.user : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "</li>\n</ul>\n\n\n</div><!-- end of leaderboardDiv -->\n";
@@ -46,9 +46,9 @@ this["hbs"]["list"] = Handlebars.template({"1":function(depth0,helpers,partials,
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1;
 
-  return "<div class=\"leaderboardSection\">\n          <h4>Leaderboard</h4>\n          <ul id=\"leaderboard\" class=\"leaderboard\">\n"
+  return "\n<div class=\"leaderboardSection\">\n          <h4 class=\"leaderboardh4\">Leaderboard</h4>\n          <ul id=\"leaderboard\" class=\"leaderboard\">\n"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.user : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "          </ul>\n        </div>\n";
+    + "          </ul>\n        </div>\n\n<div class=\"deleteDiv\">\n  <button id=\"#deleteUser\">Delete Account</button>\n</div>\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["login"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
@@ -90,7 +90,7 @@ this["hbs"]["sidebar"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"
     + alias3(((helper = (helper = helpers.username || (depth0 != null ? depth0.username : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"username","hash":{},"data":data}) : helper)))
     + "</h4>\n          <div class=\"avatar\">\n              <img src=\"https://raw.githubusercontent.com/TRPMorrison/Qpic/master/Qlogo.png\">\n          </div>\n          <div class=\"score\">\n            <p>Current score: "
     + alias3(((helper = (helper = helpers.points || (depth0 != null ? depth0.points : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"points","hash":{},"data":data}) : helper)))
-    + "</p>\n          </div>\n        </div>\n\n        </div>\n\n<div class=\"deleteDiv\">\n  <button id=\"#deleteUser\">Delete Account</button>\n</div>\n\n";
+    + "</p>\n          </div>\n        </div>\n\n        </div>\n\n\n\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["single"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
