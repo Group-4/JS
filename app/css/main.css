@@ -441,6 +441,10 @@ header {
     margin: 0;
     margin-top: 1em; }
 
+.leaderBoardTop {
+  overflow: hidden;
+  width: 100%; }
+
 /* NEW POST VIEW
 ----------------- */
 .newpost {
