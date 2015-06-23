@@ -39,6 +39,7 @@ body {
 input,
 button {
   border: none;
+  @include border();
 
   &:focus {
     outline: none;

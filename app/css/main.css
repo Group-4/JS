@@ -22,7 +22,9 @@ body {
 
 input,
 button {
-  border: none; }
+  border: none;
+  border: 1px solid #ccc;
+  border-radius: 3px; }
   input:focus,
   button:focus {
     outline: none; }
