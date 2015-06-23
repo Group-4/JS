@@ -28,6 +28,7 @@
 
       this.render();
       $('.container').html(this.el);
+      console.log(app.LoggedInUser);
     },
 
     render: function() {

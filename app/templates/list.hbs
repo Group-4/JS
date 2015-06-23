@@ -1,13 +1,33 @@
 
 <div class="leaderboardSection">
-          <h4 class="leaderboardh4">Leaderboard</h4>
-          <ul id="leaderboard" class="leaderboard">
-          {{#each user}}
-            <li>{{username}}: <span class="leaderboardScorePoints">{{points}}</span> | {{win_percent}}% correct</li>
+  <h4 class="leaderboardh4">Leaderboard</h4>
 
-          {{/each}}
-          </ul>
-        </div>
+  <table class="leadertable">
+    <tr>
+      <th>User</th>
+      <th>Points</th>
+      <th>% Correct</th>
+    </tr>
+
+    {{#each user}}
+
+    <tr>
+      <td>{{username}}</td>
+      <td>{{points}}</td>
+      <td>{{win_percent}}%</td>
+    </tr>
+
+    {{/each}}
+
+  </table>
+
+{{!--   <ul id="leaderboard" class="leaderboard">
+    {{#each user}}
+    <li>{{username}}: <span class="leaderboardScorePoints">{{points}}</span> | {{win_percent}}% correct</li>
+
+    {{/each}}
+  </ul> --}}
+</div>
 
 <div class="deleteDiv">
   <button id="#deleteUser">Delete Account</button>

@@ -17,7 +17,7 @@
 
        <div class="imageWrap">
         <p class="poster">
-          <i class="fa fa-camera"> Posted by: </i><span>{{ owner }}</span>
+          <i class="fa fa-camera"><b> Posted by | </b></i><span> {{ owner }}</span>
         </p>
         <div class="deleteBtn" data-id="{{id}}" id="deleteBtn"></div>
 
@@ -25,8 +25,8 @@
           <a href="#/single/{{id}}"><img src="{{ image_url }}"></a>
         </div>
 
-        <div id="databox">
-          <p><b>FIRST SOLVED BY: </b><span>{{ solved_by }}</span></p>
+        <div id="databox" class="databox">
+          <p><b>First solved by </b><span>{{ solved_by }}</span></p>
          </div>
        </div>
 

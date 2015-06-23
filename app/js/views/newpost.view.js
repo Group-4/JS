@@ -46,7 +46,7 @@
 
       $.post(app.rootURL + '/posts', p.toJSON()).done ( function (data) {
         $('#postImage').get(0).reset();
-        $('#preview').html('<div class="fullPreview"><p>Preview of added post</p><div class="newImageWrap"><div class="poster"><i class="fa fa-camera"> Posted by: <span>' + app.LoggedInUser.username + '</span></i></div><div class="actualImage"><img src="' + image_url + '"></div><div class="databox"><p>HINT: ' + hint + '</p></div></div></div>');
+        $('#preview').html('<div class="fullPreview"><p>Preview of added post</p><div class="newImageWrap"><div class="poster"><i class="fa fa-camera"> Posted by: <span>' + app.LoggedInUser.username + '</span></i></div><div class="actualImage"><img src="' + image_url + '"></div><div class="databoxnew"><p>HINT: ' + hint + '</p></div></div></div>');
       });
     },
 

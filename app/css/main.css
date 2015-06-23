@@ -144,6 +144,10 @@ header {
     float: left;
     font-family: "Roboto", sans-serif;
     color: #225378; }
+  .mainImages h3 {
+    display: inline-block;
+    float: left;
+    font-size: 2em; }
   .mainImages .rightBtns {
     overflow: hidden; }
   .mainImages .newpostBtn {
@@ -186,10 +190,9 @@ header {
   .mainImages .imageWrap {
     position: relative;
     width: 100%;
-    height: 260px;
+    height: 280px;
     overflow: hidden;
     border-radius: 4px;
-    margin-bottom: 2em;
     float: right;
     display: inline;
     border: 1px solid #EDEEEE;
@@ -200,37 +203,41 @@ header {
       height: 170px;
       clear: both; }
     .mainImages .imageWrap .poster {
-      display: inline;
+      display: inline-block;
       color: #1695A3;
       float: left;
-      margin-bottom: .5em;
       position: relative;
       font-family: "Roboto", sans-serif;
       font-size: 12px;
-      letter-spacing: .1em; }
+      letter-spacing: .05em;
+      padding: .3em; }
+      .mainImages .imageWrap .poster i {
+        color: #225378; }
       .mainImages .imageWrap .poster span {
         font-size: 10pt;
         color: #FF8236; }
     .mainImages .imageWrap .deleteBtn {
+      display: inline-block;
       float: right;
       color: #225378; }
       .mainImages .imageWrap .deleteBtn:hover {
         color: #FF8236; }
-    .mainImages .imageWrap #databox {
-      margin-top: 0;
+    .mainImages .imageWrap .databox {
+      margin-top: 5px;
       color: #1695A3;
       font-size: 12pt;
       font-family: "Roboto", sans-serif;
       overflow: hidden;
-      width: 100%; }
-      .mainImages .imageWrap #databox p {
+      width: 100%;
+      letter-spacing: .05em; }
+      .mainImages .imageWrap .databox p {
         margin: 0;
         font-size: .8em;
         clear: both;
         margin-top: 1em; }
-        .mainImages .imageWrap #databox p span {
+        .mainImages .imageWrap .databox p span {
           color: #FF8236; }
-        .mainImages .imageWrap #databox p span b {
+        .mainImages .imageWrap .databox p span b {
           margin: 0;
           text-align: center; }
 
@@ -378,6 +385,7 @@ header {
   margin-right: 2.35765%;
   width: 23.23176%;
   background-color: #F3FFE2;
+  height: 100%;
   overflow: hidden;
   clear: both; }
   .sidebarWrapper:last-child {
@@ -385,19 +393,31 @@ header {
   .sidebarWrapper button {
     font-family: "Roboto", sans-serif;
     width: 100%;
-    color: #F3FFE2; }
-  .sidebarWrapper .leaderboardScorePoints {
-    color: #FF8236;
-    font-weight: bold; }
+    color: #F3FFE2;
+    margin-top: 10em; }
+  .sidebarWrapper .leadertable {
+    background-color: #F3FFE2;
+    border: none;
+    margin: auto;
+    width: 100%; }
+  .sidebarWrapper table {
+    border: none; }
+    .sidebarWrapper table th {
+      padding: 1em;
+      font-size: 1.3em;
+      color: #225378;
+      text-align: center; }
+    .sidebarWrapper table td {
+      color: #225378;
+      text-align: center;
+      font-size: 1.1em;
+      padding: 1em; }
   .sidebarWrapper .leaderboardh4 {
-    background-color: #FF8236;
     padding: 10px;
     font-size: 2.5em;
     border-radius: 3px;
-    color: #F3FFE2; }
-  .sidebarWrapper .leaderboard {
-    padding: 15px;
-    line-height: 2em; }
+    color: #FF8236;
+    text-align: center; }
   .sidebarWrapper .innerAside {
     width: 90%;
     margin: auto;
@@ -405,7 +425,10 @@ header {
     font-family: "Roboto", sans-serif; }
     .sidebarWrapper .innerAside h4 {
       margin-top: 1em;
-      font-family: "Roboto", sans-serif; }
+      font-family: "Roboto", sans-serif;
+      color: #225378; }
+    .sidebarWrapper .innerAside p {
+      color: #225378; }
   .sidebarWrapper .asideTop {
     margin-top: 2em; }
     .sidebarWrapper .asideTop .avatar {
@@ -447,6 +470,7 @@ header {
       margin-bottom: 2em;
       float: left;
       display: inline;
+      border: 1px solid #EDEEEE;
       border: 1px solid #ACF0F2;
       padding: 10px 20px 100px 20px;
       background-color: white; }
@@ -470,14 +494,15 @@ header {
         .newpost .newpostMain .newImageWrap .poster span {
           font-size: 10pt;
           color: #FF8236; }
-      .newpost .newpostMain .newImageWrap .databox {
+      .newpost .newpostMain .newImageWrap .databoxnew {
         margin-top: 0;
         color: #1695A3;
         font-size: 12pt;
         font-family: "Roboto", sans-serif;
         overflow: hidden;
-        width: 100%; }
-        .newpost .newpostMain .newImageWrap .databox p {
+        width: 100%;
+        letter-spacing: .1em; }
+        .newpost .newpostMain .newImageWrap .databoxnew p {
           margin-top: 1em;
           font-size: .7em;
           color: #1695A3; }
