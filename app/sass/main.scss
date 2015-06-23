@@ -522,23 +522,23 @@ header {
             p {
                 display: block;
                 padding: .8em;
-                border: 1px solid $darkblue;
+                // border: 1px solid $darkblue;
                 color: $darkblue;
                 font-family: $roboto;
                 cursor: pointer;
                 margin-left: 1.7em;
-                margin-bottom: 1em;
+                // margin-bottom: 1em;
                 span {
                     color: $orange;
                 }
-                &:hover {
-                    background-color: $orange;
-                    color: white;
-                    border: none;
-                    span {
-                        color: $darkblue;
-                    }
-                }
+                // &:hover {
+                //     background-color: $orange;
+                //     color: white;
+                //     border: none;
+                //     span {
+                //         color: $darkblue;
+                //     }
+                // }
             }
             .incorrectGuesses {
                 // display: block;

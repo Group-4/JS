@@ -366,20 +366,12 @@ header {
       .container .singleMain .singleGuesses p {
         display: block;
         padding: .8em;
-        border: 1px solid #225378;
         color: #225378;
         font-family: "Roboto", sans-serif;
         cursor: pointer;
-        margin-left: 1.7em;
-        margin-bottom: 1em; }
+        margin-left: 1.7em; }
         .container .singleMain .singleGuesses p span {
           color: #FF8236; }
-        .container .singleMain .singleGuesses p:hover {
-          background-color: #FF8236;
-          color: white;
-          border: none; }
-          .container .singleMain .singleGuesses p:hover span {
-            color: #225378; }
       .container .singleMain .singleGuesses .incorrectGuesses {
         display: none;
         clear: both;
