@@ -78,6 +78,7 @@
           }
         });
         app.mainRouter.navigate('/main', { trigger: true });
+        window.location.reload();
       });
 
       // Return error message if request errors
