@@ -280,7 +280,7 @@ header {
     margin-bottom: 2em;
     float: right;
     display: inline;
-    border: 1px solid #ACF0F2;
+    border: 1px solid #EDEEEE;
     padding: 10px 20px 100px 20px;
     background-color: white;
 
@@ -306,12 +306,13 @@ header {
         }
       }
 
-    .showDelete {
-      display: inline-block;
-    }
+    .deleteBtn {
+      float: right;
+      color: $darkblue;
 
-    .hideDelete {
-      display: none;
+      &:hover {
+        color: $orange;
+      }
     }
 
     #databox {

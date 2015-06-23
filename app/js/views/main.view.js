@@ -9,7 +9,8 @@
     events: {
     'click #deletePost' : 'deletePost',
     'click #delete': 'deleteAccount',
-    'click #logoutBtn' : 'logout'
+    'click #logoutBtn' : 'logout',
+    'click .deleteBtn' : 'deletePost'
     },
 
     template: hbs.main,
@@ -37,20 +38,14 @@
         var response = allUserPosts.responseJSON;
       }).done(function (data) {
         self.$el.html(self.template({ image: allUserPosts.responseJSON }));
-
+        // add delete post button to logged in user's posts only
         allUserPosts.responseJSON.forEach( function (userPost) {
-
           if (app.LoggedInUser.username === userPost.owner) {
-            console.log('match', app.LoggedInUser.username);
             var postID = userPost.id;
-            console.log(postID);
-            console.log($('.deleteBtn[data-id ="' + postID + '"]'));
             $('.deleteBtn[data-id ="' + postID + '"]').html('<i class="fa fa-minus-square"></i>');
           }
         })
-
       });
-
 
       // Show header and sidebar
       $('header').removeClass('hide');
@@ -62,36 +57,21 @@
       });
       // Drop sidebar template into sidebar
       $('.sidebar').html(this.templateSidebar(app.LoggedInUser));
-
     },
 
-    // DELETE POST
-      // if (user_id === app.LoggedInUser.id) {
-     // $('deletePost').html(this.templateNewPost(app.deletePost));
-     // DELETE ACCOUNT
-    //  $('deleteAccount').html(this.templateSidebar(app.deleteAccount));
-
-    // DELETING ACCOUNT
- // $(function () {
- //    $(".deleteAccount").click(function () {
- //      var button = button;
- //      var url = "http://tiyqpic.herokuapp.com//users/:id";
- //      var element = $(this);
- //      var deleteID = element.attr("id");
- //      var delUserAcct = 'id=' + deleteUserID;
-
- //      if(confirm("Delete your Qpic account?")){
- //    // AJAX TO DELETE
- //        $.ajax({
- //          type: "POST",
- //          url: "http://tiyqpic.herokuapp.com//users/:id",
- //          data: delUserAcct,
- //          success: function() {
- //          // console.log("Your Qpic account has been deleted!");
- //        }
- //    });
-
- //  },
+    deletePost: function () {
+      // Find post with correct post id to delete
+      var button = $(event.target).parent();
+      var postIdToDelete = $(button).data('id');
+      // send delete request
+      $.ajax({
+        url: app.rootURL + '/posts/' + postIdToDelete,
+        type: 'DELETE',
+        success: function() {
+          $(button).parents('li').fadeOut();
+        }
+      });
+    },
 
   logout: function(e) {
     e.preventDefault();
