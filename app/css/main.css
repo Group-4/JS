@@ -211,6 +211,10 @@ header {
       .mainImages .imageWrap .poster span {
         font-size: 10pt;
         color: #FF8236; }
+    .mainImages .imageWrap .showDelete {
+      display: inline-block; }
+    .mainImages .imageWrap .hideDelete {
+      display: none; }
     .mainImages .imageWrap #databox {
       margin-top: 0;
       color: #1695A3;

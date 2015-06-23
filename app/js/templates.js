@@ -52,15 +52,17 @@ this["hbs"]["main"] = Handlebars.template({"1":function(depth0,helpers,partials,
 
   return "     <li data-id=\""
     + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
-    + "\">\n\n       <div class=\"imageWrap\">\n        <p class=\"poster\">\n  <i class=\"fa fa-camera\"> Posted by: </i>\n    <span>"
+    + "\">\n\n       <div class=\"imageWrap\">\n        <p class=\"poster\">\n          <i class=\"fa fa-camera\"> Posted by: </i><span>"
     + alias3(((helper = (helper = helpers.owner || (depth0 != null ? depth0.owner : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"owner","hash":{},"data":data}) : helper)))
-    + "</span></p>\n\n          <div class=\"actualImage\">\n            <a href=\"#/single/"
+    + "</span>\n        </p>\n        <div class=\"deleteBtn\" data-id=\""
+    + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
+    + "\" id=\"deleteBtn\">x</div>\n\n        <div class=\"actualImage\">\n          <a href=\"#/single/"
     + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
     + "\"><img src=\""
     + alias3(((helper = (helper = helpers.image_url || (depth0 != null ? depth0.image_url : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"image_url","hash":{},"data":data}) : helper)))
-    + "\"></a>\n          </div>\n  <div id=\"databox\">\n    <p><b>FIRST SOLVED BY: </b><span>"
+    + "\"></a>\n        </div>\n\n        <div id=\"databox\">\n          <p><b>FIRST SOLVED BY: </b><span>"
     + alias3(((helper = (helper = helpers.solved_by || (depth0 != null ? depth0.solved_by : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"solved_by","hash":{},"data":data}) : helper)))
-    + "</span></p>\n       </div>\n       </div>\n\n     </li>\n";
+    + "</span></p>\n         </div>\n       </div>\n\n     </li>\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1;
 

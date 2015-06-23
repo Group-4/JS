@@ -17,16 +17,17 @@
 
        <div class="imageWrap">
         <p class="poster">
-  <i class="fa fa-camera"> Posted by: </i>
-    <span>{{ owner }}</span></p>
+          <i class="fa fa-camera"> Posted by: </i><span>{{ owner }}</span>
+        </p>
+        <div class="deleteBtn" data-id="{{id}}" id="deleteBtn">x</div>
 
-          <div class="actualImage">
-            <a href="#/single/{{id}}"><img src="{{ image_url }}"></a>
-          </div>
-  <div id="databox">
-    <p><b>FIRST SOLVED BY: </b><span>{{ solved_by }}</span></p>
-    {{!-- <P><span><b>HINT: </b>{{ hint }}</span></p> --}}
-       </div>
+        <div class="actualImage">
+          <a href="#/single/{{id}}"><img src="{{ image_url }}"></a>
+        </div>
+
+        <div id="databox">
+          <p><b>FIRST SOLVED BY: </b><span>{{ solved_by }}</span></p>
+         </div>
        </div>
 
      </li>

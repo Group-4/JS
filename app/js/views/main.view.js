@@ -24,7 +24,6 @@
       this.collectionUsers = args.collectionUsers;
       this.collectionPosts = args.collectionPosts;
       this.collectionUserPosts = args.collectionUserPosts;
-      this.collection
 
       this.render();
       $('.container').html(this.el);
@@ -33,12 +32,26 @@
     render: function() {
       var self = this;
 
-      // Get all users from database and drop data into template
+      // Get all users' unsolved posts from database and drop data into template
       var allUserPosts = $.get(app.rootURL + '/users/' + app.LoggedInUser.username + '/unsolved?sort=difficult', function(data) {
         var response = allUserPosts.responseJSON;
       }).done(function (data) {
         self.$el.html(self.template({ image: allUserPosts.responseJSON }));
+
+        allUserPosts.responseJSON.forEach( function (userPost) {
+
+          if (app.LoggedInUser.username === userPost.owner) {
+            console.log('match', app.LoggedInUser.username);
+            var postID = userPost.id;
+            console.log(postID);
+            console.log($('.deleteBtn[data-id ="' + postID + '"]'));
+            $('.deleteBtn[data-id ="' + postID + '"]').html('<i class="fa fa-minus-square"></i>');
+          }
+        })
+
       });
+
+
       // Show header and sidebar
       $('header').removeClass('hide');
       $('sidebarWrapper').removeClass('hide');

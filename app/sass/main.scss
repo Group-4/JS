@@ -306,6 +306,14 @@ header {
         }
       }
 
+    .showDelete {
+      display: inline-block;
+    }
+
+    .hideDelete {
+      display: none;
+    }
+
     #databox {
       margin-top: 0;
       color: #1695A3;
