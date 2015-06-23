@@ -10,7 +10,9 @@
     'click #deletePost' : 'deletePost',
     'click #delete': 'deleteAccount',
     'click #logoutBtn' : 'logout',
-    'click .deleteBtn' : 'deletePost'
+    'click .deleteBtn' : 'deletePost',
+    'click #sortDifficult' : 'sortDifficult',
+    'click #sortRecent' : 'render'
     },
 
     template: hbs.main,
@@ -34,6 +36,33 @@
     render: function() {
       var self = this;
 
+      // Get all posts from database and drop data into template, sorted by most recent add
+      this.collectionPosts = new app.Collections.Posts();
+
+      this.collectionPosts.fetch().done( function (data) {
+        this.$el.html(this.template({image: data}));
+      }.bind(this));
+
+      // Show header and sidebar
+      $('header').removeClass('hide');
+      $('sidebarWrapper').removeClass('hide');
+      // Get leaderboard data and drop into template
+      var leaderboardList = $.get(app.rootURL + '/leaderboard', function(data){
+      }).done(function(data) {
+        $('.asideBottom').html(self.templateList({user: leaderboardList.responseJSON }));
+      });
+      // Drop sidebar template into sidebar
+      $('.sidebar').html(this.templateSidebar(app.LoggedInUser));
+    },
+
+    sortDifficult: function () {
+      console.log('sorting');
+      var self = this;
+
+      var sortBtn = event.target;
+      console.log(sortBtn);
+      $(sortBtn).addClass('sorted');
+
       // Get all users' unsolved posts from database and drop data into template
       var allUserPosts = $.get(app.rootURL + '/users/' + app.LoggedInUser.username + '/unsolved?sort=difficult', function(data) {
         var response = allUserPosts.responseJSON;
@@ -48,16 +77,6 @@
         })
       });
 
-      // Show header and sidebar
-      $('header').removeClass('hide');
-      $('sidebarWrapper').removeClass('hide');
-      // Get leaderboard data and drop into template
-      var leaderboardList = $.get(app.rootURL + '/leaderboard', function(data){
-      }).done(function(data) {
-        $('.asideBottom').html(self.templateList({user: leaderboardList.responseJSON }));
-      });
-      // Drop sidebar template into sidebar
-      $('.sidebar').html(this.templateSidebar(app.LoggedInUser));
     },
 
     deletePost: function () {
