@@ -52,7 +52,7 @@ this["hbs"]["main"] = Handlebars.template({"1":function(depth0,helpers,partials,
 
   return "     <li data-id=\""
     + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
-    + "\">\n\n       <div class=\"imageWrap\">\n        <p class=\"poster\">\n          <i class=\"fa fa-camera\"><b> Posted by | </b></i><span> "
+    + "\">\n\n       <div class=\"imageWrap\">\n        <p class=\"poster\">\n          <i class=\"fa fa-camera\"><b> Posted by </b></i><span> "
     + alias3(((helper = (helper = helpers.owner || (depth0 != null ? depth0.owner : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"owner","hash":{},"data":data}) : helper)))
     + "</span>\n        </p>\n        <div class=\"deleteBtn\" data-id=\""
     + alias3(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"id","hash":{},"data":data}) : helper)))
@@ -66,7 +66,7 @@ this["hbs"]["main"] = Handlebars.template({"1":function(depth0,helpers,partials,
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1;
 
-  return "<div class=\"mainImages\">\n\n  <h2>LET'S PLAY!</h2>\n  <div class=\"rightBtns\">\n    <div class=\"logout\" id=\"logout\">\n      <p class=\"logoutBtn\" id=\"logoutBtn\">Logout</p>\n    </div>\n    <a href=\"/#newpost\"><div class=\"newpostBtn\">\n      <i class=\"fa fa-camera\"></i>\n      <p>Add a new post</p>\n    </div></a>\n  </div>\n\n  <div class=\"sorting\">\n    <div class=\"circle\" id=\"sortDifficult\"></div>\n    <p class=\"sort\">Sort by most difficult.</p>\n    <div class=\"circle\" id=\"sortRecent\"></div>\n    <p class=\"sort\">Sort by most recent addition.</p>\n  </div>\n\n  <ul class=\"small-block-grid-3\">\n\n"
+  return "<div class=\"mainImages\">\n\n  <h2>LET'S PLAY!</h2>\n  <div class=\"rightBtns\">\n    <div class=\"logout\" id=\"logout\">\n      <p class=\"logoutBtn\" id=\"logoutBtn\">Logout</p>\n    </div>\n    <a href=\"/#newpost\"><div class=\"newpostBtn\">\n      <i class=\"fa fa-camera\"></i>\n      <p>Add a new post</p>\n    </div></a>\n  </div>\n\n  <div class=\"sorting\">\n    <div class=\"circle circleD\" id=\"sortDifficult\"></div>\n    <p class=\"sort\">Sort by most difficult.</p>\n\n    <div class=\"circle circleR\" id=\"sortRecent\"></div>\n    <p class=\"sort\">Sort by most recent addition.</p>\n  </div>\n\n  <ul class=\"small-block-grid-3\">\n\n"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.image : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "\n  </ul>\n\n</div>\n\n\n";
 },"useData":true});

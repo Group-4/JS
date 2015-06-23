@@ -41,7 +41,17 @@
 
       this.collectionPosts.fetch().done( function (data) {
         this.$el.html(this.template({image: data}));
+        // add delete post button to logged in user's posts only
+        data.forEach( function (post) {
+          if (app.LoggedInUser.username === post.owner) {
+            var postID = post.id;
+            $('.deleteBtn[data-id ="' + postID + '"]').html('<i class="fa fa-minus-square"></i>');
+          }
+        })
       }.bind(this));
+
+
+      $('.circleR').addClass('sorted');
 
       // Show header and sidebar
       $('header').removeClass('hide');
@@ -56,12 +66,11 @@
     },
 
     sortDifficult: function () {
-      console.log('sorting');
       var self = this;
 
       var sortBtn = event.target;
-      console.log(sortBtn);
-      $(sortBtn).addClass('sorted');
+      $(event.target).addClass('sorted');
+      $(event.target).siblings().removeClass('sorted');
 
       // Get all users' unsolved posts from database and drop data into template
       var allUserPosts = $.get(app.rootURL + '/users/' + app.LoggedInUser.username + '/unsolved?sort=difficult', function(data) {
