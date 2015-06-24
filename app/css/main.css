@@ -430,6 +430,8 @@ header {
     border-radius: 3px;
     color: #FF8236;
     text-align: center; }
+  .sidebarWrapper .deleteuser {
+    padding: .5em; }
   .sidebarWrapper .innerAside {
     width: 90%;
     margin: auto;

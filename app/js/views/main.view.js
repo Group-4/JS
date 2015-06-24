@@ -33,24 +33,22 @@
     },
 
     render: function() {
+      // $('.circleR').addClass('sorted');
+
       var self = this;
-
-      // Get all posts from database and drop data into template, sorted by most recent add
-      this.collectionPosts = new app.Collections.Posts();
-
-      this.collectionPosts.fetch().done( function (data) {
-        this.$el.html(this.template({image: data}));
+      // Get all users' unsolved posts from database and drop data into template
+      var allUserPosts = $.get(app.rootURL + '/users/' + app.LoggedInUser.username + '/unsolved', function(data) {
+        var response = allUserPosts.responseJSON;
+      }).done(function (data) {
+        self.$el.html(self.template({ image: allUserPosts.responseJSON }));
         // add delete post button to logged in user's posts only
-        data.forEach( function (post) {
-          if (app.LoggedInUser.username === post.owner) {
-            var postID = post.id;
+        allUserPosts.responseJSON.forEach( function (userPost) {
+          if (app.LoggedInUser.username === userPost.owner) {
+            var postID = userPost.id;
             $('.deleteBtn[data-id ="' + postID + '"]').html('<i class="fa fa-minus-square"></i>');
           }
         })
-      }.bind(this));
-
-
-      $('.circleR').addClass('sorted');
+      });
 
       // Show header and sidebar
       $('header').removeClass('hide');

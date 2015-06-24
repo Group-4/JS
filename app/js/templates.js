@@ -40,7 +40,7 @@ this["hbs"]["list"] = Handlebars.template({"1":function(depth0,helpers,partials,
 
   return "\n<div class=\"leaderboardSection\">\n  <h4 class=\"leaderboardh4\">Leaderboard</h4>\n\n  <table class=\"leadertable\">\n    <tr>\n      <th>User</th>\n      <th>Points</th>\n      <th>% Correct</th>\n    </tr>\n\n"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.user : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "\n  </table>\n\n</div>\n\n<div class=\"deleteDiv\">\n  <button id=\"#deleteUser\">Delete Account</button>\n</div>\n";
+    + "\n  </table>\n\n</div>\n\n<div class=\"deleteDiv\">\n  <button id=\"#deleteUser\" class='deleteuser'>Delete Account</button>\n</div>\n";
 },"useData":true});
 this["hbs"] = this["hbs"] || {};
 this["hbs"]["login"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
