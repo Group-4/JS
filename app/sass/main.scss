@@ -206,9 +206,37 @@ header {
   float: right;
   width: 100%;
 
-  ul {
+  .imageList {
     margin-right: 1em;
     clear: both;
+  }
+
+  .pages {
+    width: 100%;
+    text-align: center;
+
+    ul {
+      text-align: center;
+      width: 25%;
+      margin: auto;
+
+      li {
+        background-color: $darkblue;
+        padding: 1em;
+        color: $light;
+        height: 100%;
+        margin-bottom: 2em;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $teal;
+        }
+      }
+
+      .clickedPage {
+        background-color: $teal;
+      }
+    }
   }
 
   h2 {

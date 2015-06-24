@@ -137,9 +137,27 @@ header {
 .mainImages {
   float: right;
   width: 100%; }
-  .mainImages ul {
+  .mainImages .imageList {
     margin-right: 1em;
     clear: both; }
+  .mainImages .pages {
+    width: 100%;
+    text-align: center; }
+    .mainImages .pages ul {
+      text-align: center;
+      width: 25%;
+      margin: auto; }
+      .mainImages .pages ul li {
+        background-color: #225378;
+        padding: 1em;
+        color: #F3FFE2;
+        height: 100%;
+        margin-bottom: 2em;
+        cursor: pointer; }
+        .mainImages .pages ul li:hover {
+          background-color: #1695A3; }
+      .mainImages .pages ul .clickedPage {
+        background-color: #1695A3; }
   .mainImages h2 {
     display: inline-block;
     float: left;

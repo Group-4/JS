@@ -12,7 +12,8 @@
     'click #logoutBtn' : 'logout',
     'click .deleteBtn' : 'deletePost',
     'click #sortDifficult' : 'sortDifficult',
-    'click #sortRecent' : 'render'
+    'click #sortRecent' : 'render',
+    'click #pagination' : 'pageChange'
     },
 
     template: hbs.main,
@@ -60,6 +61,28 @@
       });
       // Drop sidebar template into sidebar
       $('.sidebar').html(this.templateSidebar(app.LoggedInUser));
+    },
+
+    pageChange: function () {
+      $(event.target).addClass('clickedPage');
+      $(event.target).siblings().removeClass('clickedPage');
+
+      var pageId = $(event.target).data('id');
+
+      var self = this;
+      // Get all users unsolved posts from database and drop data into template
+      var allUserPosts = $.get(app.rootURL + '/users/' + app.LoggedInUser.username + '/unsolved?page=' + pageId, function (data) {
+          var response = allUserPosts.responseJSON;
+      }).done(function (data) {
+        self.$el.html(self.template({ image: allUserPosts.responseJSON }));
+        // add delete post button to logged in user's posts only
+        allUserPosts.responseJSON.forEach( function (userPost) {
+          if (app.LoggedInUser.username === userPost.owner) {
+            var postID = userPost.id;
+            $('.deleteBtn[data-id ="' + postID + '"]').html('<i class="fa fa-minus-square"></i>');
+          }
+        })
+      });
     },
 
     sortDifficult: function () {

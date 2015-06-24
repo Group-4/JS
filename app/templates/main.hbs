@@ -19,7 +19,7 @@
     <p class="sort">Sort by most recent addition.</p>
   </div>
 
-  <ul class="small-block-grid-3">
+  <ul class="small-block-grid-3 imageList">
 
     {{#each image}}
      <li data-id="{{id}}">
@@ -43,6 +43,14 @@
     {{/each}}
 
   </ul>
+
+  <div class="pages">
+    <ul class="pagination" id="pagination">
+      <li id="pageOne" class="pageNumber" data-id="1">1</li>
+      <li id="pageTwo" class="pageNumber" data-id="2">2</li>
+      <li id="pageThree" class="pageNumber" data-id="3">3</li>
+    </ul>
+  </div>
 
 </div>
 
